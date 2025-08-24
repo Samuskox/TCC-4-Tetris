@@ -1,0 +1,5 @@
+res://player.tscn
+res://character_body_2d.gd
+res://tile_map_layer.gd
+res://Player.gd
+res://tile_map.gd
