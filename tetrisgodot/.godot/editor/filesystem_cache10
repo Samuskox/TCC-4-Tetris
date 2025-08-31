@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1756007851
-character_body_2d.tscn::PackedScene::7456485567059702371::1756007851::0::1::::<><><>0<>0<><>::uid://c7rxn5d31jduo::::res://Player.gd<>uid://w57vfnnlod5x::::res://icon.svg<>uid://dbme010fwfs11::::res://lendaria.gd
-icon.svg::CompressedTexture2D/CompressedTexture2D::1608066621404158495::1755258533::1755258543::1::::<><><>0<>0<>b30a5b6c2a14470e34e57d6f52406eed<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-lendaria.gd::GDScript::7254512345068750014::1755281193::0::1::::<>Sprite2D<><>0<>0<><>::
-Player.gd::GDScript::7055400073418858986::1756007598::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::3451918516255174687::1756007865::0::1::::<><><>0<>0<><>::uid://cf8r1qvwq2ety::::res://tile_map_layer.gd<>uid://c7rxn5d31jduo::::res://Player.gd<>uid://w57vfnnlod5x::::res://icon.svg<>uid://dbme010fwfs11::::res://lendaria.gd
-tile_map_layer.gd::GDScript/GDScript::5192989544815416070::1756007054::0::1::::Map<>TileMapLayer<><>0<>0<><>::
+::res://::1756663015
+Bloco.png::CompressedTexture2D/CompressedTexture2D::8669701327545082818::1756589863::1756589871::1::::<><><>0<>0<>59ee9343b276a0088fcad48ad8ef2eab<>res://.godot/imported/Bloco.png-3e61c17e51d83c5b658c924eab18711d.ctex::
+icon.svg::CompressedTexture2D/CompressedTexture2D::4690137454582298901::1756588353::1756588362::1::::<><><>0<>0<>22b6e365de6c4175154040dbcfd3e860<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Scenes/::1756592795
+tetris.tscn::PackedScene::4522869845924082026::1756592795::0::1::::<><><>0<>0<><>::uid://bm8rxumy7bw3o::::res://Scripts/tetris.gd
+::res://Scripts/::1756592167
+tetris.gd::GDScript::3297885605508239270::1756592167::0::1::::<>Node2D<><>0<>0<><>::
