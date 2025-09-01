@@ -10,7 +10,10 @@ var yPlayer := 3.0
 
 #var peca := [[Vector2(0, 0), Vector2(1, 0), Vector2(0,1), Vector2(1,1)]] # perguntar isso pro yago, eu entendi mais ou menos
 const peca: Array[Vector2] = [
-	Vector2(0,0), Vector2(1,0)
+	Vector2(0,0), 
+	Vector2(0,1),
+	Vector2(0,2),
+	Vector2(0,3)
 ]
 
 func _ready() -> void:
@@ -29,11 +32,11 @@ func _process(delta: float) -> void:
 	
 	
 	if Input.is_action_just_pressed("direita"):
-		xPlayer += clamp(xPlayer + 1, 0, 10 - 1)
-		#print("direita bozonaro klmds")
+		xPlayer = clamp(xPlayer + 1, 0, 8) # num funfa
+		print("direita bozonaro klmds" + str(xPlayer))
 	if Input.is_action_just_pressed("esquerda"):
-		xPlayer -= clamp(1, 0, 10)
-		#print("esquerda lula ksksk")
+		xPlayer = clamp(xPlayer - 1, 0, 8)
+		#print("esquerda lula ksksk")./
 	if(Input.is_action_just_pressed("baixo")):
 		yPlayer += 1
 		#print("semata kk")
