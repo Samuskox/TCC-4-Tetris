@@ -1,15 +1,17 @@
 extends Node2D
 
-const GridWidth := 500
-const GridHeight := 500
+const GridWidth := 10
+const GridHeight := 20
 const cellSize := 32
 var grid := []
 
-var xPlayer := 3
-var yPlayer := 3
+var xPlayer := 3.0
+var yPlayer := 3.0
 
-
-
+#var peca := [[Vector2(0, 0), Vector2(1, 0), Vector2(0,1), Vector2(1,1)]] # perguntar isso pro yago, eu entendi mais ou menos
+const peca: Array[Vector2] = [
+	Vector2(0,0), Vector2(1,0)
+]
 
 func _ready() -> void:
 	grid.resize(GridWidth)
@@ -19,7 +21,6 @@ func _ready() -> void:
 		for y in range(GridHeight):
 			grid[x][y] = 0
 			
-	grid[5][2] = 1
 
 func _process(delta: float) -> void:
 	
@@ -28,14 +29,14 @@ func _process(delta: float) -> void:
 	
 	
 	if Input.is_action_just_pressed("direita"):
-		xPlayer += 1
-		print("direita bozonaro klmds")
+		xPlayer += clamp(xPlayer + 1, 0, 10 - 1)
+		#print("direita bozonaro klmds")
 	if Input.is_action_just_pressed("esquerda"):
-		xPlayer -= 1
-		print("esquerda lula ksksk")
+		xPlayer -= clamp(1, 0, 10)
+		#print("esquerda lula ksksk")
 	if(Input.is_action_just_pressed("baixo")):
 		yPlayer += 1
-		print("semata kk")
+		#print("semata kk")
 	
 func _draw() -> void:
 	for x in range(GridWidth + 1):
@@ -64,10 +65,10 @@ func _draw() -> void:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DEEP_PINK)
 			elif grid[x][y] == 7:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.WEB_PURPLE)
-	teste(xPlayer, yPlayer)
-	
+	#moviment(xPlayer, yPlayer)
+	drawPiece(peca,Vector2(xPlayer, yPlayer))
 
-func teste(x,y):
+func moviment(x,y):
 	var block_pos = Vector2(x, y) * cellSize
 	draw_rect(Rect2(block_pos, Vector2(cellSize, cellSize)), Color.CORAL, true)
 	
@@ -75,9 +76,11 @@ func teste(x,y):
 
 
 func _on_timer_timeout() -> void:
-	for x in range(GridWidth):
-		for y in range(GridHeight):
-			grid[x][y] = randi() % 8
+	yPlayer += 1
+	
 			
-	queue_redraw() 
-	 # Replace with function body.
+
+func drawPiece(peca, pos):
+	for block in peca:
+		draw_rect(Rect2((block + pos) * cellSize, Vector2(cellSize, cellSize)), Color.CYAN, true)
+	
