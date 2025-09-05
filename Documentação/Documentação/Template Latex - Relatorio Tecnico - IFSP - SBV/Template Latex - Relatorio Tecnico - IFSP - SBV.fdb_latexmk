@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex Template Latex - Relatorio Tecnico - IFSP - SBV"] 1757034028.89112 "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757034034.78865 0
+["bibtex Template Latex - Relatorio Tecnico - IFSP - SBV"] 1757112931.79957 "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757113015.76365 0
   "./abntex2-custom/abntex2-alf.bst" 1756842122 62244 1c999a6bd28f2c83247b075aaf0482a6 ""
-  "./referencias.bib" 1757033112 4795 ab8762d6a392318c8963a2002101d623 ""
+  "./referencias.bib" 1757112881 5400 2dff367d3ae7c15b1d555244c974cf9e ""
   "C:/Program Files/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" 1757034032 17285 a28a2d8f2e8506290d5b19fe318f4f0d "pdflatex"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" 1757113013 19332 4af4a0dd0db374a3218f74e77be5bb51 "pdflatex"
   (generated)
   "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl"
   "Template Latex - Relatorio Tecnico - IFSP - SBV.blg"
   (rewritten before read)
-["makeindex Template Latex - Relatorio Tecnico - IFSP - SBV.idx"] 1757033050.54126 "Template Latex - Relatorio Tecnico - IFSP - SBV.idx" "Template Latex - Relatorio Tecnico - IFSP - SBV.ind" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757034034.78811 0
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.idx" 1757034031 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex Template Latex - Relatorio Tecnico - IFSP - SBV.idx"] 1757112926.09059 "Template Latex - Relatorio Tecnico - IFSP - SBV.idx" "Template Latex - Relatorio Tecnico - IFSP - SBV.ind" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757113015.76315 0
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.idx" 1757113012 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "Template Latex - Relatorio Tecnico - IFSP - SBV.ilg"
   "Template Latex - Relatorio Tecnico - IFSP - SBV.ind"
   (rewritten before read)
-["pdflatex"] 1757034029.31335 "c:/Users/Samuel/Desktop/TCC/TCC-4-Tetris/Documentação/Documentação/Template Latex - Relatorio Tecnico - IFSP - SBV/Template Latex - Relatorio Tecnico - IFSP - SBV.tex" "Template Latex - Relatorio Tecnico - IFSP - SBV.pdf" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757034034.78929 0
+["pdflatex"] 1757113010.14737 "c:/Users/Samuel/Desktop/TCC/TCC-4-Tetris/Documentação/Documentação/Template Latex - Relatorio Tecnico - IFSP - SBV/Template Latex - Relatorio Tecnico - IFSP - SBV.tex" "Template Latex - Relatorio Tecnico - IFSP - SBV.pdf" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757113015.76441 0
   "01Capa.tex" 1756842122 813 d4b521e5c08c0025e19a02dabb3c3f50 ""
   "02FolhaDeRosto.tex" 1756842122 1642 046dd734cb56daa6eed6fd54ae9dbec8 ""
   "03FichaCatalografica.tex" 1756842122 304 f3a10ed1a2fbe540f88bec2e9c3b8504 ""
@@ -297,16 +297,16 @@
   "C:/Program Files/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/Samuel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1756843811 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Samuel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1756843829 13247319 cc7fde301a19a9776eceb63087886243 ""
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" 1757034032 17285 a28a2d8f2e8506290d5b19fe318f4f0d "pdflatex"
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl" 1757034029 3099 d9ec96263c57fb3fdb5d2b98fcab56ab "bibtex Template Latex - Relatorio Tecnico - IFSP - SBV"
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.brf" 1757034032 1237 c2fa24b7e4ab93889bf4baafb05d89ed "pdflatex"
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.ind" 1757033050 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Template Latex - Relatorio Tecnico - IFSP - SBV.idx"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" 1757113013 19332 4af4a0dd0db374a3218f74e77be5bb51 "pdflatex"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl" 1757112932 3999 726eb84beb76db9bfe3593394f5a8dd1 "bibtex Template Latex - Relatorio Tecnico - IFSP - SBV"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.brf" 1757113013 1552 ec9eb8c1d86624d1a31d98fee350b6a2 "pdflatex"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.ind" 1757112926 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Template Latex - Relatorio Tecnico - IFSP - SBV.idx"
   "Template Latex - Relatorio Tecnico - IFSP - SBV.tex" 1756842122 2832 d856b0dd22e5ad4119f59e153463a38b ""
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.toc" 1757034032 2802 ba0bcaa62d0ead093216a23df17f3cd6 "pdflatex"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.toc" 1757113013 2896 c2c7006c8734f52dcebeb05d469b8ecc "pdflatex"
   "ataDefesa/exemploAtaDefesa.pdf" 1756842122 48028 2a7aa4e50db441e994ab04caa83bc884 ""
   "c:/Users/Samuel/Desktop/TCC/TCC-4-Tetris/Documentação/Documentação/Template Latex - Relatorio Tecnico - IFSP - SBV/Template Latex - Relatorio Tecnico - IFSP - SBV.tex" 1756842122 2832 d856b0dd22e5ad4119f59e153463a38b ""
   "capitulo01Introducao.tex" 1756944859 2493 61ffe903ac9fcc0091b5aedc81075788 ""
-  "capitulo02ConsideracoesGerais.tex" 1757034022 12553 0876521bfbe243fd2d00b1b6118556e8 ""
+  "capitulo02ConsideracoesGerais.tex" 1757113007 15594 dee6af72cd32d6fff1056fa9f932332f ""
   "capitulo03Metodologia.tex" 1756842122 209 5bee4cc4283751045ce416fe0b2458ad ""
   "capitulo04AnaliseDosResultados.tex" 1756842122 983 4ef070bf19b8fffc56c628fca0ec7cea ""
   "capitulo05ConclusoesRecomendacoes.tex" 1756842122 452 e04256261917d81bd03a2ee370a202bb ""
