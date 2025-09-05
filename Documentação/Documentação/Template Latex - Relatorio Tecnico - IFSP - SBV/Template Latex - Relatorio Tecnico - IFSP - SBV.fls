@@ -495,6 +495,8 @@ INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.toc
 INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.toc
 INPUT Template Latex - Relatorio Tecnico - IFSP - SBV.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmssbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso10.tfm
 INPUT .\05Resumo.tex
 INPUT .\05Resumo.tex
 INPUT .\05Resumo.tex
@@ -574,6 +576,10 @@ INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso12.tfm
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
 INPUT .\capitulo03Metodologia.tex
 INPUT .\capitulo03Metodologia.tex
 INPUT .\capitulo03Metodologia.tex
@@ -634,12 +640,18 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
