@@ -1,20 +1,20 @@
 # Fdb version 4
-["bibtex Template Latex - Relatorio Tecnico - IFSP - SBV"] 1757112931.79957 "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757113015.76365 0
+["bibtex Template Latex - Relatorio Tecnico - IFSP - SBV"] 1757343422.57218 "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757343589.55364 0
   "./abntex2-custom/abntex2-alf.bst" 1756842122 62244 1c999a6bd28f2c83247b075aaf0482a6 ""
   "./referencias.bib" 1757112881 5400 2dff367d3ae7c15b1d555244c974cf9e ""
   "C:/Program Files/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" 1757113013 19332 4af4a0dd0db374a3218f74e77be5bb51 "pdflatex"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" 1757343585 22338 c09ae47ddb4097a4797c7a64781d5a3f "pdflatex"
   (generated)
   "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl"
   "Template Latex - Relatorio Tecnico - IFSP - SBV.blg"
   (rewritten before read)
-["makeindex Template Latex - Relatorio Tecnico - IFSP - SBV.idx"] 1757112926.09059 "Template Latex - Relatorio Tecnico - IFSP - SBV.idx" "Template Latex - Relatorio Tecnico - IFSP - SBV.ind" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757113015.76315 0
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.idx" 1757113012 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex Template Latex - Relatorio Tecnico - IFSP - SBV.idx"] 1757343345.4699 "Template Latex - Relatorio Tecnico - IFSP - SBV.idx" "Template Latex - Relatorio Tecnico - IFSP - SBV.ind" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757343589.55218 0
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.idx" 1757343582 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "Template Latex - Relatorio Tecnico - IFSP - SBV.ilg"
   "Template Latex - Relatorio Tecnico - IFSP - SBV.ind"
   (rewritten before read)
-["pdflatex"] 1757113010.14737 "c:/Users/Samuel/Desktop/TCC/TCC-4-Tetris/Documentação/Documentação/Template Latex - Relatorio Tecnico - IFSP - SBV/Template Latex - Relatorio Tecnico - IFSP - SBV.tex" "Template Latex - Relatorio Tecnico - IFSP - SBV.pdf" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757113015.76441 0
+["pdflatex"] 1757343579.36468 "c:/Users/Samuel/Desktop/TCC/TCC-4-Tetris/Documentação/Documentação/Template Latex - Relatorio Tecnico - IFSP - SBV/Template Latex - Relatorio Tecnico - IFSP - SBV.tex" "Template Latex - Relatorio Tecnico - IFSP - SBV.pdf" "Template Latex - Relatorio Tecnico - IFSP - SBV" 1757343589.55554 0
   "01Capa.tex" 1756842122 813 d4b521e5c08c0025e19a02dabb3c3f50 ""
   "02FolhaDeRosto.tex" 1756842122 1642 046dd734cb56daa6eed6fd54ae9dbec8 ""
   "03FichaCatalografica.tex" 1756842122 304 f3a10ed1a2fbe540f88bec2e9c3b8504 ""
@@ -297,22 +297,23 @@
   "C:/Program Files/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "C:/Users/Samuel/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1756843811 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Samuel/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1756843829 13247319 cc7fde301a19a9776eceb63087886243 ""
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" 1757113013 19332 4af4a0dd0db374a3218f74e77be5bb51 "pdflatex"
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl" 1757112932 3999 726eb84beb76db9bfe3593394f5a8dd1 "bibtex Template Latex - Relatorio Tecnico - IFSP - SBV"
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.brf" 1757113013 1552 ec9eb8c1d86624d1a31d98fee350b6a2 "pdflatex"
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.ind" 1757112926 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Template Latex - Relatorio Tecnico - IFSP - SBV.idx"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.aux" 1757343585 22338 c09ae47ddb4097a4797c7a64781d5a3f "pdflatex"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.bbl" 1757343423 3999 726eb84beb76db9bfe3593394f5a8dd1 "bibtex Template Latex - Relatorio Tecnico - IFSP - SBV"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.brf" 1757343585 2408 aa79653dcdea8f3a7981a7ed523aecc8 "pdflatex"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.ind" 1757343346 0 d41d8cd98f00b204e9800998ecf8427e "makeindex Template Latex - Relatorio Tecnico - IFSP - SBV.idx"
   "Template Latex - Relatorio Tecnico - IFSP - SBV.tex" 1756842122 2832 d856b0dd22e5ad4119f59e153463a38b ""
-  "Template Latex - Relatorio Tecnico - IFSP - SBV.toc" 1757113013 2896 c2c7006c8734f52dcebeb05d469b8ecc "pdflatex"
+  "Template Latex - Relatorio Tecnico - IFSP - SBV.toc" 1757343585 3080 5d2c593bcfc7db053954f67eea90aeb9 "pdflatex"
   "ataDefesa/exemploAtaDefesa.pdf" 1756842122 48028 2a7aa4e50db441e994ab04caa83bc884 ""
   "c:/Users/Samuel/Desktop/TCC/TCC-4-Tetris/Documentação/Documentação/Template Latex - Relatorio Tecnico - IFSP - SBV/Template Latex - Relatorio Tecnico - IFSP - SBV.tex" 1756842122 2832 d856b0dd22e5ad4119f59e153463a38b ""
   "capitulo01Introducao.tex" 1756944859 2493 61ffe903ac9fcc0091b5aedc81075788 ""
-  "capitulo02ConsideracoesGerais.tex" 1757113007 15594 dee6af72cd32d6fff1056fa9f932332f ""
+  "capitulo02ConsideracoesGerais.tex" 1757343573 19232 9e6811afd2beba1289e6904fa61e561b ""
   "capitulo03Metodologia.tex" 1756842122 209 5bee4cc4283751045ce416fe0b2458ad ""
   "capitulo04AnaliseDosResultados.tex" 1756842122 983 4ef070bf19b8fffc56c628fca0ec7cea ""
   "capitulo05ConclusoesRecomendacoes.tex" 1756842122 452 e04256261917d81bd03a2ee370a202bb ""
   "estrutura.sty" 1756842122 6819 06bac34a75944a3e28db4901bd8d00a2 ""
   "fichaCatalografica/exemploFichaCatalografica.pdf" 1756842122 43803 38ad675a0981c866de21999bad58d796 ""
   "fontes/ClasseExemplo.java" 1756842122 224 3de8a9c80a372963038ab3345046e914 ""
+  "imagens/categoriaGamesCrawford.png" 1757292008 21354 96032596619ca964d80ac3a5e32bd244 ""
   "imagens/cronograma.png" 1756842122 9226 0a6bf8da5e5c51ccb00b22bd3d4a951b ""
   "imagens/exemploFigura.png" 1756842122 27410 831f9c28c891ab88676e010f227c40e6 ""
   "imagens/exemploQuadro.png" 1756842122 14957 c074b1bb1460272ad1d35fdb8e2f073c ""

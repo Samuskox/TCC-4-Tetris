@@ -497,6 +497,7 @@ INPUT Template Latex - Relatorio Tecnico - IFSP - SBV.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmssbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso12.tfm
 INPUT .\05Resumo.tex
 INPUT .\05Resumo.tex
 INPUT .\05Resumo.tex
@@ -579,10 +580,23 @@ INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\categoriaGamesCrawford.png
+INPUT .\imagens\categoriaGamesCrawford.png
+INPUT .\imagens\categoriaGamesCrawford.png
+INPUT .\imagens\categoriaGamesCrawford.png
+INPUT .\imagens\categoriaGamesCrawford.png
+INPUT .\imagens\categoriaGamesCrawford.png
+INPUT .\imagens\categoriaGamesCrawford.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
+INPUT .\imagens\exemploFigura.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso12.tfm
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
