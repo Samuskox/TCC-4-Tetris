@@ -8,15 +8,14 @@ var grid := []
 var xPlayer := 3.0
 var yPlayer := 3.0
 
-#var peca := [[Vector2(0, 0), Vector2(1, 0), Vector2(0,1), Vector2(1,1)]] # perguntar isso pro yago, eu entendi mais ou menos
-const peca: Array[Vector2] = [
+const iP: Array[Vector2] = [
 	Vector2(0,0), 
 	Vector2(0,1),
 	Vector2(0,2),
 	Vector2(0,3)
 ]
 
-var piece := Piece.new(peca,Vector2(xPlayer, yPlayer), Color.CYAN)
+var piece := Piece.new(iP,Vector2(xPlayer, yPlayer), Color.CYAN)
 
 func _ready() -> void:
 	grid.resize(GridWidth)
@@ -30,18 +29,12 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
-	queue_redraw()
-	
-	
-	
 	if Input.is_action_just_pressed("direita"):
-		piece.position.x = clamp(piece.position.x + 1, 0, 8) # num funfa
-		print("direita bozonaro klmds" + str(xPlayer))
+		piece.move(Vector2(1,0))
 	if Input.is_action_just_pressed("esquerda"):
-		xPlayer = clamp(xPlayer - 1, 0, 8)
-		#print("esquerda lula ksksk")./
+		piece.move(Vector2(-1,0))
 	if(Input.is_action_just_pressed("baixo")):
-		yPlayer += 1
+		piece.move(Vector2(0,1))
 		#print("semata kk")
 	
 func _draw() -> void:
@@ -71,22 +64,8 @@ func _draw() -> void:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DEEP_PINK)
 			elif grid[x][y] == 7:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.WEB_PURPLE)
-	#moviment(xPlayer, yPlayer)
-	#drawPiece(peca,Vector2(xPlayer, yPlayer))
-
-#func moviment(x,y):
-	#var block_pos = Vector2(x, y) * cellSize
-	#draw_rect(Rect2(block_pos, Vector2(cellSize, cellSize)), Color.CORAL, true)
-	
-	
-
 
 func _on_timer_timeout() -> void:
 	yPlayer += 1
 	
-			
-
-#func drawPiece(peca, pos):
-	#for block in peca:
-		#draw_rect(Rect2((block + pos) * cellSize, Vector2(cellSize, cellSize)), Color.CYAN, true)
 	
