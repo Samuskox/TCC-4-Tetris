@@ -1,7 +1,7 @@
-PWD c:\Users\Samuel\Desktop\TCC\TCC-4-Tetris\Documentação\Documentação\Template Latex - Relatorio Tecnico - IFSP - SBV
+PWD c:\Users\Samuel\Desktop\TCC\TCC-4-Tetris\Documentação\TemplatesTrabalhosIFSPSBV-master\Template Latex - Artigo - IFSP - SBV
 INPUT C:\Users\Samuel\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Samuel\Desktop\TCC\TCC-4-Tetris\Documentação\Documentação\Template Latex - Relatorio Tecnico - IFSP - SBV\Template Latex - Relatorio Tecnico - IFSP - SBV.tex
-OUTPUT Template Latex - Relatorio Tecnico - IFSP - SBV.log
+INPUT c:\Users\Samuel\Desktop\TCC\TCC-4-Tetris\Documentação\TemplatesTrabalhosIFSPSBV-master\Template Latex - Artigo - IFSP - SBV\Template Latex - Artigo - IFSP - SBV.tex
+OUTPUT Template Latex - Artigo - IFSP - SBV.log
 INPUT C:\Program Files\MiKTeX\tex\latex\abntex2\abntex2.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\abntex2\abntex2.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
@@ -20,44 +20,44 @@ INPUT C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\etoolbox\etoolbox.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\memoir\mem12.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\memoir\mem12.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\memoir\mem12.clo
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\dcolumn.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\dcolumn.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\delarray.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\delarray.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\booktabs\booktabs.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\booktabs\booktabs.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\nameref.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\nameref.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\refcount\refcount.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\refcount\refcount.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\infwarerr\infwarerr.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT C:\Program Files\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\kvoptions\kvoptions.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\verbatim.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\verbatim.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\base\shortvrb.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\base\shortvrb.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\memoir\mem11.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\memoir\mem11.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\memoir\mem11.clo
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\dcolumn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\dcolumn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\delarray.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\delarray.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\verbatim.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\verbatim.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\shortvrb.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\shortvrb.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
@@ -106,31 +106,14 @@ INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
 INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
-INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
-INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
 INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-en.ini
-INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-fr.ini
-INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french3.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es.ini
 INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
 INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
 INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\carlisle\scalefnt.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\carlisle\scalefnt.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\calc.sty
@@ -144,7 +127,7 @@ INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\lastpage\lastpage.sty
@@ -357,12 +340,12 @@ INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifxetex.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\relsize\relsize.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\relsize\relsize.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\relsize\relsize.sty
-OUTPUT Template Latex - Relatorio Tecnico - IFSP - SBV.idx
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.aux
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.aux
-INPUT Template Latex - Relatorio Tecnico - IFSP - SBV.aux
-OUTPUT Template Latex - Relatorio Tecnico - IFSP - SBV.aux
-OUTPUT Template Latex - Relatorio Tecnico - IFSP - SBV.pdf
+OUTPUT Template Latex - Artigo - IFSP - SBV.idx
+INPUT .\Template Latex - Artigo - IFSP - SBV.aux
+INPUT .\Template Latex - Artigo - IFSP - SBV.aux
+INPUT Template Latex - Artigo - IFSP - SBV.aux
+OUTPUT Template Latex - Artigo - IFSP - SBV.aux
+OUTPUT Template Latex - Artigo - IFSP - SBV.pdf
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -380,38 +363,26 @@ INPUT C:\Program Files\MiKTeX\tex\latex\pdflscape\pdflscape-nometadata.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\pdflscape\pdflscape-nometadata.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
-INPUT .\01Capa.tex
-INPUT .\01Capa.tex
-INPUT .\01Capa.tex
-INPUT .\01Capa.tex
-INPUT 01Capa.tex
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmss.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmss.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmss.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss17.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss17.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi6.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy6.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
@@ -424,103 +395,51 @@ INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msa.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msa.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msa.cfg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msb.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msb.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msb.cfg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT .\02FolhaDeRosto.tex
-INPUT .\02FolhaDeRosto.tex
-INPUT .\02FolhaDeRosto.tex
-INPUT .\02FolhaDeRosto.tex
-INPUT 02FolhaDeRosto.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msb.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msb.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\Samuel\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
-INPUT .\03FichaCatalografica.tex
-INPUT .\03FichaCatalografica.tex
-INPUT .\03FichaCatalografica.tex
-INPUT .\03FichaCatalografica.tex
-INPUT 03FichaCatalografica.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\fichaCatalografica\exemploFichaCatalografica.pdf
-INPUT .\04AtaDefesa.tex
-INPUT .\04AtaDefesa.tex
-INPUT .\04AtaDefesa.tex
-INPUT .\04AtaDefesa.tex
-INPUT 04AtaDefesa.tex
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss17.tfm
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.toc
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.toc
-INPUT Template Latex - Relatorio Tecnico - IFSP - SBV.toc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmssbx10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso12.tfm
-INPUT .\05Resumo.tex
-INPUT .\05Resumo.tex
-INPUT .\05Resumo.tex
-INPUT .\05Resumo.tex
-INPUT 05Resumo.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-INPUT .\capitulo01Introducao.tex
-INPUT .\capitulo01Introducao.tex
-INPUT .\capitulo01Introducao.tex
-INPUT .\capitulo01Introducao.tex
-INPUT capitulo01Introducao.tex
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\ts1lmr.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ts1-lmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ts1-lmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ts1-lmr6.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmss.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmss.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmss.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Samuel\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
-INPUT .\capitulo02ConsideracoesGerais.tex
-INPUT .\capitulo02ConsideracoesGerais.tex
-INPUT .\capitulo02ConsideracoesGerais.tex
-INPUT .\capitulo02ConsideracoesGerais.tex
-INPUT capitulo02ConsideracoesGerais.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
 INPUT .\imagens\exemploFigura.png
@@ -541,8 +460,8 @@ INPUT .\fontes\ClasseExemplo.java
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmtt9.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
 INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
 INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
@@ -554,142 +473,86 @@ INPUT C:\Program Files\MiKTeX\tex\generic\stringenc\se-utf8.def
 INPUT C:\Program Files\MiKTeX\tex\generic\stringenc\se-iso-8859-1.def
 INPUT C:\Program Files\MiKTeX\tex\generic\stringenc\se-iso-8859-1.def
 INPUT C:\Program Files\MiKTeX\tex\generic\stringenc\se-iso-8859-1.def
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ts1-lmr10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmbx9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr7.tfm
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\categoriaGamesCrawford.png
-INPUT .\imagens\categoriaGamesCrawford.png
-INPUT .\imagens\categoriaGamesCrawford.png
-INPUT .\imagens\categoriaGamesCrawford.png
-INPUT .\imagens\categoriaGamesCrawford.png
-INPUT .\imagens\categoriaGamesCrawford.png
-INPUT .\imagens\categoriaGamesCrawford.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso12.tfm
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\imagens\exemploFigura.png
-INPUT .\capitulo03Metodologia.tex
-INPUT .\capitulo03Metodologia.tex
-INPUT .\capitulo03Metodologia.tex
-INPUT .\capitulo03Metodologia.tex
-INPUT capitulo03Metodologia.tex
-INPUT .\capitulo04AnaliseDosResultados.tex
-INPUT .\capitulo04AnaliseDosResultados.tex
-INPUT .\capitulo04AnaliseDosResultados.tex
-INPUT .\capitulo04AnaliseDosResultados.tex
-INPUT capitulo04AnaliseDosResultados.tex
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmri9.tfm
 INPUT .\imagens\cronograma.png
 INPUT .\imagens\cronograma.png
 INPUT .\imagens\cronograma.png
 INPUT .\imagens\cronograma.png
 INPUT .\imagens\cronograma.png
 INPUT .\imagens\cronograma.png
-INPUT .\capitulo05ConclusoesRecomendacoes.tex
-INPUT .\capitulo05ConclusoesRecomendacoes.tex
-INPUT .\capitulo05ConclusoesRecomendacoes.tex
-INPUT .\capitulo05ConclusoesRecomendacoes.tex
-INPUT capitulo05ConclusoesRecomendacoes.tex
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.bbl
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.bbl
-INPUT Template Latex - Relatorio Tecnico - IFSP - SBV.bbl
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.brf
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.brf
-INPUT Template Latex - Relatorio Tecnico - IFSP - SBV.brf
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.brf
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.brf
-OUTPUT Template Latex - Relatorio Tecnico - IFSP - SBV.brf
-OUTPUT Template Latex - Relatorio Tecnico - IFSP - SBV.toc
-INPUT Template Latex - Relatorio Tecnico - IFSP - SBV.aux
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.brf
-INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.brf
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
+INPUT .\Template Latex - Artigo - IFSP - SBV.bbl
+INPUT .\Template Latex - Artigo - IFSP - SBV.bbl
+INPUT Template Latex - Artigo - IFSP - SBV.bbl
+INPUT .\Template Latex - Artigo - IFSP - SBV.brf
+INPUT .\Template Latex - Artigo - IFSP - SBV.brf
+INPUT Template Latex - Artigo - IFSP - SBV.brf
+INPUT .\Template Latex - Artigo - IFSP - SBV.brf
+INPUT .\Template Latex - Artigo - IFSP - SBV.brf
+OUTPUT Template Latex - Artigo - IFSP - SBV.brf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT Template Latex - Artigo - IFSP - SBV.aux
+INPUT .\Template Latex - Artigo - IFSP - SBV.brf
+INPUT .\Template Latex - Artigo - IFSP - SBV.brf
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbx9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr7.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr17.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr17.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr6.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmr9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmri9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss17.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss17.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt9.pfb

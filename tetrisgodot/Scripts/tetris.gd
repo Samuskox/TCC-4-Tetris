@@ -16,6 +16,8 @@ const peca: Array[Vector2] = [
 	Vector2(0,3)
 ]
 
+var piece := Piece.new(peca,Vector2(xPlayer, yPlayer), Color.CYAN)
+
 func _ready() -> void:
 	grid.resize(GridWidth)
 	for x in range(GridWidth):
@@ -24,6 +26,7 @@ func _ready() -> void:
 		for y in range(GridHeight):
 			grid[x][y] = 0
 			
+	add_child(piece)
 
 func _process(delta: float) -> void:
 	
@@ -32,7 +35,7 @@ func _process(delta: float) -> void:
 	
 	
 	if Input.is_action_just_pressed("direita"):
-		xPlayer = clamp(xPlayer + 1, 0, 8) # num funfa
+		piece.position.x = clamp(piece.position.x + 1, 0, 8) # num funfa
 		print("direita bozonaro klmds" + str(xPlayer))
 	if Input.is_action_just_pressed("esquerda"):
 		xPlayer = clamp(xPlayer - 1, 0, 8)
@@ -69,11 +72,11 @@ func _draw() -> void:
 			elif grid[x][y] == 7:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.WEB_PURPLE)
 	#moviment(xPlayer, yPlayer)
-	drawPiece(peca,Vector2(xPlayer, yPlayer))
+	#drawPiece(peca,Vector2(xPlayer, yPlayer))
 
-func moviment(x,y):
-	var block_pos = Vector2(x, y) * cellSize
-	draw_rect(Rect2(block_pos, Vector2(cellSize, cellSize)), Color.CORAL, true)
+#func moviment(x,y):
+	#var block_pos = Vector2(x, y) * cellSize
+	#draw_rect(Rect2(block_pos, Vector2(cellSize, cellSize)), Color.CORAL, true)
 	
 	
 
@@ -83,7 +86,7 @@ func _on_timer_timeout() -> void:
 	
 			
 
-func drawPiece(peca, pos):
-	for block in peca:
-		draw_rect(Rect2((block + pos) * cellSize, Vector2(cellSize, cellSize)), Color.CYAN, true)
+#func drawPiece(peca, pos):
+	#for block in peca:
+		#draw_rect(Rect2((block + pos) * cellSize, Vector2(cellSize, cellSize)), Color.CYAN, true)
 	

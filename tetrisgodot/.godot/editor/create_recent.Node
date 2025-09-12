@@ -1,2 +1,6 @@
+TileMap
+TileMapLayer
+GridContainer
+Camera2D
 Node2D
 Timer
