@@ -532,7 +532,37 @@ Jogos de quebra-cabeça como \textit{Portal} (2007), exigem que o jogador utiliz
 
 \section{Tecnologias para Desenvolvimento de jogos}
 
+Para desenvolver um jogo, é necessário conhecimentos de várias áreas distintas como:
+música, programação de algoritmos, desenhos gráficos e outros. A utilização dessas áreas de forma individual,
+seria extremamente complexa, por isso são criados \textit{engines} ou motores gráficos \cite{Alves2020}.
+Uma \textit{engine} abstrai esses elementos que precisaria de um conhecimento muito específico e extensos, 
+essa abstração não é algo padronizado, alguns motores gráficos tem mais abstração, outros possui menos abstração \cite{Alves2020}.
+
+Motores gráficos são ambientes para desenvolvimento de jogos, como uma IDE\footnote{Integrated Development Environment (Ambiente de Desenvolvimento Integrado)}, 
+gerenciando o \textit{loop} e possuindo módulos para a criação de diferentes tipos de jogos. O \textit{looping} de um jogo é um processo fundamental de um jogo, defini o ciclo de vida de um jogo \cite{Alves2020}. 
+	
+Apesar da estrutura de um \textit{loop} ser muito complexo e detalhado, todas as \textit{engines} seguem o mesmo padrão. 
+Essa estrutura de \textit{looping} passa por uma entrada, a partir da entrada, atualiza as estruturas dentro do jogo, 
+e por último renderiza o jogo no estado atual e assim é feito a repetição desse processo \cite{Alves2020}, como mostrado na imagem abaixo:
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Ciclo de vida de um jogo}
+	\includegraphics[scale=0.7]{imagens/LoopEngineJogo.png}
+	\\\textbf{Fonte:} Adaptado de \cite{Alves2020}
+\end{figure}
+\FloatBarrier
+
+
 \subsection{GDscript - Godot}
+
+A \textit{Godot Engine} é uma ferramenta grátis e de código aberto licenciado pelo MIT para criação de jogos 2D e 3D \cite{godot_docs}.
+A \textit{Godot Engine} oferece ao desenvolvedor ferramentas para criação de jogos, gereciamento de \textit{assets} e também oferece um editor de script integrado,
+o desenvolvimento na \textit{Godot Engine} é baseado em classes de objetos chamados nós (\text{nodes}) \cite{salmela2022_godot}. 
+Existem muitos tipo de nós disponíveis, tipos de nós para gráficos, física, interface de usuário, audio e de outros tipos, esses 
+nós são organizados em uma cena de acordo como o desenvolvedor quiser para comportamentos mais complexos \cite{salmela2022_godot}.
+
 
 \subsection{Java - LibGDX}
 

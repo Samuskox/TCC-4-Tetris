@@ -26,6 +26,7 @@ func _ready() -> void:
 			grid[x][y] = 0
 			
 	add_child(piece)
+	
 
 func _process(delta: float) -> void:
 	
@@ -64,8 +65,4 @@ func _draw() -> void:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DEEP_PINK)
 			elif grid[x][y] == 7:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.WEB_PURPLE)
-
-func _on_timer_timeout() -> void:
-	yPlayer += 1
-	
 	

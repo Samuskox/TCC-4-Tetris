@@ -11,6 +11,17 @@ func _init(iblock: Array[Vector2], igridPosition : Vector2, iColor: Color):
 	blocks = iblock
 	gridPosition = igridPosition
 	color = iColor
+	
+func _ready() -> void:
+	var timer := Timer.new()
+	add_child(timer)
+	timer.timeout.connect(fall)
+	timer.autostart = true
+	timer.wait_time = 1.0
+	timer.start(1)
+
+
+	
 
 func _draw() -> void:
 	for block in blocks:
@@ -22,4 +33,14 @@ func move(direction: Vector2):
 	else :
 		gridPosition += direction
 	queue_redraw()
+	
+func fall():
+	queue_redraw()
+	gridPosition.y += 1
+	
+func _process(delta: float) -> void:
+	pass
+
+
+	
 	
