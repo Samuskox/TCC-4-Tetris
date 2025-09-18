@@ -559,14 +559,118 @@ e por último renderiza o jogo no estado atual e assim é feito a repetição de
 
 A \textit{Godot Engine} é uma ferramenta grátis e de código aberto licenciado pelo MIT para criação de jogos 2D e 3D \cite{godot_docs}.
 A \textit{Godot Engine} oferece ao desenvolvedor ferramentas para criação de jogos, gereciamento de \textit{assets} e também oferece um editor de script integrado,
-o desenvolvimento na \textit{Godot Engine} é baseado em classes de objetos chamados nós (\text{nodes}) \cite{salmela2022_godot}. 
+o desenvolvimento na \textit{Godot Engine} é baseado em classes de objetos chamados nós (\text{nodes}) \cite{salmela2022_godot, godot_docs}. 
 Existem muitos tipo de nós disponíveis, tipos de nós para gráficos, física, interface de usuário, audio e de outros tipos, esses 
-nós são organizados em uma cena de acordo como o desenvolvedor quiser para comportamentos mais complexos \cite{salmela2022_godot}.
+nós são organizados em uma cena de acordo como o desenvolvedor quiser para comportamentos mais complexos \cite{salmela2022_godot, godot_docs}.
+Assim como um script pode ser anexado á um nó para também conseguir um comportamento específico. \textit{Godot Engine} tem uma linguagem para programar
+scripts chamada GDScript, a síntaxe é bem similar ao Python por causa da indentação mas não é baseado na mesma, também uporta a linguagem C\# \cite{godot_docs}.
+Um exemplo do ambiente de desenvolvimento na \textit{Godot Engine} é mostrado abaixo:
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Janela do editor Godot durante o desenvolvimento do jogo}
+	\includegraphics[scale=0.3]{imagens/Godot.jpg}
+	\\\textbf{Fonte:} Elaborado pelo Autor
+\end{figure}
+\FloatBarrier
+
+\textit{Godot Engine} possui fluxos separados de renderização 2D e 3D, 
+na renderização 3D oferece físicas de sombra e luz, 
+já na renderização em 2D também oferece luz, sombra e máscaras 2D. 
+Em ambos os fluxos de renderização possibilita o desenvolvedor utilizar físicas para simulação e 
+\textit{ray casting}\footnote{Técnica de renderização 3D a partir de um ponto de observação} \cite{godot_docs}.
 
 
-\subsection{Java - LibGDX}
 
-\subsection{C++ - Raylib}
+\subsection{Java}
 
-\subsection{Python - pygame}
+Java é uma linguagem de programação que surgiu na década de 90, como uma necessidade para tráfegar dados na web, a linguagem é baseada no paradigma de orienteção à objeto, 
+é possível encapsular dados dentro de um bloco e criar métodos demanipulação desses dados. Um exemplo de encapsulamento é mostrado na imagem abaixo: 
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Encapsulamento de variáveis e métodos}
+	\includegraphics[scale=1]{imagens/EncapsulamentoObjetoJava.png}
+	\\\textbf{Fonte:} \cite{indrusiak_java}
+\end{figure}
+\FloatBarrier
+
+Um exemplo em código de encapsulamento:
+
+\lstinputlisting[language=Java]{fontes/Classe.java} 
+
+A linguagem também permite a modularização das aplicações, reuso e manuntenção simples do código implementado \cite{indrusiak_java}.
+Sob as camadas internas, Java em seus recursos fundamentais de uma linguagem, como estruturas de controles, estruturas de definição,
+tratamentos de exceções, construtores de objeto, modificadores de acesso, tipos de dados e outros, é padronizado e mantém um 
+conjunto de recursos limitado comparado á outras linguagens, essa padronização e simplicidade se mostra na ausência no uso 
+de ponteiros e gerenciamento de memória por meio da programação, fazendo com que a programação fique mais eficiente \cite{indrusiak_java}. 
+
+A linguagem Java é tanto interpretada como compilada, após escrever um código em Java, é salvo o arquivo fonte e em seguida é possível
+compilar este arquivo fonte, produzindo um arquivo binário chamado de arquivo classe, esses arquivos não são executados diretamente pelos processadores .
+Esses arquivos estão em um formato chamado bytecode e assim podem ser executados em qualquer interpretador de Java, o código precisa ser compilado 
+apenas uma vez, pois os bytecodes são gerados dentro do arquivo classe e podem ser executados em qualquer plataforma de hardware e software \cite{indrusiak_java, deitel2016java}.
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Como funciona a execução e compilação de um código em java}
+	\includegraphics[scale=0.6]{imagens/CompiladorJava.png}
+	\\\textbf{Fonte:} \cite{deitel2016java}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{LibGDX}
+
+LibGDX é um framework\footnote{Conjunto de ferramentas, bibliotecas, componentes prontos e boas práticas que fornecem uma estrutura base para o desenvolvimento de software.} 
+escrito em java, utiliza OpenGL \footnote{Interface de programação de aplicações (API) gráfica multiplataforma que permite renderizar gráficos 2D e 3D. Disponível em:https://www.opengl.org/} e 
+é código aberto para desenvolvimento de jogos 3D e 2D para computadores e celulares \cite{libgdx_wiki}.
+A LibGDX oferece módulos para que a arquitetura de um jogo possa ser construído, são eles:
+\begin{itemize}
+	\item \textbf{Módulo de entradas:} Dá ao desenvolvedor uma forma unificada 
+	de modelos de entradas, detectando teclados, telas sensíveis ao toque, aceletometros e mouses \cite{libgdx_wiki}.
+	\item \textbf{Módulo de gráficos:} Proporciona o desenho de imagens na tela utilizando OpenGL ES\footnote{(Graphics Library for Embedded Systems) Disponível em: https://www.khronos.org/opengles/} fornecido por hardware \cite{libgdx_wiki}.  
+	\item \textbf{Módulo de arquivos:} Concede o acesso a métodos convenientes para leitura e gravação de arquivos de mídia \cite{libgdx_wiki}.
+	\item \textbf{Módulo de áudio:} Disponibiliza recursos de áudio para gravação e reprodução de arquivos áudio em todas as plataformas \cite{libgdx_wiki}.
+	\item \textbf{Módulo de redes:} Fornece ao desenvolvedor metódos para utilizar recursos de rede, 
+	usando protocolos de internet e comunicação cliente e servidor \cite{libgdx_wiki}.
+\end{itemize}
+
+Com esses módulos disponíveis na biblioteca LibGDX, abaixo mostra um diagrama como esses módulos são usados em um ciclo de vida de um jogo:
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Ciclo de vida de um jogo com os módulos da LibGDX}
+	\includegraphics[scale=0.8]{imagens/CicloDeVidaJogo.png}
+	\\\textbf{Fonte:} \cite{libgdx_wiki}
+\end{figure}
+\FloatBarrier
+
+Além disso, LibGDX oferece ao desenvolvedor a possibilidade de utilizar partículas 2D,
+manipulação de \textit{bitmaps} e editor de texturas, junto com isso \cite{libgdx_wiki,firmansyahRPGLibgdx}, existem métodos principais, são essenciais para manter o ciclo de vida de um jogo, são eles:
+
+\begin{table}[h]
+\centering
+\caption{Ciclo de Métodos do LibGDX (Adaptado de \cite{firmansyahRPGLibgdx})}
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Nome do Método} & \textbf{Descrição} \\ \hline
+\textbf{Create()} & Este método será usado uma vez quando a aplicação for criada. \\ \hline
+\textbf{Resize(int width, int height)} & Este método será sempre usado quando o tamanho da tela do jogo estiver mudando e não estiver em pausa. Há um parâmetro de largura e altura da tela que é atualizado sempre que o jogo for redimensionado. \\ \hline
+\textbf{Render()} & Este método é usado como repetição do jogo na aplicação. A lógica do jogo é atualizada aqui. \\ \hline
+\textbf{Pause()} & No Android, este método é usado quando o botão \textit{home} é pressionado ou quando há uma chamada telefônica. No desktop, este método é usado apenas uma vez antes do método \textit{dispose}. \\ \hline
+\textbf{Resume()} & Este método é usado apenas no Android para continuar a aplicação após estar em pausa. \\ \hline
+\textbf{Dispose()} & Este método é usado para fechar a aplicação. \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{C++}
+
+\subsubsection{Raylib}
+
+\subsection{Python}
+
+\subsubsection{Pygame}
 
