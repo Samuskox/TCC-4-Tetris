@@ -1,5 +1,5 @@
 public class Classe{
-    public static void main(String[] args) {
+
         String variavel;
         int num;
 
@@ -19,6 +19,4 @@ public class Classe{
         public void setNum(){
             this.num = num;
         }
-
-    }
 }

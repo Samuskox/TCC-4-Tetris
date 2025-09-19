@@ -649,7 +649,7 @@ Com esses módulos disponíveis na biblioteca LibGDX, abaixo mostra um diagrama 
 \FloatBarrier
 
 Além disso, LibGDX oferece ao desenvolvedor a possibilidade de utilizar partículas 2D,
-manipulação de \textit{bitmaps} e editor de texturas, junto com isso \cite{libgdx_wiki,firmansyahRPGLibgdx}, existem métodos principais, são essenciais para manter o ciclo de vida de um jogo, são eles:
+manipulação de \textit{bitmaps} e editor de texturas, junto com isso \cite{libgdx_wiki, firmansyahRPGLibgdx}, existem métodos principais, são essenciais para manter o ciclo de vida de um jogo, são eles:
 
 \begin{table}[h]
 \centering
@@ -673,17 +673,55 @@ demanda de programas de softwares que ocorreu na década de 1980 \cite{deitel200
 
 C++ é uma linguagem que mistura tanto a programação orientada a objeto tanto quanto a programação procecedural, assim o programador tem uma
 maior flexibilidade escolhendo o paradigma que mais se adequa ao projeto. A criação de códigos fica mais eficiente e é mais reutilizáveis por causa da 
-modularização\footnote{Tarefas separadas em funções ou procedimentos, cada um deles realizando uma parte do programa}.
+modularização\footnote{Tarefas separadas em funções ou procedimentos, cada uma realizando uma parte do programa}.
 
 Os programas em C++ são feitos classes e funções existentes na C++ \textit{Standart Library}, além disso a linguagem suporta a programação genérica
 por meio de modelos de diferentes tipos, sem a necessidade de reescrever o código\cite{turos2024cpp, deitel2005cpp}.
 
+Os códigos feitos em C++ ao serem executados passam por 6 fases: edição, pré-processamento, compilação, linkagem, carregamento e execução, como mostrado abaixo:
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{As fases para rodar um código em C++}
+	\includegraphics[scale=0.8]{imagens/ambienteC.png}
+	\\\textbf{Fonte:} \cite{deitel2005cpp}
+\end{figure}
+\FloatBarrier
 
 
 
 \subsubsection{Raylib}
 
+Raylib é uma biblioteca de programação de Jogos 2D e 3D de código aberto escrita em C.
+A Raylib não provê uma API de documentação igual o Godot ou a LibGDX, apenas uma lista com todas funções disponíveis e um exemplo de como usa-las, Raylib tem suporte para computadores, tanto Desktop quanto para Web e para celulares.
+Apesar de ser escrita em C, a linguagem suporta também pode ser usada em linguagens como C++ e Python \cite{raylib2025}.
+Assim como a LibGDX e o godot, a Raylib tem funções próprias que compõe a arquitetura de um jogo \cite{raylib2025}, abaixo na tabela é mostrado as funções:
+
+\begin{table}[h]
+\centering
+\caption{Funções básicas para utilizar a Raylib. Feito pelo autor \cite{raylib2025}}
+\begin{tabular}{|l|p{7cm}|}
+\hline
+\textbf{Nome da função} & \textbf{Descrição} \\ \hline
+\textbf{ InitWindow(Width, Height, "My Game")} & Este método será usado uma vez quando a aplicação for criada. Há parâmetro de largura e altura da tela e o nome da janela  \\ \hline
+\textbf{ SetTargetFPS(60)} & Este método configura quantos quadros por segundo o jogo será renderizado \\ \hline
+\textbf{ BeginDrawing()} & Este método é usado dentro de uma estrutura de \textit{loop}, serve para desenhar na janela \\ \hline
+\textbf{ ClearBackground(RAYWHITE)} & Este método é usado para limpar a janela em uma cor específica para evitar erros visuais \\ \hline
+\textbf{ EndDrawing()} & Este método é utilizado para terminar o desenho dentro da janela \\ \hline
+\textbf{ CloseWindow()} & Método para fechar a aplicação \\ \hline
+\end{tabular}
+\end{table}
+
+Também abaixo é mostrado um código base para a programação de um jogo em Raylib:
+
+\lstinputlisting[language=C++]{fontes/Raylib.cpp} 
+
 \subsection{Python}
+
+
+
+
 
 \subsubsection{Pygame}
 
