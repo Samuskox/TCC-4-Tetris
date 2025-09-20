@@ -1,27 +1,30 @@
 #include "raylib.h"
 
 int main() {
-    // Determin the Game Window Width and Height
+    // Determina a altura e largura da janela
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    // Initialize the Window
+    // Inicializa a janela
     InitWindow(screenWidth, screenHeight, "My Game");
 
-    // Setting the Frames Per Second
+    // Configura quantos quadros por segundo
     SetTargetFPS(60);
 
-    // The Game Loop
-    while (!WindowShouldClose() /*WindowShouldClose returns true if esc is clicked and closes the window*/) {
+    // O Loop do jogo
+    while (!WindowShouldClose() /*WindowShouldClose retorna 
+    verdadeiro se esc é apertado e fecha a janela*/) {
 
-        // Setup Canvas
+        // Configura o Canva
         BeginDrawing();
-        // Clear canvas to a specific color to avoid flicker
+        // Limpa o canva para não haver erros
         ClearBackground(RAYWHITE);
 
-        // Here goes all the Game Logic
+        // ...
+        // Lógica do jogo é inserida aqui
+        // ...
 
-        // teardown Canvas
+        // Fecha o canva
         EndDrawing();
     }
     CloseWindow();

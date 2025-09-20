@@ -158,19 +158,6 @@ Exemplo 2 de citação direta:
 
 Exemplo de nota de rodapé\footnote{Essa é uma nota de rodapé!}.
 
-
-\section{Trabalhos Correlatos}
-
-Pesquise e descreva no mínimo três trabalhos correlatos ao seu.
-
-Trabalhos relacionados a tetris.
-
-Trabalhos relacionados a Game Design.
-
-Trabalhos relacionados a Arquitetura de jogos.
-
-Trabalhos relacionados a Jogos em gerais.
-
 \section{O que é um Jogo?}
 Criar e participar de jogos desde os períodos mais
 antigos da história é um impulso básico do Homo 
@@ -585,7 +572,7 @@ Em ambos os fluxos de renderização possibilita o desenvolvedor utilizar físic
 
 \subsection{Java}
 
-Java é uma linguagem de programação que surgiu na década de 90, como uma necessidade para tráfegar dados na web, a linguagem é baseada no paradigma de orienteção à objeto, 
+Java é uma linguagem de programação de baixo nível que surgiu na década de 90, como uma necessidade para tráfegar dados na web, a linguagem é baseada no paradigma de orienteção à objeto, 
 é possível encapsular dados dentro de um bloco e criar métodos demanipulação desses dados. Um exemplo de encapsulamento é mostrado na imagem abaixo: 
 
 \FloatBarrier
@@ -668,8 +655,8 @@ manipulação de \textit{bitmaps} e editor de texturas, junto com isso \cite{lib
 
 \subsection{C++}
 
-A linguagem de programação C++, se originou a partir da linguagem de programação C, foi criado para abstrair dados, suportar a programação orientada a objeto e suprir uma 
-demanda de programas de softwares que ocorreu na década de 1980 \cite{deitel2005cpp}.
+A linguagem de programação C++ de alto nível, se originou a partir da linguagem de programação C, foi criado para abstrair dados, suportar a programação orientada a objeto e suprir uma 
+demanda de programas de softwares que ocorreu na década de 1980 \cite{deitel2005cpp, overviewCPP}.
 
 C++ é uma linguagem que mistura tanto a programação orientada a objeto tanto quanto a programação procecedural, assim o programador tem uma
 maior flexibilidade escolhendo o paradigma que mais se adequa ao projeto. A criação de códigos fica mais eficiente e é mais reutilizáveis por causa da 
@@ -719,9 +706,112 @@ Também abaixo é mostrado um código base para a programação de um jogo em Ra
 
 \subsection{Python}
 
+Python é uma linguagem de alto nível que surgiu na década de 1990 especializada para físicos e engenheiros, é usada popularmente nos dias atuais por empresas alta tecnologia, 
+diferentemente de várias outras linguagens de programação populares, python o código precisa ser bem indentado pois depende do recuo para 
+o código funcionar, o que torna a linguagem com sintaxe simples, clara e concisa\cite{thinkPython, oracle2025_python}, uma imagem demonstrado abaixo:
 
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Indentação de um programa comum em python}
+	\includegraphics[scale=0.8]{imagens/EstruturaProgramaPython.png}
+	\\\textbf{Fonte:} \cite{pythonDesenvolvedores}
+\end{figure}
+\FloatBarrier
 
+Python é interpretada, ou seja, não é criado um arquivo com uma linguagem de máquina para o computador ler, 
+o código é lido por um interpretador na máquina virtual python\cite{thinkPython}, como mostrado na imagem abaixo:
 
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Diagrama de um interpretador}
+	\includegraphics[scale=0.5]{imagens/Interpretador.png}
+	\\\textbf{Fonte:} adaptado de \cite{thinkPython}
+\end{figure}
+\FloatBarrier
+
+A linguagem possui diversas estruturas e uma grande coleção de módulos prontos para uso, como listas, dicionários, data/hora, e outros recursos, inclusive é possivel adicionar frameworks e bibliotecas de terceitos \cite{pythonDesenvolvedores}.
+Além disso, python é considerado uma linguagem de multi-paradigmas, ela suporta a programação modular, procedural, funcional e a orientada à objetos \cite{ParadigmsPython}. Abaixo está um exemplo de um programa simples em python:
+
+\lstinputlisting[language=python]{fontes/programa.py} 
 
 \subsubsection{Pygame}
 
+Pygame é um framework para Python, foi feita sobre a biblioteca SDL(Simple DirectMedia)\footnote{Biblioteca de desenvolvimento em C para recursos de áudio, teclado, mouse e gráficos. Disponível: https://www.libsdl.org/}
+que permitiu abstrair os recursos da biblioteca para que fosse mais acessível e mais fácil o desenvolvimento de jogos, através de módulos é possivel construir uma estrutura para um jogo \cite{pygame2025}.
+Todos os métodos da biblioteca são chamados pela biblioteca pygame, abaixo tem uma tabela exemplificando:
+
+\begin{table}[h]
+\centering
+\caption{Funções principais da biblioteca Pygame. Feito pelo autor. \cite{pygame2025}}
+\begin{tabular}{|l|p{7cm}|}
+\hline
+\textbf{Função} & \textbf{Descrição} \\ \hline
+\texttt{pygame.init()} & Importa e inicializa todos os módulos da biblioteca. \\ \hline
+\texttt{pygame.display} & Vários métodos para configurar a janela ou a tela \\ \hline
+\texttt{pygame.event.get()} & Detecta se algum evento ocorreu, por exemplo: jogador apertou uma tecla. \\ \hline
+\texttt{pygame.draw} & Conjunto de métodos usados para desenhar formas e geometria. \\ \hline
+\texttt{pygame.display.flip()} & Atualiza a tela inteira. \\ \hline
+\texttt{pygame.quit()} & Fecha a aplicação. \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Trabalhos Correlatos}
+
+Pesquise e descreva no mínimo três trabalhos correlatos ao seu.
+
+Trabalhos relacionados a tetris.
+
+Trabalhos relacionados a Game Design.
+
+Trabalhos relacionados a Arquitetura de jogos.
+
+Trabalhos relacionados a Jogos em gerais.
+
+\subsection{Desenvolvimento de jogos eletrônicos}
+
+No trabalho de \cite{morais2009jogos} propõe um estudo de um desenvolvimento de um jogo chamado "\textit{I Wanna be the
+Tribute}" feito com o motor gráficos do Game Maker 7.0, o autor aborda técnicas e o processo de engenharia de Software 
+no desenvolvimento de um jogo.
+
+No trabalho de \cite{morais2009jogos} afirma que o processo de desenvolvimento de jogos eltrônicos possui 5 fases, elas são:
+
+\begin{itemize}
+	\item \textbf{\textit{Game Design:}} O \textit{game design} é a etapa mais importante na hora de construir um 
+	jogo, com ela, é definido a forma como o jogador pensa e raciocina para tomar decisões que cheguem à um objetivo 
+	e essas decisões são tomadas a partir da regra do jogo. Segundo as palavras de \cite{morais2009jogos}:
+		\begin{citacao}
+			Um design mal feito vai gerar um jogo ruim, sem dúvidas, e este problema deve-se ao fato de que o game design ainda é uma idéia muito nova na indústria. Um game design inovador geralmente traz um bom retorno
+		\end{citacao}
+	\item \textbf{Conceitualização:} Antes de começar o desenvolvimento do jogo, 
+	o criador deve pensar como o jogo deve ser, quais os objetivos do jogador e que desafios ele irá encontrar para alcança-los.
+	Ao longo do desenvolvimento pode haver mudança que não está na conceitualização.
+	\item \textbf{Imersão:} Um jogo propõe ao jogador um novo mundo fictício com regras próprias para se imergir nele, 
+	tanto o mundo quanto as regras devem fazer sentido para que seja imersivo. Um mundo estático com personagens mal planejados e sem personalidade,
+	 com uma história mal elaborada, geralmente termina em um jogo ruim.
+	\item \textbf{Desenho:} A aparência visual de um jogo, que inclui o design dos cenários e dos personagens, é importante porque é o que 
+	permite ao jogador ver e interagir com o mundo virtual. Por isso, é essencial que a parte gráfica seja bem elaborada e bem feita.
+	\item \textbf{Inteligência Artificial:} Nas maiorias dos jogos não há apenas o jogador naquele universo, há os não-jogadores, 
+	que são as inteligências artificiais, existem várias formas de se utilizar IA em jogos, mas o mais utilizado é o modelo básico, máquinas de estados finitos,
+	de acordo com o ambiente e o jogador é feita uma decisão/ação.
+	\item \textbf{Programação:} A programação é feita a partir de uma linguagem e em conjunto a linguagem é usada uma API (\textit{Application
+	Programming Interface}) como DirectX e OpenGL, para dar suporte à linguagem, com funções e módulos de cálculo de colisão, física de um
+ambiente, configuração de sons e vídeo que ajudam no desenvolvimento.
+\end{itemize}
+
+A proposta no desenvolvimento do jogo de \cite{morais2009jogos} é que o jogo é 2D e propõe o \textit{game design} que o jogador aprende ao perder,
+com a experiencia da derrota anterior, o jogador obtem conhecimento do ambiente e das regras para conseguir chegar no objetivo.
+
+A conclusão para o trabalho de \cite{morais2009jogos} é que um projeto de desenvolver um jogo se difere em vários aspectos da engenharia de software, por 
+necessitar da criatividade para um bom \textit{game design}, segundo \cite{morais2009jogos}:
+\begin{citacao}
+	Um bom game design não só gera um bom jogo, mas também 
+	um bom game designer, que são aqueles que se 
+	dedicam ao estudo das técnicas propostas neste 
+	trabalho, desde a concepção das idéias até o 
+	desenho do ambiente, da interface homem máquina, e do balanceamento do jogo.
+\end{citacao}
+
+
+\subsection{}
