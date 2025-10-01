@@ -18,6 +18,7 @@ const iP: Array[Vector2] = [
 var piece := Piece.new(iP,Vector2(xPlayer, yPlayer), Color.CYAN)
 
 func _ready() -> void:
+	piece.main_script = self
 	grid.resize(GridWidth)
 	for x in range(GridWidth):
 		grid[x] = []
@@ -29,6 +30,7 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
+
 	
 	if Input.is_action_just_pressed("direita"):
 		piece.move(Vector2(1,0))
@@ -47,8 +49,6 @@ func _draw() -> void:
 		
 	for x in range(GridWidth):
 		for y in range(GridHeight):
-			#var position = Vector2(x,y) * cellSize
-			
 			if grid[x][y] == 0:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 2,cellSize - 2)),Color(1, 0, 0, 0))
 			elif grid[x][y] == 1:
