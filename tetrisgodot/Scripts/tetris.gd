@@ -5,20 +5,68 @@ const GridHeight := 20
 const cellSize := 32
 var grid := []
 
+var piece
+
 var xPlayer := 3.0
 var yPlayer := 3.0
 
 const iP: Array[Vector2] = [
-	Vector2(0,0), 
-	Vector2(0,1),
-	Vector2(0,2),
-	Vector2(0,3)
+	Vector2(-1, 0),
+	Vector2(0, 0),
+	Vector2(1, 0),
+	Vector2(2, 0)
 ]
 
-var piece := Piece.new(iP,Vector2(xPlayer, yPlayer), Color.CYAN)
+const sP: Array[Vector2] = [
+	Vector2(0, 0),
+	Vector2(1, 0),
+	Vector2(0, 1),
+	Vector2(-1, 1)
+]
+
+const zP: Array[Vector2] = [
+	Vector2(0,-1), 
+	Vector2(0,0),
+	Vector2(-1,0),
+	Vector2(-1,1)
+]
+
+const tP: Array[Vector2] = [
+	Vector2(0,-1),
+	Vector2(0,0),
+	Vector2(1,0),
+	Vector2(0,1)
+]
+
+const oP: Array[Vector2] = [
+	Vector2(0,0),
+	Vector2(0,1),
+	Vector2(1,0),
+	Vector2(1,1),
+]
+
+const lP: Array[Vector2] = [
+	Vector2(-1, 0),
+	Vector2(0, 0),
+	Vector2(1, 0),
+	Vector2(1, 1)
+]
+
+const jP: Array[Vector2] = [
+	Vector2(-1, 0),
+	Vector2(0, 0),
+	Vector2(1, 0),
+	Vector2(-1, 1)
+]
+
+const allPieces: Array = [iP, sP, zP, tP, oP, lP, jP]
+
+
+
+
 
 func _ready() -> void:
-	piece.main_script = self
+	
 	grid.resize(GridWidth)
 	for x in range(GridWidth):
 		grid[x] = []
@@ -26,19 +74,28 @@ func _ready() -> void:
 		for y in range(GridHeight):
 			grid[x][y] = 0
 			
-	add_child(piece)
+	grid[4][7] = 3
+	grid[6][7] = 3
+	grid[5][8] = 3
+	spawnPiece()
 	
 
 func _process(delta: float) -> void:
-
-	
+	if piece == null:
+		return 
 	if Input.is_action_just_pressed("direita"):
 		piece.move(Vector2(1,0))
 	if Input.is_action_just_pressed("esquerda"):
 		piece.move(Vector2(-1,0))
 	if(Input.is_action_just_pressed("baixo")):
 		piece.move(Vector2(0,1))
-		#print("semata kk")
+	if(Input.is_action_just_pressed("ColocarPeca")):
+		piece.lockPiece(piece)
+		piece.queue_free() # remove a peça antiga
+		spawnPiece()
+		pass
+	if(Input.is_action_just_pressed("cima")):
+		piece.rotate_piece()
 	
 func _draw() -> void:
 	for x in range(GridWidth + 1):
@@ -65,4 +122,42 @@ func _draw() -> void:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DEEP_PINK)
 			elif grid[x][y] == 7:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.WEB_PURPLE)
+				
+func spawnPiece():
+	var num = (randi() % 7)
+	var shape : Array[Vector2] = allPieces.get(num)
+	#const allPieces: Array = [iP, sP, zP, tP, oP, lP, jP]
+	if(num == 0):
+		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.CYAN)
+	elif(num == 1):
+		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.WEB_PURPLE)
+	elif(num == 2):
+		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.RED)
+	elif(num == 3):
+		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.WEB_PURPLE)
+	elif(num == 4):
+		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.YELLOW)
+	elif(num == 5):
+		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.ORANGE)
+	elif(num == 6):
+		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.DARK_BLUE)
+	
+	piece.main_script = self
+	add_child(piece)
+	# Cria uma instância da peça
+	#var new_piece = piece.instantiate()
+	
+	# Passa os dados
+
+	#new_piece.gridPosition = Vector2(GridWidth / 2 - 2, 0) # Centraliza no topo
+	#new_piece.main_script = self
+	
+	# Adiciona à cena
+	#add_child(new_piece)
+	
+	# Retorna a peça (caso precise guardar referência)
+	return piece
+	
+	
+
 	
