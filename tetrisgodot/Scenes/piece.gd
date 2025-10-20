@@ -4,6 +4,7 @@ class_name Piece
 var color: Color
 var blocks: Array[Vector2]
 var gridPosition: Vector2 
+var num
 
 var main_script: Node2D
 
@@ -11,10 +12,85 @@ const cellSize = 32
 
 var checkFall = 0
 
-func _init(iblock: Array[Vector2], igridPosition : Vector2, iColor: Color):
-	blocks = iblock
+const iP: Array[Vector2] = [
+	Vector2(-1, 0),
+	Vector2(0, 0),
+	Vector2(1, 0),
+	Vector2(2, 0)
+]
+
+const sP: Array[Vector2] = [
+	Vector2(0, 0),
+	Vector2(1, 0),
+	Vector2(0, 1),
+	Vector2(-1, 1)
+]
+
+const zP: Array[Vector2] = [
+	Vector2(0,-1), 
+	Vector2(0,0),
+	Vector2(-1,0),
+	Vector2(-1,1)
+]
+
+const tP: Array[Vector2] = [
+	Vector2(0,-1),
+	Vector2(0,0),
+	Vector2(1,0),
+	Vector2(0,1)
+]
+
+const oP: Array[Vector2] = [
+	Vector2(0,0),
+	Vector2(0,1),
+	Vector2(1,0),
+	Vector2(1,1),
+]
+
+const lP: Array[Vector2] = [
+	Vector2(-1, 0),
+	Vector2(0, 0),
+	Vector2(1, 0),
+	Vector2(1, 1)
+]
+
+const jP: Array[Vector2] = [
+	Vector2(-1, 0),
+	Vector2(0, 0),
+	Vector2(1, 0),
+	Vector2(-1, 1)
+]
+
+const allPieces: Array = [iP, sP, zP, tP, oP, lP, jP]
+
+func _init(igridPosition : Vector2, iNumber):
+	
 	gridPosition = igridPosition
-	color = iColor
+	num = iNumber
+	
+	if(num == 0):
+		blocks = iP
+		color = Color.CYAN
+	elif(num == 1):
+		blocks = tP
+		color = Color.WEB_PURPLE
+	elif(num == 2):
+		blocks = zP
+		color = Color.RED
+	elif(num == 3):
+		blocks = sP
+		color = Color.LIGHT_GREEN
+	elif(num == 4):
+		blocks = oP
+		color = Color.YELLOW
+	elif(num == 5):
+		blocks = lP
+		color = Color.ORANGE
+	elif(num == 6):
+		blocks = jP
+		color = Color.DARK_BLUE
+		
+
 
 func _ready() -> void:
 	
@@ -42,12 +118,13 @@ func fall():
 	#var fall = gridPosition + Vector2(0,1)
 	print("checkfall: ", checkFall)
 	if not move(Vector2(0,1)):
-		checkFall += 1
+		
 		if checkFall == 1:
 			#lockPiece(self)
-			
+			#main_script.spawnPiece()
 			checkFall = 0
 		else:
+			checkFall += 1
 			pass
 	else:
 		gridPosition.y += 1
@@ -87,27 +164,11 @@ func lockPiece(piece: Piece):
 		var y = int(piece.gridPosition.y + block.y)
 		if x >= 0 and x < main_script.GridWidth and y >= 0 and y < main_script.GridHeight:
 			main_script.grid[x][y] = 1
-			
+		elif x >= 0 and x < main_script.GridWidth and y >= 0 and y < main_script.GridHeight and num == 1:
+			main_script.grid[x][y] = 7
+		queue_redraw()
 func rotate_piece() -> Array[Vector2]:
 	var rotated_blocks: Array[Vector2] = []
-	#var angle = 90
-	##var center := Vector2(0, 0)
-	##for block in blocks:
-		##center += block
-	##center /= blocks.size()
-	#print("Bloco rotacionado e depois arredondado")
-	#for block in blocks: 
-		#var rotatedBlock := block.rotated(angle)
-		##var new_block = rotatedBlock
-		#rotatedBlock.x = snappedf(rotatedBlock.x, 0.001)
-		#rotatedBlock.y = snappedf(rotatedBlock.y, 0.001)
-		#print(rotatedBlock)
-		#var new_block := rotatedBlock.snapped(Vector2.ONE)  # substitui round()
-		#print(new_block)
-		#var rounded_block: Vector2 = Vector2((new_block.x), (new_block.y))
-		#rotated_blocks.append(rounded_block)
-		#print(rounded_block)
-		#ESSE METODO NAO FUNFA POR QUE OS FLOATS FODEM TUDO
 	
 	for block in blocks:
 		var new_block: Vector2

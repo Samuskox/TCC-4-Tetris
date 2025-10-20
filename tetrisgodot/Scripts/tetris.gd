@@ -10,61 +10,6 @@ var piece
 var xPlayer := 3.0
 var yPlayer := 3.0
 
-const iP: Array[Vector2] = [
-	Vector2(-1, 0),
-	Vector2(0, 0),
-	Vector2(1, 0),
-	Vector2(2, 0)
-]
-
-const sP: Array[Vector2] = [
-	Vector2(0, 0),
-	Vector2(1, 0),
-	Vector2(0, 1),
-	Vector2(-1, 1)
-]
-
-const zP: Array[Vector2] = [
-	Vector2(0,-1), 
-	Vector2(0,0),
-	Vector2(-1,0),
-	Vector2(-1,1)
-]
-
-const tP: Array[Vector2] = [
-	Vector2(0,-1),
-	Vector2(0,0),
-	Vector2(1,0),
-	Vector2(0,1)
-]
-
-const oP: Array[Vector2] = [
-	Vector2(0,0),
-	Vector2(0,1),
-	Vector2(1,0),
-	Vector2(1,1),
-]
-
-const lP: Array[Vector2] = [
-	Vector2(-1, 0),
-	Vector2(0, 0),
-	Vector2(1, 0),
-	Vector2(1, 1)
-]
-
-const jP: Array[Vector2] = [
-	Vector2(-1, 0),
-	Vector2(0, 0),
-	Vector2(1, 0),
-	Vector2(-1, 1)
-]
-
-const allPieces: Array = [iP, sP, zP, tP, oP, lP, jP]
-
-
-
-
-
 func _ready() -> void:
 	
 	grid.resize(GridWidth)
@@ -91,6 +36,7 @@ func _process(delta: float) -> void:
 		piece.move(Vector2(0,1))
 	if(Input.is_action_just_pressed("ColocarPeca")):
 		piece.lockPiece(piece)
+		queue_redraw() # repinta tudo
 		piece.queue_free() # remove a peça antiga
 		spawnPiece()
 		pass
@@ -125,38 +71,13 @@ func _draw() -> void:
 				
 func spawnPiece():
 	var num = (randi() % 7)
-	var shape : Array[Vector2] = allPieces.get(num)
-	#const allPieces: Array = [iP, sP, zP, tP, oP, lP, jP]
-	if(num == 0):
-		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.CYAN)
-	elif(num == 1):
-		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.WEB_PURPLE)
-	elif(num == 2):
-		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.RED)
-	elif(num == 3):
-		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.WEB_PURPLE)
-	elif(num == 4):
-		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.YELLOW)
-	elif(num == 5):
-		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.ORANGE)
-	elif(num == 6):
-		piece = Piece.new(shape,Vector2(GridWidth / 2 - 2, 0), Color.DARK_BLUE)
-	
+	piece = Piece.new(Vector2(GridWidth / 2 - 2, 1), num)
 	piece.main_script = self
 	add_child(piece)
-	# Cria uma instância da peça
-	#var new_piece = piece.instantiate()
-	
-	# Passa os dados
-
-	#new_piece.gridPosition = Vector2(GridWidth / 2 - 2, 0) # Centraliza no topo
-	#new_piece.main_script = self
-	
-	# Adiciona à cena
-	#add_child(new_piece)
-	
-	# Retorna a peça (caso precise guardar referência)
 	return piece
+	
+func cleanLine():
+	pass
 	
 	
 
