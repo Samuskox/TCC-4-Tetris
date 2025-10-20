@@ -19,9 +19,9 @@ func _ready() -> void:
 		for y in range(GridHeight):
 			grid[x][y] = 0
 			
-	grid[4][7] = 3
-	grid[6][7] = 3
-	grid[5][8] = 3
+	#grid[4][7] = 3
+	#grid[6][7] = 3
+	#grid[5][8] = 3
 	spawnPiece()
 	
 
@@ -36,6 +36,7 @@ func _process(delta: float) -> void:
 		piece.move(Vector2(0,1))
 	if(Input.is_action_just_pressed("ColocarPeca")):
 		piece.lockPiece(piece)
+		cleanLine()
 		queue_redraw() # repinta tudo
 		piece.queue_free() # remove a peça antiga
 		spawnPiece()
@@ -77,7 +78,25 @@ func spawnPiece():
 	return piece
 	
 func cleanLine():
-	pass
+	for y in range(GridHeight - 1, -1, -1): # baixo pra cima
+		var isFull = true
+		for x in range(GridWidth):
+			if grid[x][y] == 0:
+				isFull = false
+				break
+		if isFull:
+			removeLine(y)
+			y += 1 # reve a linha atual porque tudo desceu
+
+func removeLine(lineY: int):
+	for y in range(lineY, 0, -1):
+		for x in range(GridWidth):
+			grid[x][y] = grid[x][y - 1]
+	# limpa em cima
+	for x in range(GridWidth):
+		grid[x][0] = 0
+	
+	
 	
 	
 
