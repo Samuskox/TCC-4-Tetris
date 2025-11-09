@@ -120,8 +120,8 @@ func fall():
 	if not move(Vector2(0,1)):
 		
 		if checkFall == 1:
-			#lockPiece(self)
-			#main_script.spawnPiece()
+			lockPiece(self)
+			main_script.spawnPiece()
 			checkFall = 0
 		else:
 			checkFall += 1
