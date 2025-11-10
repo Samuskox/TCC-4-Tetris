@@ -188,7 +188,7 @@ em telas de televisão e computadores, com imagens mais dinâmicas,
 recursos sonoros aprimorados e maior exigência de habilidade e 
 aprendizado por parte dos jogadores.
 
-No livro "Understanding Video Games: The Essential Introduction"
+No livro ``Understanding Video Games: The Essential Introduction''
 \cite{egenfeldt2020understanding}, os autores explicam que existem
 diversas metodologias de análise do que é jogo, sendo três os principais
 elementos:
@@ -196,15 +196,15 @@ elementos:
 \begin{enumerate}
 	\item \textbf{Regras:} O game design que define a estrutura do jogo;
 	\item \textbf{Experiência Humana:} O grau de envolvimento e imersão do jogador;
-	\item \textbf{Cultura:}  O contexto no qual o jogo está inserido
+	\item \textbf{Cultura:}  O contexto no qual o jogo está inserido.
 \end{enumerate}
 
 Esses três elementos quando juntos em uma aplicação, definem o que é um jogo,
  o game design vai definir as mecânicas e regras em um contexto que se 
  está inserido que vai auxiliar na experiência humana. 
 
-De acordo com Paul Schuytema, no livro "Design de Games — Uma Abordagem
-Prática" \cite{schuytema2008design}, um jogo eletrônico é uma forma de 
+De acordo com Paul Schuytema, no livro ```Design de Games — Uma Abordagem
+Prática'' \cite{schuytema2008design}, um jogo eletrônico é uma forma de 
 entretenimento composta por atividades, funções e ações realizadas por 
 um jogador, limitado por regras dentro de um universo definido, que resultam 
 em uma condição final, o universo e as regras têm a função de dar contexto às 
@@ -222,22 +222,33 @@ que os jogadores se envolvam para a chegada do objetivo,
 tornando a experiência de jogar satisfatória, não apenas pela 
 conquista do objetivo final, mas por todo o processo.
 
-\section{Tipos de Jogos não Digitais} %será que eu mudo pra TIpos de jogos Tradicionais??
+\david{tradicionais fica melhor mesmo}
+
+\section{Tipos de Jogos Tradicionais} %será que eu mudo pra TIpos de jogos Tradicionais??
 
 	\subsection{Jogos de Cartas}
 	A categoria de jogos de cartas são aquelas no qual há a interação entre os jogadores através de um baralho de cartas,
 	são jogos que requerem uma estratégia para serem jogadas, em torno da análise combinatoria das cartas visiveis aos jogadores ("na mesa")
 	e das cartas que está nas mãos dos jogadores, em muitos jogos de cartas pode ter a interação e comunicação entre jogadores, 
 	permitindo o blefe, por exemplo o poker \cite{lucchese2009conceituaccao}. 
-	
+
+\david[inline]{não é assim que referencia figura}
+
 	Abaixo está a imagem de um baralho clássico que está presente em vários jogos de cartas:
+    
+\david[inline]{é assim. arrume TODOS}
+
+Na Figura~\ref{fig:baralhoClassico} é mostrada uma imagem de um baralho clássico que está presente em vários jogos de cartas:
+
+\david[inline]{use a macro url para definir as urls das fontes. fiz no exemplo abaixo. ajuste o restante.}
 
 	\FloatBarrier
 \begin{figure}[!htbp]
 	\centering
 	\caption{Cartas de um baralho clássico}
 	\includegraphics[scale=0.4]{imagens/JogosCartas.jpg}
-	\\\textbf{Fonte:} https://segredosdomundo.r7.com/dicas-de-jogos-de-baralho/
+	\\\textbf{Fonte:} \url{https://segredosdomundo.r7.com/dicas-de-jogos-de-baralho/}
+    \label{fig:baralhoClassico}
 \end{figure}
 \FloatBarrier
 
@@ -782,12 +793,12 @@ Foi feito um \textit{Game Desing Document} para o maior entendimento do que seri
 As métricas à serem avaliadas afim de comparar o desenvolvimento nas \textit{engines} foram: 
 
 \begin{enumerate}
-	\item \textit{TilesMap}: \textit{Tiles} são cada bloco repetitivos que constituirão o piso e paredes de cada nível do jogo.
-	\item Sistema de câmera: Visão apresentado para o jogador no momento atual aonde está o personagem.
-	\item Movimentação do jogador: O movimento do jogador é a mudança de posição do avatar do jogador no \textit{Tiles} recentemente criados.
-	\item Sistema de luz: Sistema de luz simula a luz real, em que uma fonte luz clareia uma determinada área. 
-	\item Sistema de movimentação de IA: O movimento dos inimigos até o jogador de maneira automática.
-	\item Sistema de som: Processo da aplicação de tocar algum som quando determinada ação acontece.
+	\item \textit{TilesMap}: \textit{Tiles} são cada bloco repetitivos que constituirão o piso e paredes de cada nível do jogo;
+	\item Sistema de câmera: Visão apresentado para o jogador no momento atual aonde está o personagem;
+	\item Movimentação do jogador: O movimento do jogador é a mudança de posição do avatar do jogador no \textit{Tiles} recentemente criados;
+	\item Sistema de luz: Sistema de luz simula a luz real, em que uma fonte luz clareia uma determinada área;
+	\item Sistema de movimentação de IA: O movimento dos inimigos até o jogador de maneira automática;
+	\item Sistema de som: Processo da aplicação de tocar algum som quando determinada ação acontece;
 	\item Transição de Fases: Transição de uma fase do jogo para outra.
 \end{enumerate}
 
@@ -819,21 +830,21 @@ O jogo desenvolvido se chama "Os mortos-vivos" do genêro ação, no qual o joga
 Foram utilizados algumas métricas para realizar a avaliação dos motores, métricas para o código fonte e métricas para performance:
 Para o código fonte:
 \begin{enumerate}
-	\item Tamanho final do arquivo
-	\item Quantidade de arquivos de código
-	\item Quantidade de linhas
-	\item Quantidade de linhas de código
-	\item Complexidade do código
+	\item Tamanho final do arquivo;
+	\item Quantidade de arquivos de código;
+	\item Quantidade de linhas;
+	\item Quantidade de linhas de código;
+	\item Complexidade do código.
 \end{enumerate} 
 Para a perfomance:
 \begin{enumerate}
-	\item Tempo de carregamento de jogo
-	\item Uso de CPU mínimo
-	\item Uso de CPU máximo
-	\item Média do uso de CPU
-	\item Uso de memória RAM mínimo
-	\item Uso de memória RAM máximo
-	\item Média do uso de memória RAM
+	\item Tempo de carregamento de jogo;
+	\item Uso de CPU mínimo;
+	\item Uso de CPU máximo;
+	\item Média do uso de CPU;
+	\item Uso de memória RAM mínimo;
+	\item Uso de memória RAM máximo;
+	\item Média do uso de memória RAM.
 \end{enumerate} 
 
 O estudo comparativo de \cite{pantoja2022jogos} foi concluído que entre os motores \textit{Unity} 
@@ -844,12 +855,3 @@ complexo, demonstrou desempenho superior durante os testes, com maior
 estabilidade em cenários variados. Assim, o \textit{Godot} é recomendado para iniciantes, 
 enquanto a \textit{Unity} se mostra mais adequado para projetos que priorizam funcionalidades 
 complexas e uma melhor experiência do jogador.
-
-
-
-
-
-
-
-
-
