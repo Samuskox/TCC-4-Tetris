@@ -68,25 +68,25 @@ func _init(igridPosition : Vector2, iNumber):
 	gridPosition = igridPosition
 	num = iNumber
 	
-	if(num == 0):
+	if(num == 1):
 		blocks = iP
 		color = Color.CYAN
-	elif(num == 1):
+	elif(num == 2):
 		blocks = tP
 		color = Color.WEB_PURPLE
-	elif(num == 2):
+	elif(num == 3):
 		blocks = zP
 		color = Color.RED
-	elif(num == 3):
+	elif(num == 4):
 		blocks = sP
 		color = Color.LIGHT_GREEN
-	elif(num == 4):
+	elif(num == 5):
 		blocks = oP
 		color = Color.YELLOW
-	elif(num == 5):
+	elif(num == 6):
 		blocks = lP
 		color = Color.ORANGE
-	elif(num == 6):
+	elif(num == 7):
 		blocks = jP
 		color = Color.DARK_BLUE
 		
@@ -115,16 +115,13 @@ func move(direction: Vector2):
 
 
 func fall():
-	#var fall = gridPosition + Vector2(0,1)
 	print("checkfall: ", checkFall)
 	if not move(Vector2(0,1)):
-		
 		if checkFall == 1:
 			lockPiece(self)
 			main_script.spawnPiece()
 			checkFall = 0
 		else:
-			checkFall += 1
 			pass
 	else:
 		gridPosition.y += 1
@@ -134,51 +131,26 @@ func fall():
 		#gridPosition.y += 1;
 	#queue_redraw()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
-	
-#func isValidmove(target_position: Vector2) -> bool:
-	#if not main_script:
-		#return true # Se não tiver referência ao grid, assume que é válido
-#
-	#for block in blocks:
-		#var absolute_pos = block + target_position
-		##print("Bloco: ",block)
-		##print("posição que vai: ", target_position)
-		##print("Posição das duas: ",absolute_pos)
-		#var x = int(absolute_pos.x)
-		#var y = int(absolute_pos.y)
-		## Checar Limites Horizontais e Verticais
-		#if x < 0 or x >= main_script.GridWidth:
-			##print("tavindo aq e é falso")
-			#return false
-		#if y < 0 or y >= main_script.GridHeight:
-			#return false # Colisão com o chão
-		#if main_script.grid[x][y] != 0:
-			#return false
-	#return true
 
 func lockPiece(piece: Piece):
 	for block in piece.blocks:
 		var x = int(piece.gridPosition.x + block.x)
 		var y = int(piece.gridPosition.y + block.y)
 		if x >= 0 and x < main_script.GridWidth and y >= 0 and y < main_script.GridHeight:
-			main_script.grid[x][y] = 1
-		elif x >= 0 and x < main_script.GridWidth and y >= 0 and y < main_script.GridHeight and num == 1:
-			main_script.grid[x][y] = 7
+			main_script.grid[x][y] = piece.num
+		#elif x >= 0 and x < main_script.GridWidth and y >= 0 and y < main_script.GridHeight and num == 1:
+			#main_script.grid[x][y] = 7
 		queue_redraw()
+
 func rotate_piece() -> Array[Vector2]:
 	var rotated_blocks: Array[Vector2] = []
 	
 	for block in blocks:
 		var new_block: Vector2
-		new_block = Vector2(block.y, -block.x)   
-		rotated_blocks.append(new_block)
-
-	#print("BLOCO ROTACIONADO")
-	#for block in rotated_blocks:
-		#
-		#print(block)
+		new_block = Vector2(-block.y, block.x) #rotacionando bloco por bloco
+		rotated_blocks.append(new_block) #Coloco em um conjunto novo de blocos
 	if isValidmove(gridPosition, rotated_blocks):
 		blocks = rotated_blocks
 		queue_redraw()

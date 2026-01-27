@@ -22,6 +22,15 @@ func _ready() -> void:
 	#grid[4][7] = 3
 	#grid[6][7] = 3
 	#grid[5][8] = 3
+	for x in range(GridWidth - 1):
+		grid[x][19] = (randi() % 7 + 1)
+		
+	for x in range(GridWidth - 1):
+		grid[x][18] = (randi() % 7 + 1)
+	
+	for x in range(GridWidth - 1):
+		grid[x][17] = (randi() % 7 + 1)
+			
 	spawnPiece()
 	
 
@@ -56,29 +65,33 @@ func _draw() -> void:
 			if grid[x][y] == 0:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 2,cellSize - 2)),Color(1, 0, 0, 0))
 			elif grid[x][y] == 1:
-				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.BLUE)
+				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.CYAN)
 			elif grid[x][y] == 2:
-				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.RED)
-			elif grid[x][y] == 3:
-				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.YELLOW)
-			elif grid[x][y] == 4:
-				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DEEP_SKY_BLUE)
-			elif grid[x][y] == 5:
-				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.GREEN)
-			elif grid[x][y] == 6:
-				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DEEP_PINK)
-			elif grid[x][y] == 7:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.WEB_PURPLE)
+			elif grid[x][y] == 3:
+				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.RED)
+			elif grid[x][y] == 4:
+				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.LIGHT_GREEN)
+			elif grid[x][y] == 5:
+				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.YELLOW)
+			elif grid[x][y] == 6:
+				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.ORANGE)
+			elif grid[x][y] == 7:
+				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DARK_BLUE)
 				
 func spawnPiece():
-	var num = (randi() % 7)
+	var num = (randi() % 7 + 1)
+	#print("numero da cor:", num)
 	piece = Piece.new(Vector2(GridWidth / 2 - 2, 1), num)
 	piece.main_script = self
 	add_child(piece)
 	return piece
 	
 func cleanLine():
-	for y in range(GridHeight - 1, -1, -1): # baixo pra cima
+	
+	var y = GridHeight - 1
+	
+	while y >= 0: # de baixo pra cima
 		var isFull = true
 		for x in range(GridWidth):
 			if grid[x][y] == 0:
@@ -86,7 +99,10 @@ func cleanLine():
 				break
 		if isFull:
 			removeLine(y)
-			y += 1 # reve a linha atual porque tudo desceu
+		else:
+			y -= 1 #checa toda a linhas de baixo pra cima
+
+		
 
 func removeLine(lineY: int):
 	for y in range(lineY, 0, -1):

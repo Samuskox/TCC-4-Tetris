@@ -299,12 +299,20 @@ INPUT C:\Program Files\MiKTeX\tex\generic\babel\txtbabel.def
 INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\portuges.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\portuges.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\portuges.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-portuges.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-portuges.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-portuges.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-brazil.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-brazil.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-brazil.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\pt\babel-pt.ini
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\portuguese.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\portuguese.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\portuguese.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\pt\babel-pt-BR.ini
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
 INPUT C:\Program Files\MiKTeX\tex\latex\colortbl\colortbl.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\colortbl\colortbl.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
@@ -688,6 +696,9 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-osf-t1.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-Bold-osf-t1.tfm
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.nav
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.nav
+INPUT Template Latex - Apresentacao - IFSP - SBV.nav
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-Bold-osf-t1.tfm
 INPUT .\01Capa.tex
 INPUT .\01Capa.tex
@@ -708,6 +719,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-osf-t1.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\google\carlito\Crlt-Bold-osf-t1.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-Bold-osf-t1--base.tfm
 INPUT C:\Users\Samuel\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\carlito\crlt_hsqwq5.enc
 INPUT C:\Program Files\MiKTeX\fonts\vf\google\carlito\Crlt-osf-t1.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-osf-t1--base.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\google\carlito\Crlt-Bold-osf-t1.vf
@@ -724,6 +736,8 @@ INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-osf-t1.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\google\carlito\Crlt-Bold-osf-t1.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-Bold-osf-t1--base.tfm
 INPUT .\02Introducao.tex
 INPUT .\02Introducao.tex
 INPUT .\02Introducao.tex
@@ -744,6 +758,7 @@ INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
 INPUT C:\Program Files\MiKTeX\fonts\vf\google\carlito\Crlt-osf-ts1.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-osf-ts1--base.tfm
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\carlito\crlt_j4hweq.enc
 INPUT C:\Program Files\MiKTeX\fonts\vf\google\carlito\Crlt-osf-t1.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-osf-t1--base.tfm
 INPUT .\03RevisaoLiteraturaConsideracoesGerais.tex
@@ -754,8 +769,6 @@ INPUT 03RevisaoLiteraturaConsideracoesGerais.tex
 INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
-INPUT C:\Program Files\MiKTeX\fonts\vf\google\carlito\Crlt-Bold-osf-t1.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-Bold-osf-t1--base.tfm
 INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
@@ -930,6 +943,7 @@ INPUT .\imagens\logo.png
 INPUT C:\Program Files\MiKTeX\fonts\vf\google\carlito\Crlt-Italic-osf-t1.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-Italic-osf-t1--base.tfm
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\carlito\crlt_zisnlb.enc
 INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\listings\lstlang1.sty
@@ -964,3 +978,46 @@ INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
 INPUT .\imagens\logo.png
+INPUT .\00Referencias.tex
+INPUT .\00Referencias.tex
+INPUT .\00Referencias.tex
+INPUT .\00Referencias.tex
+INPUT 00Referencias.tex
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.bbl
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.bbl
+INPUT Template Latex - Apresentacao - IFSP - SBV.bbl
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.brf
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.brf
+INPUT Template Latex - Apresentacao - IFSP - SBV.brf
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.brf
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.brf
+OUTPUT Template Latex - Apresentacao - IFSP - SBV.brf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-osf-ot1.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-osf-t1.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\google\carlito\Crlt-Italic-osf-t1.tfm
+OUTPUT Template Latex - Apresentacao - IFSP - SBV.nav
+OUTPUT Template Latex - Apresentacao - IFSP - SBV.toc
+OUTPUT Template Latex - Apresentacao - IFSP - SBV.snm
+INPUT Template Latex - Apresentacao - IFSP - SBV.aux
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.out
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.out
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.brf
+INPUT .\Template Latex - Apresentacao - IFSP - SBV.brf
+INPUT C:\Program Files\MiKTeX\fonts\type1\google\carlito\Crlt-Bold.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\google\carlito\Crlt-Bold.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\google\carlito\Crlt-Italic.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\google\carlito\Crlt-Italic.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\google\carlito\Crlt-Regular.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\google\carlito\Crlt-Regular.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt9.pfb
