@@ -112,7 +112,9 @@ func move(direction: Vector2):
 	if isValidmove(new_position):
 		gridPosition = new_position
 		queue_redraw()
-
+		return true
+	else:
+		return false
 
 func fall():
 	print("checkfall: ", checkFall)

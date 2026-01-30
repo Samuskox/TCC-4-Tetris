@@ -9,6 +9,7 @@ var piece
 
 var xPlayer := 3.0
 var yPlayer := 3.0
+var goingdown = false
 
 func _ready() -> void:
 	
@@ -44,12 +45,20 @@ func _process(delta: float) -> void:
 	if(Input.is_action_just_pressed("baixo")):
 		piece.move(Vector2(0,1))
 	if(Input.is_action_just_pressed("ColocarPeca")):
-		piece.lockPiece(piece)
-		cleanLine()
-		queue_redraw() # repinta tudo
-		piece.queue_free() # remove a peça antiga
-		spawnPiece()
-		pass
+		goingdown = true
+		while goingdown:
+			#print("checando se pode ou nao pode: ")
+			if piece.move(Vector2(0,1)):
+				#print("pode")
+				pass
+			else:
+				#print("nao pode")
+				piece.lockPiece(piece)
+				cleanLine()
+				queue_redraw() # repinta tudo
+				piece.queue_free() # remove a peça antiga
+				spawnPiece()
+				goingdown = false
 	if(Input.is_action_just_pressed("cima")):
 		piece.rotate_piece()
 	
