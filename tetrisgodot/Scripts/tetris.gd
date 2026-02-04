@@ -11,6 +11,9 @@ var xPlayer := 3.0
 var yPlayer := 3.0
 var goingdown = false
 
+var score := 0
+@onready var score_label = $Score
+
 func _ready() -> void:
 	
 	grid.resize(GridWidth)
@@ -99,7 +102,7 @@ func spawnPiece():
 func cleanLine():
 	
 	var y = GridHeight - 1
-	
+	var linesScores = 0
 	while y >= 0: # de baixo pra cima
 		var isFull = true
 		for x in range(GridWidth):
@@ -107,9 +110,14 @@ func cleanLine():
 				isFull = false
 				break
 		if isFull:
+			
 			removeLine(y)
+			linesScores += 1
+			
 		else:
 			y -= 1 #checa toda a linhas de baixo pra cima
+	updateScore(linesScores)
+	linesScores = 0
 
 		
 
@@ -120,7 +128,18 @@ func removeLine(lineY: int):
 	# limpa em cima
 	for x in range(GridWidth):
 		grid[x][0] = 0
-	
+		
+func updateScore(numlines: int):
+	match numlines:
+		1:
+			score += 100
+		2: 
+			score += 300
+		3: 
+			score += 500
+		4: 
+			score += 800
+	score_label.text = "Pontos: " + str(score)
 	
 	
 	

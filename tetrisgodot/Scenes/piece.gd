@@ -106,7 +106,7 @@ func _ready() -> void:
 func _draw() -> void:
 	for block in blocks:
 		draw_rect(Rect2((block + gridPosition) * cellSize, Vector2(cellSize - 2, cellSize - 2)), color, true)
-	
+
 func move(direction: Vector2):
 	var new_position = gridPosition + direction
 	if isValidmove(new_position):
@@ -127,11 +127,7 @@ func fall():
 			main_script.spawnPiece()
 			queue_free()
 			checkFall = 0
-	
-	#if isValidmove(fall):
-		#gridPosition.y += 1;
-	#queue_redraw()
-	
+
 func _process(_delta: float) -> void:
 	pass
 
