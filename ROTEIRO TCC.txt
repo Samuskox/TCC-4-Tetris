@@ -1,0 +1,82 @@
+A industria dos jogos é muito relevante nos dias atuais, ela lucra mais que a industria da música e do cinemas juntas, portanto tem uma enorme importância econônomica, além dessa importância econômica, os jogos também fazem parte de várias culturas hoje em dia
+
+Junto com isso, os jogos também são ótimos fatores pra estudo acadêmico, ao desenvolver um jogo, o aprendizado vem junto, aprender lógica de programação, uso de diferentes tecnologias e aplicação de distintos paradigmas de programação. Ao estruturar um jogo é importante comparar as tecnologias e escolher a que melhor se adequa ao projeto e quais os impactos da escolha da arquitetura.
+
+A comparação de arquitetura é importante para orientar iniciantes e profissionais da área de desenvolvimento de jogos para que tomada de decisão de arquitetura seja mais segura e auxilie no fluxo de desenvolvimento.
+
+Com base nessas informações, será feito um teste de hipóteses analisando e comparando
+diferentes tecnologias de desenvolvimento de software, utilizando o jogo Tetris.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+O que é um jogo?
+
+Um jogo pode ser considerado uma atividade de ocupação voluntária, realizada
+dentro de certas limitações de tempo e espaço, seguindo regras determinadas e obrigatórias,
+com o objetivo de alcançar uma meta específica, gerando sensações de tensão, desafio e
+alegria.
+
+Alguns exemplos de jogos tradicionais são os jogos de cartas, como poker, jogos atléticos como basquete e os jogos de tabuleiro como o xadrez
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Mas e um jogo eletrônico?
+Segundo Crawford no livro "A arte do videogame" ou em ingles "The art of computer games", um jogo eletronico pode ser definido da seguinte forma "Um jogo é um sistema fechado e formal que representa subjetivamente um subconjunto
+da realidade."
+
+Um jogo eletronico é um produto e tem sua propria estrutura e é uma simulação de uma parte da realidade ou da fantasia focada na expêriencia do jogador
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Um jogo eletronico segue praticamente a mesma definição de um jogo tradicional, porém um jogo eletrônico precisa ser bem estruturado (ter um bom game-design) para que os jogadores se envolvam e se engagem para a chegada de do objetivo ou de uma meta.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+existem muitos gêneros de jogos, um deles é o genêro de ação, aonde o jogador precisa ter movimentos rápidos, bons reflexos e apertar o botão na hora correta.
+Dentro do gênero de ação, existem subgeneros como o FPS first person shotter ou jogo de tiro de primeira pessoa, (aonde o jogador está mirando com algum tipo de arma e precisa derrotar inimigos mirando nos mesmos, um bom exemplo é Apex Legends de 2018) existem também o subgenero de Luta, (aonde o jogador tem um embate com a máquina ou com outros jogadores, fazendo ações como bater, bloquear, pular) e o subgenero de plataforma (onde o jogador tem que pular ou escalar pequenas plataforma na tela)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Existe também o gênero de quebra cabeça ou puzzle
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Existem muito gêneros de jogos
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Para desenvolver um jogo, é necessarios de várias areas de conhecimento como, musica, programação, desenhos, gráficos e outros
+
+Um motor gráfico é um de desenvolvimento de jogos que abstrai esses conhecimentos e gerencia o ciclo de vida de um jogo e possui modulos para a criação de jogos
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A Godot Engine é uma ferramenta grátis para criação de jogos 2D e 3D que ser utilizada para construção dos tetris, baseado em classes de objetos chamados nós (nodes), existem muitos tipo de nós disponíveis, nós para gráficos, física, interface de usuário, audio e de outros. Um script pode ser anexado a um nó para também conseguir um comportamento específico, que são programáveis em uma linguagem chamada GDScript
+
+----------------------------------------------------------------------------------------------------------------------
+
+Pra falar da LibGDX, tem que mencionar java, 
+A linguagem de programação java é baseada no paradigma de orientação à objeto, é possível encapsular dados dentro de um bloco e criar métodos de manipulação desses dados.
+
+E a LibGDX é um framework de java que vai ser usada para implementação dos tetris, que utiliza a openGL, que é uma API para gráficos 2D e 3D, e ela possui módulos para a criação de jogos, módulos de gráficos, audio e outros.
+
+-----------------------------------------------------------------------
+
+Para falar da Raylib, é importante falar um pouco de C++
+
+C++ é uma linguagem de programação de alto nível, se originou a partir da linguagem de programação C, foi criado para abstrair dados, suportar a programação orientada a objeto e programação procedural
+
+e a Raylib é uma biblioteca de programação de Jogos 2D e 3D de código aberto escrita em C, mas suporta C++. que será utilizada nesse trabalho. A Raylib não provê uma API de documentação igual o Godot ou a LibGDX, apenas uma lista com todas funções disponíveis e um exemplo de como usa-las, Raylib tem suporte para computadores, tanto Desktop quanto para Web e para celulares
+
+------------------------------------------------------------------------
+
+E para falar de Pygame, é super importante falar sobre python
+
+Python é uma linguagem de sintaxe simples e de alto nivel, possui várias funções para manipular dados em listas, dicionarios, data/hora e outros, nela também é possivel adicionar bibliotecas de terceiro e ela é multiparadigma, portanto aceita a programação modular, procedural e o rientada a objeto.
+
+E pygame é uma biblioteca para python, feita sobre a SDL que é uma biblioteca em C de aplicações multimidia, pygame abstrai recursos dessa biblioteca e deixa mais acessivel para o desenvolvimento de jogos, também possui modulos pra construção de jogos.
+
+------------------------------------------------------------------
+

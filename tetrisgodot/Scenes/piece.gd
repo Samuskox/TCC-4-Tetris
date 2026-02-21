@@ -96,7 +96,7 @@ func _ready() -> void:
 	
 	main_script = get_node("/root/Tetris")
 	
-	var timer := Timer.new()
+	var timer := $"../Timer"
 	add_child(timer)
 	timer.timeout.connect(fall)
 	timer.autostart = true

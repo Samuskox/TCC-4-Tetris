@@ -13,6 +13,7 @@ var goingdown = false
 
 var score := 0
 @onready var score_label = $Score
+var gameover := false
 
 func _ready() -> void:
 	
@@ -64,7 +65,7 @@ func _process(delta: float) -> void:
 				goingdown = false
 	if(Input.is_action_just_pressed("cima")):
 		piece.rotate_piece()
-	
+		
 func _draw() -> void:
 	for x in range(GridWidth + 1):
 		draw_line(Vector2(x * cellSize,0), Vector2(x * cellSize, GridHeight * cellSize),Color.WHITE, 1.5)
@@ -90,13 +91,22 @@ func _draw() -> void:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.ORANGE)
 			elif grid[x][y] == 7:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DARK_BLUE)
-				
+			elif grid[x][y] == 8:
+				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DARK_SLATE_GRAY)
+
 func spawnPiece():
 	var num = (randi() % 7 + 1)
 	#print("numero da cor:", num)
-	piece = Piece.new(Vector2(GridWidth / 2 - 2, 1), num)
-	piece.main_script = self
-	add_child(piece)
+	var startPos = Vector2(GridWidth / 2 - 1, 1)
+	piece = Piece.new(startPos, num)
+	
+	if isSpawnBlocked(piece.blocks, startPos):
+		triggerGameOver()
+		piece.queue_free
+		return
+	#piece.main_script = self
+	else:
+		add_child(piece)
 	return piece
 	
 func cleanLine():
@@ -140,6 +150,26 @@ func updateScore(numlines: int):
 		4: 
 			score += 800
 	score_label.text = "Pontos: " + str(score)
+	
+func triggerGameOver():
+	gameover = true
+	$Timer.stop()
+	score_label.text = "Pontos: " + str(score) + " || GAME OVER"
+	for x in range(GridWidth):
+		for y in range(GridHeight):
+			if grid[x][y] > 0:
+				grid[x][y] = 8
+
+func isSpawnBlocked(piece: Array[Vector2], spawnPos: Vector2) -> bool:
+	for block in piece:
+		var x = int(spawnPos.x + block.x)
+		var y = int(spawnPos.y + block.y)
+		
+		if x >= 0 and x < GridWidth and y >= 0 and y < GridHeight:
+			if grid[x][y] != 0:
+				return true
+		
+	return false
 	
 	
 	
