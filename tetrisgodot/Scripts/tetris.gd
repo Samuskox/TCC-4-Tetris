@@ -92,7 +92,7 @@ func _draw() -> void:
 			elif grid[x][y] == 7:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DARK_BLUE)
 			elif grid[x][y] == 8:
-				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color.DARK_SLATE_GRAY)
+				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color("031b24"))
 
 func spawnPiece():
 	var num = (randi() % 7 + 1)

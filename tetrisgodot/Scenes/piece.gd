@@ -63,7 +63,7 @@ const jP: Array[Vector2] = [
 
 const allPieces: Array = [iP, sP, zP, tP, oP, lP, jP]
 
-func _init(igridPosition : Vector2, iNumber):
+func _init(igridPosition : Vector2 = Vector2.ZERO, iNumber : int = 0):
 	
 	gridPosition = igridPosition
 	num = iNumber
@@ -97,7 +97,7 @@ func _ready() -> void:
 	main_script = get_node("/root/Tetris")
 	
 	var timer := $"../Timer"
-	add_child(timer)
+	#add_child(timer)
 	timer.timeout.connect(fall)
 	timer.autostart = true
 	timer.wait_time = 1.0
