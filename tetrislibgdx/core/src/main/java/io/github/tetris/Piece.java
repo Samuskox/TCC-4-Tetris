@@ -7,7 +7,8 @@ import com.badlogic.gdx.math.Vector2;
 import space.earlygrey.shapedrawer.ShapeDrawer;
 
 public class Piece {
-
+    //TO DO: make this more efficient by using a single array of Vector2s and just rotating them instead of having 7 different arrays for each piece
+    // TODO: Put this o piece when instantiating the piece instead of having 7 different arrays for each piece and a switch statement in the constructor
     Color color;
     Vector2[] blocks;
     Vector2 position;
@@ -72,24 +73,31 @@ public class Piece {
         switch(num){
             case 0:
                 blocks = iP;
+                color = Color.CYAN;
                 break;
             case 1:
                 blocks = sP;
+                color = Color.GREEN;
                 break;
             case 2:
                 blocks = zP;
+                color = Color.RED;
                 break;
             case 3:
                 blocks = tP;
+                color = Color.PURPLE;
                 break;
             case 4:
                 blocks = oP;
+                color = Color.YELLOW;
                 break;
             case 5:
                 blocks = lP;
+                color = Color.ORANGE;
                 break;
             case 6:
                 blocks = jP;
+                color = Color.BLUE;
                 break;
         }
     }
@@ -97,30 +105,31 @@ public class Piece {
     public void draw(ShapeDrawer shapeDrawer){
         float offsetX = Gdx.graphics.getWidth()/2f - (tetris.gridWidth * tetris.cellSize)/2f;
         float size   = tetris.cellSize - (tetris.spaceBetweenCells * 2);
-
+        shapeDrawer.setColor(color);
         for(Vector2 block : blocks){
             shapeDrawer.filledRectangle(
-                offsetX + (position.x + block.x) * tetris.cellSize,
-                (position.y + block.y) * tetris.cellSize,
-                size,
-                size);
+            offsetX + (position.x + block.x) * tetris.cellSize,
+            ((position.y + block.y) * tetris.cellSize) + 1,
+            size,
+            size);
         }
     }
 
-    public void move(int dx, int dy){
-        if (!isValidMove(dx, dy)){
+    public void move(Vector2 direction){
+        Vector2 newPosition = new Vector2(position.x + direction.x, position.y + direction.y);
+        if (!isValidMove(newPosition, blocks)){
             return;
         }
 
         System.out.println("Valid move");
-        position.x += dx;
-        position.y += dy;
+        position.x += direction.x;
+        position.y += direction.y;
     }
 
-    public boolean isValidMove(int dx, int dy){
-        for(Vector2 block : blocks){
-            int newX = (int)(position.x + block.x + dx);
-            int newY = (int)(position.y + block.y + dy);
+    public boolean isValidMove(Vector2 targetPosition, Vector2[] targetBlocks){
+        for(Vector2 block : targetBlocks){
+            int newX = (int)(targetPosition.x + block.x);
+            int newY = (int)(targetPosition.y + block.y);
 
             if(newX < 0 || newX >= tetris.gridWidth || newY < 0 || newY >= tetris.gridHeight){
                 return false;
@@ -131,5 +140,16 @@ public class Piece {
             }
         }
         return true;
+    }
+
+    public Vector2[] rotate(){
+        Vector2[] newBlocks = new Vector2[blocks.length];
+        for(int i = 0; i < blocks.length; i++){
+            newBlocks[i] = new Vector2(blocks[i].y, -blocks[i].x);
+        }
+        if (!isValidMove(position, newBlocks)){
+            return blocks;
+        }
+        return newBlocks;
     }
 }
