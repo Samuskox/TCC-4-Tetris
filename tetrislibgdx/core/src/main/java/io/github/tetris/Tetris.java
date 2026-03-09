@@ -1,5 +1,13 @@
 package io.github.tetris;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Random;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector2;
@@ -15,9 +23,12 @@ public class Tetris {
 
     Piece piece;
 
-    public Tetris(){
-        
+    ArrayList<Piece> pieces = new ArrayList<Piece>();
 
+    Queue<Integer> pieceQueue = new LinkedList<>();
+    
+
+    public Tetris(){
         for(int i = 0;i < gridWidth; i++){
             for(int j = 0; j < gridHeight; j++){
                 grid[i][j] = 0;
@@ -28,7 +39,21 @@ public class Tetris {
     }
 
     public void spawnPiece(){
-        piece = new Piece(3, this, new Vector2(4, 19));
+        //TODO: make the spawnPiece come from a list of pieces and not just random.
+
+        int num = getNextPieceNum();
+        Vector2 spawnPosition = new Vector2(4,19);
+        Piece protPiece = new Piece(num, this, spawnPosition);
+        if(isSpawnBlocked(protPiece, spawnPosition)){
+            //game over
+            gameOver();
+            //System.out.println(isSpawnBlocked(protPiece, spawnPosition));
+            //System.out.println("Game Over");
+        } else {
+            piece = new Piece(num, this, spawnPosition);
+        }
+
+        //piece = new Piece(new Random().nextInt(7) + 1, this, new Vector2(4, 19));
     }
 
     public void drawGrid(ShapeDrawer shapeDrawer){
@@ -43,6 +68,8 @@ public class Tetris {
                           (cellSize - (spaceBetweenCells * 2)) + 1,
                            Color.RED);
                 }
+
+                //TODO: if for each piece type and color
             }
         }
         drawLines(shapeDrawer);
@@ -66,9 +93,101 @@ public class Tetris {
         for(Vector2 block : piece.blocks){
             int x = (int)(piece.position.x + block.x);
             int y = (int)(piece.position.y + block.y);
-            grid[x][y] = 1;
+            grid[x][y] = piece.num;
         }
+        cleanLine();
         System.out.println("lockou a peça");
     }
+
+    public void hardDrop(){
+        Boolean canFall = true;
+
+        while(canFall){
+            if(piece.canFall()){
+                //System.out.println("caindo");
+            } else {
+                canFall = false;
+            }
+        }
+    }
+
+
+    public void cleanLine(){
+        
+        for(int i = 0; i <= gridHeight - 1; i++){
+            boolean lineFull = true;
+            for(int j = 0; j < gridWidth; j++){
+                if(grid[j][i] == 0){
+                    lineFull = false;
+                    break;
+                }
+            }
+            if(lineFull){
+                removeline(i--);
+            }
+        }
+    }
+
+    public void removeline(int lineIndex){
+        for(int i = lineIndex; i < gridHeight - 1; i++){
+            for(int j = 0; j < gridWidth; j++){
+                grid[j][i] = grid[j][i + 1];
+            }
+        }
+        for(int j = 0; j < gridWidth; j++){
+            grid[j][gridHeight - 1] = 0;
+        }
+    }
+
+    public Boolean isSpawnBlocked(Piece piece, Vector2 spawnPosition){
+        for(Vector2 block : piece.blocks){
+            int x = (int)(spawnPosition.x + block.x);
+            int y = (int)(spawnPosition.y + block.y);
+
+            if(x < 0 || x >= gridWidth || y < 0 ){
+                return true;
+            }
+
+            if(y >= gridHeight){
+                continue;
+            }
+
+            System.out.println("x: " + x + " y: " + y);
+            if(grid[x][y] >= 1){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void gameOver(){
+        for(int i = 0; i < gridWidth; i++){
+            for(int j = 0; j < gridHeight; j++){
+                if(grid[i][j] >= 1){
+                    grid[i][j] = 9;
+                    //TODO: MAKE A COLOR FOR THE LOCKED BLOCKS AND NOT JUST MAKE THEM ALL RED
+                }
+            }
+        }
+    }
+
+    public void refillPieceQueue(){
+        pieceQueue.add(1);
+        pieceQueue.add(2);
+        pieceQueue.add(3);
+        pieceQueue.add(4);
+        pieceQueue.add(5);
+        pieceQueue.add(6);
+        pieceQueue.add(7);
+        Collections.shuffle((List<Integer>) pieceQueue);
+    }
+
+    public int getNextPieceNum(){
+        if(pieceQueue.isEmpty()){
+            refillPieceQueue();
+        }
+        return pieceQueue.poll();
+    }
+
     
 }

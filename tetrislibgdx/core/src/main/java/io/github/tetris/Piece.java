@@ -70,32 +70,33 @@ public class Piece {
         this.num = num;
         this.tetris = tetris;
         this.position = new Vector2(pos.x, pos.y);
+        System.out.println("Num:"+num);
         switch(num){
-            case 0:
+            case 1:
                 blocks = iP;
                 color = Color.CYAN;
                 break;
-            case 1:
+            case 2:
                 blocks = sP;
                 color = Color.GREEN;
                 break;
-            case 2:
+            case 3:
                 blocks = zP;
                 color = Color.RED;
                 break;
-            case 3:
+            case 4:
                 blocks = tP;
                 color = Color.PURPLE;
                 break;
-            case 4:
+            case 5:
                 blocks = oP;
                 color = Color.YELLOW;
                 break;
-            case 5:
+            case 6:
                 blocks = lP;
                 color = Color.ORANGE;
                 break;
-            case 6:
+            case 7:
                 blocks = jP;
                 color = Color.BLUE;
                 break;
@@ -121,7 +122,7 @@ public class Piece {
             return;
         }
 
-        System.out.println("Valid move");
+        //System.out.println("Valid move");
         position.x += direction.x;
         position.y += direction.y;
     }
@@ -151,5 +152,15 @@ public class Piece {
             return blocks;
         }
         return newBlocks;
+    }
+
+    public Boolean canFall(){
+        if(isValidMove(new Vector2(position.x, position.y - 1), blocks)){
+            //System.out.println("fallindo");
+            move(new Vector2(0,-1));
+            return true;
+        }
+        return false;
+        
     }
 }

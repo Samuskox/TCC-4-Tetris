@@ -21,6 +21,10 @@ public class Main extends ApplicationAdapter {
 
     private Tetris tetris;
 
+    //private float delta = Gdx.graphics.getDeltaTime();
+    private float fallTimer = 0;
+    private float fallInterval = 1.0f;
+
     // float gridPixelWidth = tetris.gridWidth * tetris.cellSize;
     // float startX = (Gdx.graphics.getWidth() - gridPixelWidth) / 2f;
     // float padding = tetris.spaceBetweenCells;
@@ -41,6 +45,16 @@ public class Main extends ApplicationAdapter {
     @Override
     public void render() {
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
+        //System.out.println("delta: " + Gdx.graphics.getDeltaTime());
+        fallTimer += Gdx.graphics.getDeltaTime();
+        if(fallTimer >= fallInterval){
+            //System.out.println("one seconds passing");
+            //System.out.println("time reseting");
+            fallTimer = 0;
+            tetris.piece.canFall();
+
+        }
+
         batch.begin();
         batch.setColor(Color.WHITE);
         shapeDrawer.setColor(Color.YELLOW);
@@ -56,7 +70,17 @@ public class Main extends ApplicationAdapter {
     }
 
     public void test(){
-        tetris.grid[0][0] = 1;
-        tetris.grid[3][7] = 1;
+
+        for(int i = 0; i < tetris.gridWidth; i++){
+            for(int j = 0; j < tetris.gridHeight; j++){
+                tetris.grid[i][j] = 0;
+            }
+        }
+
+        for(int i = 0; i < tetris.gridWidth - 1; i++){
+            for(int j = 0; j < 3; j++){
+                tetris.grid[i][j] = 1;
+            }
+        }
     }
 }
