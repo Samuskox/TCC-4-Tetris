@@ -6,29 +6,21 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.ScreenUtils;
 import space.earlygrey.shapedrawer.ShapeDrawer;
 
-/** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
+/**
+ * {@link com.badlogic.gdx.ApplicationListener} implementation shared by all
+ * platforms.
+ */
 public class Main extends ApplicationAdapter {
     private SpriteBatch batch;
     private TextureRegion image;
     private ShapeDrawer shapeDrawer;
     private InputProcessor inputProcessor;
 
-    
-
-
     private Tetris tetris;
-
-    //private float delta = Gdx.graphics.getDeltaTime();
-    private float fallTimer = 0;
-    private float fallInterval = 1.0f;
-
-    // float gridPixelWidth = tetris.gridWidth * tetris.cellSize;
-    // float startX = (Gdx.graphics.getWidth() - gridPixelWidth) / 2f;
-    // float padding = tetris.spaceBetweenCells;
-    // float cellSizeWithSpace = tetris.cellSize - (padding * 2);
 
     @Override
     public void create() {
@@ -36,30 +28,48 @@ public class Main extends ApplicationAdapter {
         image = new TextureRegion(new Texture("blankTexture.png"));
         shapeDrawer = new ShapeDrawer(batch, image);
         tetris = new Tetris();
-        
+
         inputProcessor = new InputProcessor(tetris);
         Gdx.input.setInputProcessor(inputProcessor);
-        test();
+        //test();
     }
 
     @Override
     public void render() {
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
-        //System.out.println("delta: " + Gdx.graphics.getDeltaTime());
-        fallTimer += Gdx.graphics.getDeltaTime();
-        if(fallTimer >= fallInterval){
-            //System.out.println("one seconds passing");
-            //System.out.println("time reseting");
-            fallTimer = 0;
+
+        tetris.fallTimer += Gdx.graphics.getDeltaTime();
+        if (tetris.fallTimer >= tetris.fallInterval) {
+            // System.out.println("one seconds passing");
+            // System.out.println("time reseting");
+            tetris.fallTimer = 0;
+            tetris.lockTimer = 0;
             tetris.piece.canFall();
 
         }
 
+        if (tetris.piece.isValidMove(new Vector2(tetris.piece.position.x, tetris.piece.position.y - 1),
+                tetris.piece.blocks)) {
+            tetris.lockTimer = 0;
+            // System.out.println("vendo se reseto");
+        } else {
+            tetris.lockTimer += Gdx.graphics.getDeltaTime();
+            if (tetris.lockTimer >= tetris.lockDelay) {
+                tetris.lockPiece();
+                tetris.spawnPiece();
+                tetris.lockTimer = 0;
+            }
+        }
         batch.begin();
-        batch.setColor(Color.WHITE);
-        shapeDrawer.setColor(Color.YELLOW);
-        tetris.drawGrid(shapeDrawer);
-        tetris.piece.draw(shapeDrawer);
+
+            batch.setColor(Color.WHITE);
+            shapeDrawer.setColor(Color.YELLOW);
+            tetris.drawGrid(shapeDrawer);
+            tetris.piece.draw(shapeDrawer);
+
+        if(tetris.gameOver){
+            tetris.gameOver();
+        }
 
         batch.end();
     }
@@ -69,16 +79,15 @@ public class Main extends ApplicationAdapter {
         batch.dispose();
     }
 
-    public void test(){
-
-        for(int i = 0; i < tetris.gridWidth; i++){
-            for(int j = 0; j < tetris.gridHeight; j++){
+    public void test() {
+        for (int i = 0; i < tetris.gridWidth; i++) {
+            for (int j = 0; j < tetris.gridHeight; j++) {
                 tetris.grid[i][j] = 0;
             }
         }
 
-        for(int i = 0; i < tetris.gridWidth - 1; i++){
-            for(int j = 0; j < 3; j++){
+        for (int i = 0; i < tetris.gridWidth - 1; i++) {
+            for (int j = 0; j < 3; j++) {
                 tetris.grid[i][j] = 1;
             }
         }

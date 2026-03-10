@@ -41,17 +41,20 @@ public class InputProcessor extends InputAdapter {
         }
 
         if (keycode == Input.Keys.R) {
-            for (int i = 0; i < tetris.gridWidth; i++) {
-                for (int j = 0; j < tetris.gridHeight; j++) {
-                    tetris.grid[i][j] = 0;
-                }
-            }
+            // for (int i = 0; i < tetris.gridWidth; i++) {
+            //     for (int j = 0; j < tetris.gridHeight; j++) {
+            //         tetris.grid[i][j] = 0;
+            //     }
+            // }
 
-            for (int i = 0; i < tetris.gridWidth - 1; i++) {
-                for (int j = 0; j < 17; j++) {
-                    tetris.grid[i][j] = 1;
-                }
-            }
+            // for (int i = 0; i < tetris.gridWidth - 1; i++) {
+            //     for (int j = 0; j < 17; j++) {
+            //         tetris.grid[i][j] = 1;
+            //     }
+            // }
+
+            Tetris newTetris = new Tetris();
+            tetris = newTetris;
         }
 
         return false;

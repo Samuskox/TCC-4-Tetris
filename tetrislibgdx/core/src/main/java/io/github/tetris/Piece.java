@@ -125,6 +125,7 @@ public class Piece {
         //System.out.println("Valid move");
         position.x += direction.x;
         position.y += direction.y;
+        tetris.lockTimer = 0;
     }
 
     public boolean isValidMove(Vector2 targetPosition, Vector2[] targetBlocks){
@@ -132,8 +133,11 @@ public class Piece {
             int newX = (int)(targetPosition.x + block.x);
             int newY = (int)(targetPosition.y + block.y);
 
-            if(newX < 0 || newX >= tetris.gridWidth || newY < 0 || newY >= tetris.gridHeight){
+            if(newX < 0 || newX >= tetris.gridWidth || newY < 0){
                 return false;
+            }
+            if(newY >= tetris.gridHeight){
+                continue;
             }
 
             if(tetris.grid[newX][newY] > 0){
@@ -148,10 +152,26 @@ public class Piece {
         for(int i = 0; i < blocks.length; i++){
             newBlocks[i] = new Vector2(blocks[i].y, -blocks[i].x);
         }
-        if (!isValidMove(position, newBlocks)){
-            return blocks;
+        if (isValidMove(position, newBlocks)){
+            tetris.lockTimer = 0;
+            return newBlocks;
         }
-        return newBlocks;
+        if (isValidMove(new Vector2(position.x + 1, position.y), newBlocks)){
+            position.x += 1;
+            tetris.lockTimer = 0;
+            return newBlocks;
+        }
+        if (isValidMove(new Vector2(position.x - 1, position.y), newBlocks)){
+            position.x -= 1;
+            tetris.lockTimer = 0;
+            return newBlocks;
+        }
+        if(isValidMove(new Vector2(position.x, position.y + 1), newBlocks)){
+            position.y += 1;
+            tetris.lockTimer = 0;
+            return newBlocks;
+        }
+        return blocks;
     }
 
     public Boolean canFall(){

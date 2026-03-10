@@ -1,13 +1,8 @@
 package io.github.tetris;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
-import java.util.Random;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.Vector2;
@@ -23,9 +18,15 @@ public class Tetris {
 
     Piece piece;
 
-    ArrayList<Piece> pieces = new ArrayList<Piece>();
+    List<Integer> bagPieces = new ArrayList<>();
 
-    Queue<Integer> pieceQueue = new LinkedList<>();
+    float fallTimer = 0;
+    float fallInterval = 1.0f;
+
+    float lockTimer = 0;
+    float lockDelay = 0.5f;
+
+    Boolean gameOver = false;
     
 
     public Tetris(){
@@ -39,21 +40,15 @@ public class Tetris {
     }
 
     public void spawnPiece(){
-        //TODO: make the spawnPiece come from a list of pieces and not just random.
 
         int num = getNextPieceNum();
         Vector2 spawnPosition = new Vector2(4,19);
         Piece protPiece = new Piece(num, this, spawnPosition);
         if(isSpawnBlocked(protPiece, spawnPosition)){
-            //game over
-            gameOver();
-            //System.out.println(isSpawnBlocked(protPiece, spawnPosition));
-            //System.out.println("Game Over");
+            gameOver = true;
         } else {
             piece = new Piece(num, this, spawnPosition);
         }
-
-        //piece = new Piece(new Random().nextInt(7) + 1, this, new Vector2(4, 19));
     }
 
     public void drawGrid(ShapeDrawer shapeDrawer){
@@ -61,12 +56,60 @@ public class Tetris {
         shapeDrawer.setColor(Color.RED);
         for(int i = 0; i < gridWidth; i++){
             for (int j = 0; j < gridHeight; j++) {
-                if (grid[i][j] >= 1){
+                if (grid[i][j] == 1){
+                    shapeDrawer.filledRectangle(
+                        (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
+                         (j * cellSize), cellSize - (spaceBetweenCells * 2),
+                          (cellSize - (spaceBetweenCells * 2)) + 1,
+                           Color.CYAN);
+                } else if (grid[i][j] == 2){
+                    shapeDrawer.filledRectangle(
+                        (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
+                         (j * cellSize), cellSize - (spaceBetweenCells * 2),
+                          (cellSize - (spaceBetweenCells * 2)) + 1,
+                           Color.GREEN);
+                } else if (grid[i][j] == 3){
                     shapeDrawer.filledRectangle(
                         (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
                          (j * cellSize), cellSize - (spaceBetweenCells * 2),
                           (cellSize - (spaceBetweenCells * 2)) + 1,
                            Color.RED);
+                } else if (grid[i][j] == 4){
+                    shapeDrawer.filledRectangle(
+                        (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
+                         (j * cellSize), cellSize - (spaceBetweenCells * 2),
+                          (cellSize - (spaceBetweenCells * 2)) + 1,
+                           Color.PURPLE);
+                } else if (grid[i][j] == 5){
+                    shapeDrawer.filledRectangle(
+                        (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
+                         (j * cellSize), cellSize - (spaceBetweenCells * 2),
+                          (cellSize - (spaceBetweenCells * 2)) + 1,
+                           Color.YELLOW);
+                } else if (grid[i][j] == 6){
+                    shapeDrawer.filledRectangle(
+                        (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
+                         (j * cellSize), cellSize - (spaceBetweenCells * 2),
+                          (cellSize - (spaceBetweenCells * 2)) + 1,
+                           Color.ORANGE);
+                } else if (grid[i][j] == 7){
+                    shapeDrawer.filledRectangle(
+                        (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
+                         (j * cellSize), cellSize - (spaceBetweenCells * 2),
+                          (cellSize - (spaceBetweenCells * 2)) + 1,
+                           Color.BLUE);
+                } else if (grid[i][j] == 8){
+                    shapeDrawer.filledRectangle(
+                        (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
+                         (j * cellSize), cellSize - (spaceBetweenCells * 2),
+                          (cellSize - (spaceBetweenCells * 2)) + 1,
+                           Color.GRAY);
+                } else if (grid[i][j] == 9){
+                    shapeDrawer.filledRectangle(
+                        (i * cellSize) + Gdx.graphics.getWidth()/2 - (gridWidth * cellSize)/2,
+                         (j * cellSize), cellSize - (spaceBetweenCells * 2),
+                          (cellSize - (spaceBetweenCells * 2)) + 1,
+                           Color.WHITE);
                 }
 
                 //TODO: if for each piece type and color
@@ -93,7 +136,13 @@ public class Tetris {
         for(Vector2 block : piece.blocks){
             int x = (int)(piece.position.x + block.x);
             int y = (int)(piece.position.y + block.y);
-            grid[x][y] = piece.num;
+
+            if(x >= 0 && x < gridWidth && y >= 0 && y < gridHeight){
+                grid[x][y] = piece.num;
+            } else {
+                    gameOver = true;
+                System.out.println("Game Over");
+            }
         }
         cleanLine();
         System.out.println("lockou a peça");
@@ -164,29 +213,30 @@ public class Tetris {
         for(int i = 0; i < gridWidth; i++){
             for(int j = 0; j < gridHeight; j++){
                 if(grid[i][j] >= 1){
-                    grid[i][j] = 9;
-                    //TODO: MAKE A COLOR FOR THE LOCKED BLOCKS AND NOT JUST MAKE THEM ALL RED
+                    grid[i][j] = 8;
                 }
             }
         }
     }
 
     public void refillPieceQueue(){
-        pieceQueue.add(1);
-        pieceQueue.add(2);
-        pieceQueue.add(3);
-        pieceQueue.add(4);
-        pieceQueue.add(5);
-        pieceQueue.add(6);
-        pieceQueue.add(7);
-        Collections.shuffle((List<Integer>) pieceQueue);
+        bagPieces.add(1);
+        bagPieces.add(2);
+        bagPieces.add(3);
+        bagPieces.add(4);
+        bagPieces.add(5);
+        bagPieces.add(6);
+        bagPieces.add(7);
+        //Collections.shuffle((List<Integer>) pieceQueue);
+        Collections.shuffle(bagPieces);
     }
 
     public int getNextPieceNum(){
-        if(pieceQueue.isEmpty()){
+        System.out.println(bagPieces);
+        if(bagPieces.isEmpty()){
             refillPieceQueue();
         }
-        return pieceQueue.poll();
+        return bagPieces.remove(0);
     }
 
     
