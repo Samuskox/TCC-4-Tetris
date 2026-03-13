@@ -26,6 +26,8 @@ public class Tetris {
     float lockTimer = 0;
     float lockDelay = 0.5f;
 
+    int score = 0;
+
     Boolean gameOver = false;
     
 
@@ -162,6 +164,8 @@ public class Tetris {
 
 
     public void cleanLine(){
+
+        int linescore = 0;
         
         for(int i = 0; i <= gridHeight - 1; i++){
             boolean lineFull = true;
@@ -173,8 +177,11 @@ public class Tetris {
             }
             if(lineFull){
                 removeline(i--);
+                linescore++;
             }
         }
+
+        updateScore(linescore);
     }
 
     public void removeline(int lineIndex){
@@ -239,5 +246,23 @@ public class Tetris {
         return bagPieces.remove(0);
     }
 
+    public void updateScore(int linesCleared){
+        System.out.println("Score: " + score);
+        switch(linesCleared){
+            case 1: 
+                score += 100;
+                break;
+            case 2:
+                score += 300;
+                break;
+            case 3:
+                score += 500;
+                break;
+            case 4:
+                score += 800;
+                break;
+        }
+        System.out.println("After Score: " + score);
+    }
     
 }

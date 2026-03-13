@@ -4,6 +4,7 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
@@ -21,9 +22,13 @@ public class Main extends ApplicationAdapter {
     private InputProcessor inputProcessor;
 
     private Tetris tetris;
+    private BitmapFont font;
 
     @Override
     public void create() {
+        font = new BitmapFont();
+        font.getData().setScale(2);
+        font.getRegion().getTexture().setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear); // Deixa o texto menos "pixelado"
         batch = new SpriteBatch();
         image = new TextureRegion(new Texture("blankTexture.png"));
         shapeDrawer = new ShapeDrawer(batch, image);
@@ -31,7 +36,7 @@ public class Main extends ApplicationAdapter {
 
         inputProcessor = new InputProcessor(tetris);
         Gdx.input.setInputProcessor(inputProcessor);
-        //test();
+        // test();
     }
 
     @Override
@@ -60,18 +65,35 @@ public class Main extends ApplicationAdapter {
                 tetris.lockTimer = 0;
             }
         }
+        //COMEÇO DOS DESENHOS
         batch.begin();
 
-            batch.setColor(Color.WHITE);
-            shapeDrawer.setColor(Color.YELLOW);
-            tetris.drawGrid(shapeDrawer);
-            tetris.piece.draw(shapeDrawer);
+        
 
-        if(tetris.gameOver){
+
+        batch.setColor(Color.WHITE);
+        shapeDrawer.setColor(Color.YELLOW);
+        tetris.drawGrid(shapeDrawer);
+        
+        //poderia juntar os 3 ifs, mas fica mais organizado assim
+        
+        if(!tetris.gameOver){
+            tetris.piece.draw(shapeDrawer);
+        }
+
+        if (tetris.gameOver) {
             tetris.gameOver();
+        }
+        
+        if(tetris.gameOver){
+            font.setColor(Color.ORANGE);
+            font.draw(batch, "Game Over", Gdx.graphics.getWidth()/2f - 50, Gdx.graphics.getHeight()/2f);
+        } else {      
+            font.draw(batch, "Score: " + tetris.score, 0, Gdx.graphics.getHeight() - 10);
         }
 
         batch.end();
+        //FIM DOS DESENHOS
     }
 
     @Override
