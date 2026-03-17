@@ -69,7 +69,7 @@ public class Piece {
     public Piece(int num, Tetris tetris, Vector2 pos){
         this.num = num;
         this.tetris = tetris;
-        this.position = new Vector2(pos.x, pos.y);
+        this.position = pos;
         System.out.println("Num:"+num);
         switch(num){
             case 1:

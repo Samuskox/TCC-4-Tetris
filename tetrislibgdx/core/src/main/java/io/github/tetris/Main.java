@@ -72,9 +72,7 @@ public class Main extends ApplicationAdapter {
 
 
         batch.setColor(Color.WHITE);
-        shapeDrawer.setColor(Color.YELLOW);
         tetris.drawGrid(shapeDrawer);
-        
         //poderia juntar os 3 ifs, mas fica mais organizado assim
         
         if(!tetris.gameOver){

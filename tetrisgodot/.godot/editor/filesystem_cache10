@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1773424858
+::res://::1773700527
 Bloco.png::CompressedTexture2D/CompressedTexture2D::8669701327545082818::1756842122::1757526023::1::::<><><>0<>0<>59ee9343b276a0088fcad48ad8ef2eab<>res://.godot/imported/Bloco.png-3e61c17e51d83c5b658c924eab18711d.ctex::
 icon.svg::CompressedTexture2D/CompressedTexture2D::4690137454582298901::1756842122::1756842122::1::::<><><>0<>0<>22b6e365de6c4175154040dbcfd3e860<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://assets/::1757526023
@@ -7,6 +7,6 @@ Bloco.png::CompressedTexture2D/CompressedTexture2D::3227861323700678282::1757525
 ::res://Scenes/::1773175716
 piece.gd::GDScript/GDScript::7762695412315859137::1771873522::0::1::::Piece<>Node2D<><>0<>0<><>::
 score.gd::GDScript/GDScript::361702406489550907::1770233340::0::1::::<>Label<><>0<>0<><>::
-tetris.tscn::PackedScene::4522869845924082026::1773175716::0::1::::<><><>0<>0<><>::uid://bm8rxumy7bw3o::::res://Scripts/tetris.gd<>uid://diukpu7g6cblh::::res://Scenes/piece.gd<>uid://ffhgk1jgx8hr::::res://Scenes/score.gd
+tetris.tscn::PackedScene/PackedScene::4522869845924082026::1773175716::0::1::::<><><>0<>0<><>::uid://bm8rxumy7bw3o::::res://Scripts/tetris.gd<>uid://diukpu7g6cblh::::res://Scenes/piece.gd<>uid://ffhgk1jgx8hr::::res://Scenes/score.gd
 ::res://Scripts/::1771873419
 tetris.gd::GDScript/GDScript::3297885605508239270::1771873419::0::1::::<>Node2D<><>0<>0<><>::
