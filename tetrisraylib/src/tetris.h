@@ -20,10 +20,12 @@ class Tetris{
         int getHeight();
         int getCellSize();
         float getOffsetX();
+        int getSpaceBetweenCells();
+        void lockPiece();
         Piece* piece = nullptr;
     private:
-        int width = 20;
-        int height = 10;
+        int width = 10;
+        int height = 20;
         int cellSize = 32;
         float offsetX = GetScreenWidth()/2 - (width*cellSize)/2;
         int spaceBetweenCells = 1;

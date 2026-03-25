@@ -12,15 +12,14 @@ class Piece{
         ~Piece();
         Tetris* pointerToTetris;
         void rotate();
-        void move();
+        void move(Vector2 direction);
+        bool isValidMove(Vector2 direction, Vector2 newBlocks[4]);
         void draw();
         Vector2 position;
         Vector2 blocks[4];
         Color color;
 
         int num;
-    private:
-        void setBlocks();
 };
 
 #endif

@@ -3,8 +3,8 @@
 
 
 Tetris::Tetris(){
-    for(int i = 0; i < width; i++){
-        for(int j = 0; j < height; j++){
+    for(int i = 0; i < height; i++){
+        for(int j = 0; j < width; j++){
             grid[i][j] = 0;
         }
     }
@@ -27,12 +27,16 @@ float Tetris::getOffsetX(){
     return offsetX;
 }
 
+int Tetris::getSpaceBetweenCells(){
+    return spaceBetweenCells;
+}
+
 void Tetris::spawnPiece(){
     if (piece != nullptr) {
         delete piece;
     }
 
-    Vector2 spawnPosition = {4,10};
+    Vector2 spawnPosition = {4,1};
     piece = new Piece(this, 2, spawnPosition);
 }
 
@@ -66,11 +70,22 @@ void Tetris::draw(){
                     color = PURPLE;
                     break;
             }
-                DrawRectangle((i*cellSize) + offsetX, (j*cellSize) + 7, (cellSize - (spaceBetweenCells)), cellSize - (spaceBetweenCells), color);
+                DrawRectangle((j*cellSize) + offsetX, (i*cellSize) + 7,
+                 (cellSize - (spaceBetweenCells)),
+                  cellSize - (spaceBetweenCells),
+                  color);
         }
     }
 
-        if(piece != nullptr){
+    if(piece != nullptr){
             piece->draw();
+    }
+}
+
+void Tetris::lockPiece(){
+        for(int i = 0; i < 4; i++){
+            int x = piece->position.x + piece->blocks[i].x;
+            int y = piece->position.y + piece->blocks[i].y;
+            grid[y][x] = piece->num;
     }
 }
