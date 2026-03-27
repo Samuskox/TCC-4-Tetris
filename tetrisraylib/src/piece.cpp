@@ -73,7 +73,7 @@ void Piece::rotate(){
     if(num == 4){
         return;
     }
-    std::cout << "Tentando rotacionar" << std::endl;
+    //std::cout << "Tentando rotacionar" << std::endl;
     Vector2 newBlocks[4];
     for(int i = 0; i < 4; i++){
         newBlocks[i].x = blocks[i].y;
@@ -83,7 +83,7 @@ void Piece::rotate(){
         for(int i = 0; i < 4; i++){
             blocks[i] = newBlocks[i];
         }
-        std::cout << "Rotacionou SEM SE MOVER" << std::endl;
+        //std::cout << "Rotacionou SEM SE MOVER" << std::endl;
         return ;
     }
     if(isValidMove({1,0}, newBlocks)){
@@ -91,14 +91,14 @@ void Piece::rotate(){
             blocks[i] = newBlocks[i];
         }
         position.x += 1;
-        std::cout << "Rotacionou SE MOVENDO PRA DIREITA" << std::endl;
+        //std::cout << "Rotacionou SE MOVENDO PRA DIREITA" << std::endl;
         return ;
     } 
     if(isValidMove({-1,0}, newBlocks)){
         for(int i = 0; i < 4; i++){
             blocks[i] = newBlocks[i];
         }
-        std::cout << "Rotacionou SE MOVENDO PRA ESQUERDA" << std::endl;
+        //std::cout << "Rotacionou SE MOVENDO PRA ESQUERDA" << std::endl;
         position.x -= 1;
         return;
     } 
@@ -107,7 +107,7 @@ void Piece::rotate(){
             blocks[i] = newBlocks[i];
         }
         position.y += 1;
-        std::cout << "Rotacionou SE MOVENDO PRA BAIXO" << std::endl;
+        //std::cout << "Rotacionou SE MOVENDO PRA BAIXO" << std::endl;
         return;
     }
 }
@@ -124,7 +124,6 @@ bool Piece::isValidMove(Vector2 direction, Vector2 newBlocks[4]){
 
         int newX = position.x + direction.x + newBlocks[i].x;
         int newY = position.y + direction.y + newBlocks[i].y;
-        std::cout << "Checando posição: " << newX << ", " << newY << std::endl;
 
         if(newY < 0 || newX >= pointerToTetris->getWidth()){
             return false;
@@ -154,3 +153,17 @@ void Piece::draw(){
     }
 }
 
+bool Piece::canFall(){
+    if(isValidMove({0,1}, blocks)){
+        move({0,1});
+        return true;
+    }
+    return false;
+}
+
+void Piece::hardDrop(){
+    //a função mais minimalista de todas kkkkkkkkkkk
+    while(canFall()){
+
+    }
+}

@@ -22,7 +22,7 @@ int main ()
 
 	SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
 
-	InitWindow(700, 650, "Hello Raylib");
+	InitWindow(700, 650, "Tetris (RayLib Version)");
 	SearchAndSetResourceDir("resources");
 
 	Game game;

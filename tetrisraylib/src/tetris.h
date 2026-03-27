@@ -2,6 +2,8 @@
 #define TETRIS_H
 
 #include <vector>
+#include <algorithm>
+#include <random>
 #include "raylib.h"
 #include "piece.h"
 
@@ -22,7 +24,14 @@ class Tetris{
         float getOffsetX();
         int getSpaceBetweenCells();
         void lockPiece();
+
         Piece* piece = nullptr;
+        std::vector<int> bagPieces;
+        std::mt19937 generator;
+        void shuffleBag();
+        void refillBag();
+        void cleanLine();
+        void removeLine(int line);
     private:
         int width = 10;
         int height = 20;

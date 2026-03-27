@@ -5,6 +5,7 @@
 #include "raylib.h"
 
 
+
 Game::Game(){
     tetris = Tetris();
     gameOver = false;
@@ -36,6 +37,7 @@ void Game::inputs(){
         // while(tetris.piece->isValidMove({0,1}, tetris.piece->blocks)){
         //     tetris.piece->move({0, 1});
         // }
+        tetris.piece->hardDrop();
         tetris.lockPiece();
         tetris.piece->~Piece();
         tetris.spawnPiece();
@@ -53,6 +55,6 @@ void Game::draw(){
 }
 
 void Game::test(){
-    tetris.grid[18][9] = 3;
+    tetris.grid[18][3] = 3;
     tetris.grid[15][5] = 5;
 }
