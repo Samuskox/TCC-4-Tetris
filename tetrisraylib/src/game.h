@@ -9,8 +9,7 @@ class Game{
         void draw();
         void inputs();
         void test();
-
-        bool gameOver;
+        
         int score;
         Tetris tetris;        
 };

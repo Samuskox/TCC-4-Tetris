@@ -113,6 +113,9 @@ void Piece::rotate(){
 }
 
 void Piece::move(Vector2 direction){
+    if(pointerToTetris == nullptr){
+        return;
+    }
     Vector2 newPosition = {position.x + direction.x, position.y + direction.y};
     if(isValidMove(direction, blocks)){
         position = newPosition;
@@ -120,12 +123,15 @@ void Piece::move(Vector2 direction){
 }
 
 bool Piece::isValidMove(Vector2 direction, Vector2 newBlocks[4]){
+    if(pointerToTetris == nullptr){
+        return false;
+    }
     for(int i = 0; i<4; i++){
 
         int newX = position.x + direction.x + newBlocks[i].x;
         int newY = position.y + direction.y + newBlocks[i].y;
 
-        if(newY < 0 || newX >= pointerToTetris->getWidth()){
+        if(newX >= pointerToTetris->getWidth()){
             return false;
         }
         if(newY >= pointerToTetris->getHeight()){

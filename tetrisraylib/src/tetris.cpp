@@ -34,20 +34,29 @@ int Tetris::getSpaceBetweenCells(){
 void Tetris::spawnPiece(){
     if (piece != nullptr) {
         delete piece;
+        piece = nullptr;
     }
 
-    Vector2 spawnPosition = {4,1};
+    Vector2 spawnPosition = {4,0};
     if(bagPieces.empty()){
         refillBag();
     }
-    for(int i = 0; i < bagPieces.size(); i++){
-        std::cout << "Bag contains: " << bagPieces[i] << std::endl;
-    }
+    // for(int i = 0; i < bagPieces.size(); i++){
+    //     std::cout << "Bag contains: " << bagPieces[i] << std::endl;
+    // }
 
     
     int num = bagPieces.back();
     bagPieces.pop_back();
-    piece = new Piece(this, num, spawnPosition);
+
+    Piece newPiece(this, num, spawnPosition);
+    if(isSpawnBlocked(&newPiece, spawnPosition)){
+        std::cout << "Game Over!" << std::endl;
+        gameover = true;
+        piece = nullptr;
+    } else {
+            piece = new Piece(this, num, spawnPosition);
+    }
 }
 
 void Tetris::draw(){
@@ -80,6 +89,9 @@ void Tetris::draw(){
                 case 7:
                     color = PINK;
                     break;
+                case 8:
+                    color = WHITE;
+                    break;
             }
                 DrawRectangle((j*cellSize) + offsetX, (i*cellSize) + 7,
                  (cellSize - (spaceBetweenCells)),
@@ -94,16 +106,20 @@ void Tetris::draw(){
 }
 
 void Tetris::lockPiece(){
+    if(piece == nullptr) return;
+
     for(int i = 0; i < 4; i++){
-            int x = piece->position.x + piece->blocks[i].x;
-            int y = piece->position.y + piece->blocks[i].y;
+        int x = piece->position.x + piece->blocks[i].x;
+        int y = piece->position.y + piece->blocks[i].y;
+        if (x >= 0 && x < getWidth() && y >= 0 && y < getHeight()) {
             grid[y][x] = piece->num;
+        }
     }
 
     for (int l = 0; l < 20; l++) {
-    for (int c = 0; c < 10; c++) {
-        std::cout << grid[l][c] << " ";
-    }
+        for (int c = 0; c < 10; c++) {
+            std::cout << grid[l][c] << " ";
+        }
         std::cout << std::endl;
     }
 
@@ -149,5 +165,58 @@ void Tetris::removeLine(int line){
     }
     for(int j = 0; j < width; j++){
         grid[0][j] = 0;
+    }
+}
+
+void Tetris::gravity(){
+    if(gameover || piece == nullptr) return;
+
+    fallTimer++;
+    if(fallTimer >= fallDelay){
+        fallTimer = 0;
+        lockTimer = 0;
+        piece->canFall();
+    }
+}
+
+void Tetris::checkLock(){
+    if(gameover || piece == nullptr) return;
+
+    if(!piece->isValidMove({0,1}, piece->blocks)){
+        lockTimer++;
+        if(lockTimer >= lockDelay){
+            lockTimer = 0;
+            lockPiece();
+            spawnPiece();
+        }
+    }
+}
+
+bool Tetris::isSpawnBlocked(Piece* newPiece, Vector2 spawnPosition){
+    for(int i = 0; i < 4; i++){
+        int x = spawnPosition.x + newPiece->blocks[i].x;
+        int y = spawnPosition.y + newPiece->blocks[i].y;
+        if(x < 0 || x >= getWidth()){
+            std::cout << "Spawn blocked: piece is out of horizontal bounds." << std::endl;
+                return true;
+        }
+        if(y >= 0 && y <= getHeight()){
+             if(grid[y][x] > 0){
+            std::cout << "Spawn blocked: cell (" << x << ", " << y << ") is already occupied." << std::endl;
+            return true;
+            }
+        }
+       
+    }
+    return false;
+}
+
+void Tetris::gameOver(){
+    for(int i = 0; i < height; i++){
+        for(int j = 0; j < width; j++){
+            if(grid[i][j] > 0){
+                grid[i][j] = 8;
+            }
+        }
     }
 }

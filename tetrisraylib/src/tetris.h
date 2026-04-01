@@ -24,6 +24,8 @@ class Tetris{
         float getOffsetX();
         int getSpaceBetweenCells();
         void lockPiece();
+        bool isSpawnBlocked(Piece* newPiece, Vector2 spawnPosition);
+        void gameOver();
 
         Piece* piece = nullptr;
         std::vector<int> bagPieces;
@@ -32,6 +34,13 @@ class Tetris{
         void refillBag();
         void cleanLine();
         void removeLine(int line);
+        void gravity();
+        void checkLock();
+        int fallTimer = 0;
+        int fallDelay = 30;
+        int lockTimer = 0;
+        int lockDelay = 30;
+        bool gameover = false;
     private:
         int width = 10;
         int height = 20;
