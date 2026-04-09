@@ -23,6 +23,8 @@ class Tetris{
         int getCellSize();
         float getOffsetX();
         int getSpaceBetweenCells();
+        int getScore();
+        void addScore(int points);
         void lockPiece();
         bool isSpawnBlocked(Piece* newPiece, Vector2 spawnPosition);
         void gameOver();
@@ -47,6 +49,7 @@ class Tetris{
         int cellSize = 32;
         float offsetX = GetScreenWidth()/2 - (width*cellSize)/2;
         int spaceBetweenCells = 1;
+        int score = 0;
 };
 
 #endif

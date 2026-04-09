@@ -7,8 +7,6 @@ import com.badlogic.gdx.math.Vector2;
 import space.earlygrey.shapedrawer.ShapeDrawer;
 
 public class Piece {
-    //TO DO: make this more efficient by using a single array of Vector2s and just rotating them instead of having 7 different arrays for each piece
-    // TODO: Put this o piece when instantiating the piece instead of having 7 different arrays for each piece and a switch statement in the constructor
     Color color;
     Vector2[] blocks;
     Vector2 position;

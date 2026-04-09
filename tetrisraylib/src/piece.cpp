@@ -76,8 +76,8 @@ void Piece::rotate(){
     //std::cout << "Tentando rotacionar" << std::endl;
     Vector2 newBlocks[4];
     for(int i = 0; i < 4; i++){
-        newBlocks[i].x = blocks[i].y;
-        newBlocks[i].y = -blocks[i].x;
+        newBlocks[i].x = -blocks[i].y;
+        newBlocks[i].y = blocks[i].x;
     }
     if(isValidMove({0,0}, newBlocks)){
         for(int i = 0; i < 4; i++){
@@ -150,6 +150,7 @@ bool Piece::isValidMove(Vector2 direction, Vector2 newBlocks[4]){
 void Piece::draw(){
     
     for(int i = 0; i < 4; i++){
+        if(position.y + blocks[i].y < 0) continue; //não desenha blocos que estão acima do campo de jogo
         DrawRectangle(
             (position.x + blocks[i].x) * pointerToTetris->getCellSize() + pointerToTetris->getOffsetX(),
             (position.y + blocks[i].y) * pointerToTetris->getCellSize() + 7,

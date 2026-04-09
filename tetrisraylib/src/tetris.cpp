@@ -31,6 +31,10 @@ int Tetris::getSpaceBetweenCells(){
     return spaceBetweenCells;
 }
 
+int Tetris::getScore(){
+    return score;
+}
+
 void Tetris::spawnPiece(){
     if (piece != nullptr) {
         delete piece;
@@ -100,6 +104,8 @@ void Tetris::draw(){
         }
     }
 
+    DrawText(TextFormat("Score: %d", getScore()), 10, 10, 20, WHITE);
+
     if(piece != nullptr){
             piece->draw();
     }
@@ -116,12 +122,12 @@ void Tetris::lockPiece(){
         }
     }
 
-    for (int l = 0; l < 20; l++) {
-        for (int c = 0; c < 10; c++) {
-            std::cout << grid[l][c] << " ";
-        }
-        std::cout << std::endl;
-    }
+    // for (int l = 0; l < 20; l++) {
+    //     for (int c = 0; c < 10; c++) {
+    //         std::cout << grid[l][c] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
 
     cleanLine();
 }
@@ -143,6 +149,7 @@ void Tetris::shuffleBag(){
 }
 
 void Tetris::cleanLine(){
+    int linesCleared = 0;
     for(int i = 0; i < height; i++){
         bool fullLine = true;
         for(int j = 0; j < width; j++){
@@ -153,8 +160,10 @@ void Tetris::cleanLine(){
         }
         if(fullLine){
             removeLine(i);
+            linesCleared++;
         }
     }
+    addScore(linesCleared);
 }
 
 void Tetris::removeLine(int line){
@@ -219,4 +228,23 @@ void Tetris::gameOver(){
             }
         }
     }
+}
+
+void Tetris::addScore(int points){
+    switch(points){
+        case 1:
+            score += 100;
+            break;
+        case 2:
+            score += 300;
+            break;
+        case 3:
+            score += 500;
+            break;
+        case 4:
+            score += 800;
+            break;
+    }
+
+    //std::cout << "Score: " << score << std::endl;
 }

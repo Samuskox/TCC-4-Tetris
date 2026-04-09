@@ -247,7 +247,7 @@ public class Tetris {
     }
 
     public void updateScore(int linesCleared){
-        System.out.println("Score: " + score);
+        //System.out.println("Score: " + score);
         switch(linesCleared){
             case 1: 
                 score += 100;
@@ -262,7 +262,7 @@ public class Tetris {
                 score += 800;
                 break;
         }
-        System.out.println("After Score: " + score);
+        //System.out.println("After Score: " + score);
     }
     
 }
