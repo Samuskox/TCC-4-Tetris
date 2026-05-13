@@ -36,7 +36,7 @@ public class Main extends ApplicationAdapter {
 
         inputProcessor = new InputProcessor(tetris);
         Gdx.input.setInputProcessor(inputProcessor);
-        // test();
+        //test();
     }
 
     @Override
@@ -73,10 +73,12 @@ public class Main extends ApplicationAdapter {
 
         batch.setColor(Color.WHITE);
         tetris.drawGrid(shapeDrawer);
+        tetris.drawBox(shapeDrawer, 20, 80, tetris.piece.num, tetris.piece);
+
         //poderia juntar os 3 ifs, mas fica mais organizado assim
-        
         if(!tetris.gameOver){
             tetris.piece.draw(shapeDrawer);
+            tetris.piece.drawGhostPiece(shapeDrawer);
         }
 
         if (tetris.gameOver) {
@@ -86,9 +88,11 @@ public class Main extends ApplicationAdapter {
         if(tetris.gameOver){
             font.setColor(Color.ORANGE);
             font.draw(batch, "Game Over", Gdx.graphics.getWidth()/2f - 50, Gdx.graphics.getHeight()/2f);
-        } else {      
-            font.draw(batch, "Score: " + tetris.score, 0, Gdx.graphics.getHeight() - 10);
         }
+
+        font.draw(batch, "Score: " + tetris.score, 10, Gdx.graphics.getHeight() - 20);
+        font.draw(batch, "Lines: " + tetris.lines, 10, Gdx.graphics.getHeight() - 50);
+        
 
         batch.end();
         //FIM DOS DESENHOS

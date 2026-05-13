@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 import space.earlygrey.shapedrawer.ShapeDrawer;
@@ -27,6 +28,7 @@ public class Tetris {
     float lockDelay = 0.5f;
 
     int score = 0;
+    int lines = 0;
 
     Boolean gameOver = false;
     
@@ -114,7 +116,6 @@ public class Tetris {
                            Color.WHITE);
                 }
 
-                //TODO: if for each piece type and color
             }
         }
         drawLines(shapeDrawer);
@@ -132,6 +133,70 @@ public class Tetris {
         }
 
         //shapeDrawer.line(offsetX, offsetX, offsetX, offsetX, offsetX);
+    }
+
+    public void drawBox(ShapeDrawer shapeDrawer, int x, int y, int num, Piece pieceBox){
+        shapeDrawer.filledRectangle(
+            x,
+            y,
+            150,
+              90,
+               Color.BLACK);
+        shapeDrawer.rectangle(x, y, 150, 90, Color.WHITE);
+        Rectangle box = new Rectangle(x, y, 150, 90);
+        shapeDrawer.rectangle(box, 4);
+        Vector2[] boxBlocks = null;
+        Color color = null;
+        switch (num) {
+            case 1:
+                boxBlocks = piece.iP;
+                color = piece.color;
+                y += 15; 
+                break;
+            case 2:
+                boxBlocks = piece.sP;
+                color = piece.color;
+                x += 15;
+                break;
+            case 3:
+                boxBlocks = piece.zP;
+                color = piece.color;
+                x += 30;
+                y += 15;
+                break;
+            case 4:
+                boxBlocks = piece.tP;
+                x += 5;
+                y += 15;
+                color = piece.color;
+                break;
+            case 5:
+                boxBlocks = piece.oP;
+                color = piece.color;
+                y += 5;
+                break;
+            case 6:
+                boxBlocks = piece.lP;
+                color = piece.color;
+                x += 10;
+                break;
+            case 7: 
+                boxBlocks = piece.jP;
+                color = piece.color;
+                x += 10;
+                break;
+            default:
+                break;
+        }
+        for(Vector2 block : boxBlocks){
+            shapeDrawer.filledRectangle(
+                x + 50 + (block.x * cellSize),
+                y + 20 + (block.y * cellSize),
+                cellSize - (spaceBetweenCells * 2),
+                cellSize - (spaceBetweenCells * 2),
+                color);
+        }
+
     }
 
     public void lockPiece(){
@@ -178,6 +243,7 @@ public class Tetris {
             if(lineFull){
                 removeline(i--);
                 linescore++;
+                lines++;
             }
         }
 
@@ -208,7 +274,7 @@ public class Tetris {
                 continue;
             }
 
-            System.out.println("x: " + x + " y: " + y);
+            //System.out.println("x: " + x + " y: " + y);
             if(grid[x][y] >= 1){
                 return true;
             }
@@ -234,7 +300,6 @@ public class Tetris {
         bagPieces.add(5);
         bagPieces.add(6);
         bagPieces.add(7);
-        //Collections.shuffle((List<Integer>) pieceQueue);
         Collections.shuffle(bagPieces);
     }
 

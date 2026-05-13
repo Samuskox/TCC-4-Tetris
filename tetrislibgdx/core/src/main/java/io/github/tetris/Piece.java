@@ -36,10 +36,10 @@ public class Piece {
     };
 
     Vector2[] tP = {
-            new Vector2(0, -1),
+            new Vector2(-1, 0),
             new Vector2(0, 0),
-            new Vector2(1, 0),
-            new Vector2(0, 1)
+            new Vector2(0, 1),
+            new Vector2(1, 0)
     };
 
     Vector2[] oP = {
@@ -180,5 +180,23 @@ public class Piece {
         }
         return false;
         
+    }
+
+    public void drawGhostPiece(ShapeDrawer shapeDrawer){
+        Vector2 ghostPosition = new Vector2(position.x, position.y);
+        while(isValidMove(new Vector2(ghostPosition.x, ghostPosition.y - 1), blocks)){
+            ghostPosition.y -= 1;
+        }
+
+        float offsetX = Gdx.graphics.getWidth()/2f - (tetris.gridWidth * tetris.cellSize)/2f;
+        float size   = tetris.cellSize - (tetris.spaceBetweenCells * 2);
+        shapeDrawer.setColor(new Color(color.r, color.g, color.b, 0.5f));
+        for(Vector2 block : blocks){
+            shapeDrawer.filledRectangle(
+            offsetX + (ghostPosition.x + block.x) * tetris.cellSize,
+            ((ghostPosition.y + block.y) * tetris.cellSize) + 1,
+            size,
+            size);
+        }
     }
 }

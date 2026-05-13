@@ -11,9 +11,13 @@ var xPlayer := 3.0
 var yPlayer := 3.0
 var goingdown = false
 
+
+var bagPieces: Array[int] = []
 var score := 0
 @onready var score_label = $Score
 var gameover := false
+
+
 
 func _ready() -> void:
 	
@@ -23,7 +27,7 @@ func _ready() -> void:
 		grid[x].resize(GridHeight)
 		for y in range(GridHeight):
 			grid[x][y] = 0
-			
+			#
 	#grid[4][7] = 3
 	#grid[6][7] = 3
 	#grid[5][8] = 3
@@ -64,7 +68,7 @@ func _process(delta: float) -> void:
 				spawnPiece()
 				goingdown = false
 	if(Input.is_action_just_pressed("cima")):
-		piece.rotate_piece()
+			piece.rotate_piece()
 		
 func _draw() -> void:
 	for x in range(GridWidth + 1):
@@ -95,19 +99,25 @@ func _draw() -> void:
 				draw_rect(Rect2(Vector2(x,y) * cellSize, Vector2(cellSize - 1,cellSize - 1)),Color("031b24"))
 
 func spawnPiece():
-	var num = (randi() % 7 + 1)
+	print(bagPieces)
+	if bagPieces.is_empty():
+		refillBag()
+		print("ta enchendokkkkkk")
+	print(bagPieces)
+	var num = bagPieces.pop_back()
+	print(num)
 	#print("numero da cor:", num)
 	var startPos = Vector2(GridWidth / 2 - 1, 1)
 	piece = Piece.new(startPos, num)
 	
 	if isSpawnBlocked(piece.blocks, startPos):
 		triggerGameOver()
-		piece.queue_free
+		piece.queue_free()
 		return
 	#piece.main_script = self
 	else:
 		add_child(piece)
-	return piece
+	#return piece
 	
 func cleanLine():
 	
@@ -120,10 +130,8 @@ func cleanLine():
 				isFull = false
 				break
 		if isFull:
-			
 			removeLine(y)
 			linesScores += 1
-			
 		else:
 			y -= 1 #checa toda a linhas de baixo pra cima
 	updateScore(linesScores)
@@ -164,12 +172,26 @@ func isSpawnBlocked(piece: Array[Vector2], spawnPos: Vector2) -> bool:
 	for block in piece:
 		var x = int(spawnPos.x + block.x)
 		var y = int(spawnPos.y + block.y)
-		
+	
 		if x >= 0 and x < GridWidth and y >= 0 and y < GridHeight:
 			if grid[x][y] != 0:
 				return true
 		
 	return false
+
+func refillBag():
+	bagPieces.append(1)
+	bagPieces.append(2)
+	bagPieces.append(3)
+	bagPieces.append(4)
+	bagPieces.append(5)
+	bagPieces.append(6)
+	bagPieces.append(7)
+	
+	randomize()
+	bagPieces.shuffle()
+	
+	
 	
 	
 	

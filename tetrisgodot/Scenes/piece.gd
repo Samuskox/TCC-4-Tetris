@@ -12,6 +12,22 @@ const cellSize = 32
 
 var checkFall = 0
 
+const KICKS_NORMAL = [
+	[Vector2(0,0), Vector2(-1,0), Vector2(-1,-1), Vector2(0,2), Vector2(-1,2)], # 0 -> 1
+	[Vector2(0,0), Vector2(1,0), Vector2(1,1), Vector2(0,-2), Vector2(1,-2)],    # 1 -> 2
+	[Vector2(0,0), Vector2(1,0), Vector2(1,-1), Vector2(0,2), Vector2(1,2)],    # 2 -> 3
+	[Vector2(0,0), Vector2(-1,0), Vector2(-1,1), Vector2(0,-2), Vector2(-1,-2)] # 3 -> 0
+]
+
+const KICKS_I = [
+	[Vector2(0,0), Vector2(-2,0), Vector2(1,0), Vector2(-2,1), Vector2(1,-2)],  # 0 -> 1
+	[Vector2(0,0), Vector2(-1,0), Vector2(2,0), Vector2(-1,-2), Vector2(2,1)],  # 1 -> 2
+	[Vector2(0,0), Vector2(2,0), Vector2(-1,0), Vector2(2,-1), Vector2(-1,2)],  # 2 -> 3
+	[Vector2(0,0), Vector2(1,0), Vector2(-2,0), Vector2(1,2), Vector2(-2,-1)]   # 3 -> 0
+]
+
+var current_rotation = 0
+
 const iP: Array[Vector2] = [
 	Vector2(-1, 0),
 	Vector2(0, 0),
@@ -62,10 +78,14 @@ const jP: Array[Vector2] = [
 ]
 
 const allPieces: Array = [iP, sP, zP, tP, oP, lP, jP]
+var ghostPosition: Vector2
+var ghostBlocks: Array[Vector2]
+
 
 func _init(igridPosition : Vector2 = Vector2.ZERO, iNumber : int = 0):
 	
 	gridPosition = igridPosition
+	ghostPosition = igridPosition
 	num = iNumber
 	
 	if(num == 1):
@@ -89,13 +109,14 @@ func _init(igridPosition : Vector2 = Vector2.ZERO, iNumber : int = 0):
 	elif(num == 7):
 		blocks = jP
 		color = Color.DARK_BLUE
-		
+	
+	ghostBlocks = blocks
+	#print(ghostBlocks)
 
 
 func _ready() -> void:
 	
 	main_script = get_node("/root/Tetris")
-	
 	var timer := $"../Timer"
 	#add_child(timer)
 	timer.timeout.connect(fall)
@@ -104,6 +125,14 @@ func _ready() -> void:
 	timer.start(1)
 
 func _draw() -> void:
+	
+	for ghostBlock in ghostBlocks:
+		var x = (ghostPosition.x + ghostBlock.x) * cellSize
+		var y = (ghostPosition.y + ghostBlock.y) * cellSize
+		
+		var ghostColor = Color(0.39215687, 0.58431375, 0.92941177, 0.7)
+		draw_rect(Rect2(Vector2(x, y), Vector2(cellSize, cellSize)), ghostColor, true)
+	
 	for block in blocks:
 		draw_rect(Rect2((block + gridPosition) * cellSize, Vector2(cellSize - 2, cellSize - 2)), color, true)
 
@@ -112,12 +141,13 @@ func move(direction: Vector2):
 	if isValidmove(new_position):
 		gridPosition = new_position
 		queue_redraw()
+		updateGhostPosition()
 		return true
 	else:
 		return false
 
 func fall():
-	print("checkfall: ", checkFall)
+	#print("checkfall: ", checkFall)
 	if not move(Vector2(0,1)):
 		checkFall += 1
 		if checkFall >= 2:
@@ -142,22 +172,36 @@ func lockPiece(piece: Piece):
 		queue_redraw()
 
 func rotate_piece() -> Array[Vector2]:
+	if num == 5: return blocks
+	#print(current_rotation)
 	var rotated_blocks: Array[Vector2] = []
-	
+	#print("entrando no rotacionar")
 	for block in blocks:
 		var new_block: Vector2
-		new_block = Vector2(-block.y, block.x) #rotacionando bloco por bloco
-		rotated_blocks.append(new_block) #Coloco em um conjunto novo de blocos
-	if isValidmove(gridPosition, rotated_blocks):
-		blocks = rotated_blocks
-		queue_redraw()
-	return rotated_blocks
+		new_block = Vector2(-block.y, block.x) 
+		rotated_blocks.append(new_block) 
+	#print("rotacionou")
+	
+	var kickTable = KICKS_NORMAL if num == 1 else KICKS_I
+	var tests = kickTable[current_rotation]
+	
+	for rotation in tests:
+		var testPos = gridPosition + rotation
+		if isValidmove(testPos, rotated_blocks):
+			#print("foi...")
+			gridPosition = testPos
+			blocks = rotated_blocks
+			current_rotation = (current_rotation + 1) % 4
+			queue_redraw()
+			updateGhostPosition()
+			return rotated_blocks
+	updateGhostPosition()
+	return blocks
 
 func isValidmove(target_position: Vector2, target_blocks: Array[Vector2] = blocks) -> bool:
 	if not main_script:
 		return true
-
-	# Agora iteramos sobre target_blocks, que pode ser a nova rotação.
+	
 	for block in target_blocks: 
 		var absolute_pos = block + target_position
 		var x = int(absolute_pos.x)
@@ -166,6 +210,7 @@ func isValidmove(target_position: Vector2, target_blocks: Array[Vector2] = block
 		# Checar Limites Horizontais e Verticais
 		if x < 0 or x >= main_script.GridWidth:
 			return false
+		#print("Y: " + str(y) + "GridHeight: " + str(main_script.GridHeight))
 		if y < 0 or y >= main_script.GridHeight:
 			return false
 		
@@ -173,3 +218,20 @@ func isValidmove(target_position: Vector2, target_blocks: Array[Vector2] = block
 		if main_script.grid[x][y] != 0:
 			return false
 	return true
+	
+func updateGhostPosition():
+	var testPosition = gridPosition
+	ghostBlocks = blocks
+	var ghostFalling = true
+	
+	while ghostFalling:
+		if isValidmove(testPosition + Vector2(0,1), ghostBlocks) and testPosition.y < main_script.GridHeight:
+			testPosition += Vector2(0,1)
+		else:
+			ghostFalling = false
+		
+		#print(isValidmove(testPosition + Vector2(0,1), ghostBlocks))
+	
+	ghostPosition = testPosition
+	queue_redraw()
+	
