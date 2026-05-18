@@ -1,13 +1,33 @@
-\chapter{Análise dos Resultados Parciais}
+\chapter{Análise dos Resultados}
 \label{cap:04}
 
-Até o momento, foi desenvolvido parcialmente a versão do jogo \textit{Tetris} utilizando o motor gráfico \textit{Godot},
-o protótipo atual já permite a movimentação das peças (tetraminós) na grade com 20 de altura e 10 de comprimento, junto também da 
-queda automática das peças, também é possivel rotacionar os tetraminós no ângulo de 90ª graus. Foi implementado o sistema de colisão, 
-tanto em partes preenchidas da grade como nos limites dela.
+Foi desenvolvido as quatros versões do jogo \textit{Tetris} utilizando as tecnologias \textit{Godot}, \textit{Pygame}, \textit{Raylib} e \textit{LibGDX}, após a implementação, foi feita uma análise comparativa entre as tecnologias, levando em consideração aspectos como facilidade de uso, curva de aprendizado e desempenho.
+Para a implementação do jogo \textit{Tetris} foi levantado os requisitos necessários para o desenvolvimento do jogo, como a movimentação das peças, a rotação, a queda automática, o sistema de colisão e a remoção de linhas completas.
 
-Ficaram pendentes as funcionalidades de remover uma linha caso ela estiver completa, a funcionalidade de preencher
-a grade com peça atual do jogador e interfáce gráfica final.
+\section{Estudos das Tecnologias e Implementação}
+
+Antes do desenvolvimento de cada versão do jogo, foi realizado um estudo introdutório da linguagem de programação utilizada pela tecnologia correspondente, buscando compreender conceitos fundamentais de sintaxe, orientação a objetos, manipulação gráfica e estrutura de execução.
+
+Após o estudo introdutório da linguagem, foi feito um estudo da documentação oficial de cada engine ou biblioteca/\textit{Framework}, com foco nos recursos necessários para o desenvolvimento do jogo \textit{Tetris}, como renderização gráfica, captura de entrada do usuário, temporização, gerenciamento de desenho de elementos na tela e outros recursos específicos de cada tecnologia.
+
+O desenvolvimento foi realizado de forma incremental e comparativa. A cada nova implementação, aplicou-se os mesmos requisitos do jogo em diferentes ambientes de desenvolvimento. Essa abordagem possibilitou observar diferenças relacionadas à organização do código, gerenciamento do loop principal do jogo, modularização e disponibilidade de recursos oferecidos por cada tecnologia. Durante esse processo, também foram estudados e incorporados algoritmos e mecânicas adicionais presentes no \textit{Tetris}, como o sistema de geração de peças \textit{7-Bag} (para evitar peças iguais) e o \textit{Super Rotation System} (SRS) (sistema de rotação para cada peça), possibilitando a evolução gradual das implementações ao longo do projeto.
+
+\subsection{Godot}
+
+Durante o desenvolvimento do jogo na \textit{Godot}, observou-se uma grande facilidade na criação de cenas e gerenciamento de nós, permitindo uma implementação rápida da lógica do jogo. A estrutura de nós da \textit{Godot} facilitou a organização do código e a reutilização de componentes, o que contribuiu para uma implementação mais eficiente do jogo \textit{Tetris}. A documentação da \textit{Godot} foi útil para esclarecer dúvidas e fornecer exemplos práticos, acelerando o processo de desenvolvimento.
+Foi utilizado 2 nós principais para a implementação do jogo, o nó \textit{Node2D} para a cena principal do jogo e outro nó \textit{Node2D} para as peças do jogo, além de outros nós auxiliares para a temporização e gerenciamento gráfico, junto aos dois nós principais, foram criados scripts para implementar a lógica do jogo, como a movimentação das peças, a rotação, a queda automática, o sistema de colisão e a remoção de linhas completas.
+Abaixo há a figura~\ref{fig:godotnos} dos nós e dos scripts criados para a implementação do jogo \textit{Tetris} na \textit{Godot}:
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Nós e Scripts do Jogo Tetris na Godot}
+	\includegraphics[scale=1.2]{imagens/Nos&Scripts.png}
+	\\\textbf{Fonte:} Elaborado pelo autor
+	\label{fig:godotnos}
+\end{figure}
+\FloatBarrier
+
 
 Com algumas funcionalidades já implementadas, é possivel compreender melhor o funcionamento da \textit{engine} 
 demonstrando o funcionamento do sistema de entrada e atualização de cena e sua lógica baseada em nós (nodes),
@@ -20,51 +40,51 @@ facilitando a compreensão de seus recursos principais. No entanto, o gerenciame
 
 %\david[inline]{sinceramente, não sei se vale pensar em performance. acho que é melhor focar na sua experiência de usar n tecnologias para resolver o mesmo problema. para a quali, pode deixar o que vc coletou abaixo, mas para a defesa, vamos tirar isso. pq se for mesmo analisar desempenho, ai são outros problemas...}
 
-Com cerca de 70\% do \textit{Tetris} em \textit{Godot} feito é possivel avaliar alguns desempenhos em relação a perfomance da aba monitoramento disponível no \textit{Godot}:
+% Com cerca de 70\% do \textit{Tetris} em \textit{Godot} feito é possivel avaliar alguns desempenhos em relação a perfomance da aba monitoramento disponível no \textit{Godot}:
 
-\begin{itemize}
-	\item Tempo
-	\subitem FPS: 34 por segundos
-	\subitem Processamento: 31.20 ms
-	\subitem Processo de Física: 0.04 ms
-	\item Memória
-	\subitem Estático: 50.82 MiB
-	\subitem Estático Máximo: 50.89 MiB
-	\subitem Máx Buf Msg: 4.00 KiB
-	\item Objetos usados
-	\subitem Objetos: 1373
-	\subitem Nós: 6
-	\item Memória de Vídeo
-	\subitem Memória de Vídeo: 11.22 MiB
-	\subitem Memória de Textura: 5.11 MiB
-	\subitem Memória de Buffer: 6.10 MiB
-\end{itemize}
+% \begin{itemize}
+% 	\item Tempo
+% 	\subitem FPS: 34 por segundos
+% 	\subitem Processamento: 31.20 ms
+% 	\subitem Processo de Física: 0.04 ms
+% 	\item Memória
+% 	\subitem Estático: 50.82 MiB
+% 	\subitem Estático Máximo: 50.89 MiB
+% 	\subitem Máx Buf Msg: 4.00 KiB
+% 	\item Objetos usados
+% 	\subitem Objetos: 1373
+% 	\subitem Nós: 6
+% 	\item Memória de Vídeo
+% 	\subitem Memória de Vídeo: 11.22 MiB
+% 	\subitem Memória de Textura: 5.11 MiB
+% 	\subitem Memória de Buffer: 6.10 MiB
+% \end{itemize}
 
-Tetris é um jogo simples e leve que não demanda muitos recursos significativos de hardware, 
-portanto os resultados da perfomance não refletem uma carga significativa sobre o desempenho da máquina. Os resultados indicam uma perfomance satisfatória para um estágio que ainda está em desenvolvimento, 
-o FPS médio de 34 é adequado para um projeto em construção, e o tempo de
-processamento (31,20 ms) mostra estabilidade. O consumo de memória e de vídeo está dentro
-de limites esperados, demonstrando boa eficiência no uso dos recursos da engine Godot.
+% Tetris é um jogo simples e leve que não demanda muitos recursos significativos de hardware, 
+% portanto os resultados da perfomance não refletem uma carga significativa sobre o desempenho da máquina. Os resultados indicam uma perfomance satisfatória para um estágio que ainda está em desenvolvimento, 
+% o FPS médio de 34 é adequado para um projeto em construção, e o tempo de
+% processamento (31,20 ms) mostra estabilidade. O consumo de memória e de vídeo está dentro
+% de limites esperados, demonstrando boa eficiência no uso dos recursos da engine Godot.
 
-Até o momento atual, as seguintes atividades foram feitas, abaixo na figura~\ref{fig:cronograma} é mostrado o cronograma das atividades:
+% Até o momento atual, as seguintes atividades foram feitas, abaixo na figura~\ref{fig:cronograma} é mostrado o cronograma das atividades:
 
-\FloatBarrier
-\begin{figure}[!htbp]
-	\centering
-	\caption{Cronograma de Atividades}
-	\includegraphics[scale=1]{imagens/cronograma.png}
-	\\\textbf{Fonte:} feito pelo autor
-    \label{fig:cronograma}
-\end{figure}
-\FloatBarrier
+% \FloatBarrier
+% \begin{figure}[!htbp]
+% 	\centering
+% 	\caption{Cronograma de Atividades}
+% 	\includegraphics[scale=1]{imagens/cronograma.png}
+% 	\\\textbf{Fonte:} feito pelo autor
+%     \label{fig:cronograma}
+% \end{figure}
+% \FloatBarrier
 
-\begin{enumerate}
-	\item Estudos de artigos, livros e sites para a fundamentação teórica;
-	\item Planejamento dos jogos e definição da metodologia;
-	\item Estudo do motor grafico \textit{Godot} e do ambiente de desenvolvimento;
-	\item Coleta de Dados;
-	\item Revisão da documentação.
-\end{enumerate}
+% \begin{enumerate}
+% 	\item Estudos de artigos, livros e sites para a fundamentação teórica;
+% 	\item Planejamento dos jogos e definição da metodologia;
+% 	\item Estudo do motor grafico \textit{Godot} e do ambiente de desenvolvimento;
+% 	\item Coleta de Dados;
+% 	\item Revisão da documentação.
+% \end{enumerate}
 
 
 % \section{Cronograma do Trabalho}

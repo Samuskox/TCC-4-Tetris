@@ -13,6 +13,7 @@ class Tetris{
     public:
         Tetris();
         void draw();
+        void drawBox(int x, int y);
         void cleanLines();
         void removeLine();
         void spawnPiece();
@@ -24,10 +25,12 @@ class Tetris{
         float getOffsetX();
         int getSpaceBetweenCells();
         int getScore();
+        int getLines();
         void addScore(int points);
         void lockPiece();
         bool isSpawnBlocked(Piece* newPiece, Vector2 spawnPosition);
         void gameOver();
+        
 
         Piece* piece = nullptr;
         std::vector<int> bagPieces;
@@ -50,6 +53,7 @@ class Tetris{
         float offsetX = GetScreenWidth()/2 - (width*cellSize)/2;
         int spaceBetweenCells = 1;
         int score = 0;
+        int lines = 0;
 };
 
 #endif

@@ -35,6 +35,10 @@ int Tetris::getScore(){
     return score;
 }
 
+int Tetris::getLines(){
+    return lines;
+}
+
 void Tetris::spawnPiece(){
     if (piece != nullptr) {
         delete piece;
@@ -70,7 +74,7 @@ void Tetris::draw(){
 
             switch(grid[i][j]){
                 case 0:
-                    color = GRAY;
+                    color = WHITE;
                     break;
                 case 1:
                     color = RED;
@@ -94,7 +98,7 @@ void Tetris::draw(){
                     color = PINK;
                     break;
                 case 8:
-                    color = WHITE;
+                    color = DARKGRAY;
                     break;
             }
                 DrawRectangle((j*cellSize) + offsetX, (i*cellSize) + 7,
@@ -105,9 +109,13 @@ void Tetris::draw(){
     }
 
     DrawText(TextFormat("Score: %d", getScore()), 10, 10, 20, WHITE);
+    DrawText(TextFormat("Lines: %d", getLines()), 10, 40, 20, WHITE);
+
+    drawBox(20, 450);
 
     if(piece != nullptr){
             piece->draw();
+            piece->drawGhost();
     }
 }
 
@@ -121,13 +129,6 @@ void Tetris::lockPiece(){
             grid[y][x] = piece->num;
         }
     }
-
-    // for (int l = 0; l < 20; l++) {
-    //     for (int c = 0; c < 10; c++) {
-    //         std::cout << grid[l][c] << " ";
-    //     }
-    //     std::cout << std::endl;
-    // }
 
     cleanLine();
 }
@@ -161,6 +162,7 @@ void Tetris::cleanLine(){
         if(fullLine){
             removeLine(i);
             linesCleared++;
+            lines++;
         }
     }
     addScore(linesCleared);
@@ -247,4 +249,72 @@ void Tetris::addScore(int points){
     }
 
     //std::cout << "Score: " << score << std::endl;
+}
+
+void Tetris::drawBox(int x, int y){
+    DrawRectangle(x, y, 150, 150, GRAY);
+    DrawRectangleLines(x, y, 150, 150, WHITE);
+
+    Vector2 boxBlocks[4];
+
+    if(piece == nullptr) return;
+    if(gameover) return;
+    if(piece->num == 1){
+        for(int i = 0; i < 4; i++){
+            boxBlocks[0] = {-1, 0};
+            boxBlocks[1] = {0, 0};
+            boxBlocks[2] = {0, -1};
+            boxBlocks[3] = {1, -1};
+            DrawRectangle(x + 60 + (boxBlocks[i].x * cellSize), y + 75 + (boxBlocks[i].y * cellSize), cellSize - spaceBetweenCells, cellSize - spaceBetweenCells, RED);
+        }
+    } else if(piece->num == 2){
+        for(int i = 0; i < 4; i++){
+            boxBlocks[0] = {-1, 0};
+            boxBlocks[1] = {0, 0};
+            boxBlocks[2] = {0, -1};
+            boxBlocks[3] = {1, -1};
+            DrawRectangle(x + 60 + (boxBlocks[i].x * cellSize), y + 75 + (boxBlocks[i].y * cellSize), cellSize - spaceBetweenCells, cellSize - spaceBetweenCells, GREEN);
+        }
+    } else if(piece->num == 3){
+        for(int i = 0; i < 4; i++){
+            boxBlocks[0] = {0, 1};
+            boxBlocks[1] = {0, 0};
+            boxBlocks[2] = {0, -1};
+            boxBlocks[3] = {-1, -1};
+            DrawRectangle(x + 75 + (boxBlocks[i].x * cellSize), y + 60 + (boxBlocks[i].y * cellSize), cellSize - spaceBetweenCells, cellSize - spaceBetweenCells, BLUE);
+        }
+    } else if(piece->num == 4){
+        for(int i = 0; i < 4; i++){
+            boxBlocks[0] = {0, 0};
+            boxBlocks[1] = {1, 0};
+            boxBlocks[2] = {0, -1};
+            boxBlocks[3] = {1, -1};
+            DrawRectangle(x + 45 + (boxBlocks[i].x * cellSize), y + 80 + (boxBlocks[i].y * cellSize), cellSize - spaceBetweenCells, cellSize - spaceBetweenCells, YELLOW);
+        }
+    } else if(piece->num == 5){
+        for(int i = 0; i < 4; i++){
+            boxBlocks[0] = {0, 1};
+            boxBlocks[1] = {0, 0};
+            boxBlocks[2] = {0, -1};
+            boxBlocks[3] = {1, -1};
+            DrawRectangle(x + 50 + (boxBlocks[i].x * cellSize), y + 60 + (boxBlocks[i].y * cellSize), cellSize - spaceBetweenCells, cellSize - spaceBetweenCells, ORANGE);
+        }
+    } else if(piece->num == 6){
+        for(int i = 0; i < 4; i++){
+            boxBlocks[0] = {0, 1};
+            boxBlocks[1] = {0, 0};
+            boxBlocks[2] = {-1, 0};
+            boxBlocks[3] = {1, 0};
+            DrawRectangle(x + 60 + (boxBlocks[i].x * cellSize), y + 45 + (boxBlocks[i].y * cellSize), cellSize - spaceBetweenCells, cellSize - spaceBetweenCells, PURPLE);
+        }
+    } else if(piece->num == 7){
+        for(int i = 0; i < 4; i++){
+            boxBlocks[0] = {-1, 0};
+            boxBlocks[1] = {0, 0};
+            boxBlocks[2] = {1, 0};
+            boxBlocks[3] = {2, 0};
+            DrawRectangle(x + 45 + (boxBlocks[i].x * cellSize), y + 60 + (boxBlocks[i].y * cellSize), cellSize - spaceBetweenCells, cellSize - spaceBetweenCells, PINK);
+        }
+    }
+    
 }

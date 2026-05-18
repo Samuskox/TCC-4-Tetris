@@ -54,6 +54,7 @@ public class InputProcessor extends InputAdapter {
             // }
                 tetris.gameOver = false;
                 tetris.score = 0;
+                tetris.lines = 0;
                 tetris.spawnPiece();
         }
 

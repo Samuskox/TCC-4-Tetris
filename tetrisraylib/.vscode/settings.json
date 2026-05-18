@@ -8,5 +8,6 @@
 		"**/*.o": true,
 		"**/*.exe": true,
 	},
-	"C_Cpp.errorSquiggles": "disabled"
+	"C_Cpp.errorSquiggles": "disabled",
+	"cmake.sourceDirectory": "C:/Users/Samuel/Desktop/TCC/TCC-4-Tetris/tetrisraylib/build/external/raylib-master"
 }

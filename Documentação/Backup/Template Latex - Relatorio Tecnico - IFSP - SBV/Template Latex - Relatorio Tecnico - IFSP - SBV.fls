@@ -54,9 +54,10 @@ INPUT C:\Program Files\MiKTeX\tex\latex\tools\verbatim.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\verbatim.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\shortvrb.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\shortvrb.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\textcase\textcase.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\hyperref\hyperref.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
@@ -103,35 +104,31 @@ INPUT C:\Program Files\MiKTeX\tex\generic\babel\txtbabel.def
 INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-brazil.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-brazil.tex
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\invalid\babel-brazil.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\en\babel-en.ini
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-french.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\fr\babel-fr.ini
-INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
-INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
-INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french.ldf
 INPUT C:\Program Files\MiKTeX\tex\generic\babel-french\french3.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es.ini
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-spanish\spanish.ldf
-INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\pt\babel-pt-BR.ini
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
-INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
+INPUT C:\Program Files\MiKTeX\tex\latex\babel-portuges\brazil.ldf
 INPUT C:\Program Files\MiKTeX\tex\latex\carlisle\scalefnt.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\carlisle\scalefnt.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\enumitem\enumitem.sty
@@ -764,13 +761,13 @@ INPUT .\capitulo04AnaliseDosResultados.tex
 INPUT .\capitulo04AnaliseDosResultados.tex
 INPUT .\capitulo04AnaliseDosResultados.tex
 INPUT capitulo04AnaliseDosResultados.tex
-INPUT .\imagens\Nos&Scripts.png
-INPUT .\imagens\Nos&Scripts.png
-INPUT .\imagens\Nos&Scripts.png
-INPUT .\imagens\Nos&Scripts.png
-INPUT .\imagens\Nos&Scripts.png
-INPUT .\imagens\Nos&Scripts.png
-INPUT .\imagens\Nos&Scripts.png
+INPUT .\imagens\cronograma.png
+INPUT .\imagens\cronograma.png
+INPUT .\imagens\cronograma.png
+INPUT .\imagens\cronograma.png
+INPUT .\imagens\cronograma.png
+INPUT .\imagens\cronograma.png
+INPUT .\imagens\cronograma.png
 INPUT .\capitulo05ConclusoesRecomendacoes.tex
 INPUT .\capitulo05ConclusoesRecomendacoes.tex
 INPUT .\capitulo05ConclusoesRecomendacoes.tex

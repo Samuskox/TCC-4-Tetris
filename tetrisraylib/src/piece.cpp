@@ -143,20 +143,59 @@ bool Piece::isValidMove(Vector2 direction, Vector2 newBlocks[4]){
         if(pointerToTetris->grid[newY][newX] > 0){
             return false;
         }
+        printf("Checking move: (%d, %d)\n", newX, newY);
     }
+
     return true;
 }
 
 void Piece::draw(){
     
     for(int i = 0; i < 4; i++){
-        if(position.y + blocks[i].y < 0) continue; //não desenha blocos que estão acima do campo de jogo
+        if(position.y + blocks[i].y < 0) continue; // não desenha blocos que estão acima do campo de jogo
         DrawRectangle(
             (position.x + blocks[i].x) * pointerToTetris->getCellSize() + pointerToTetris->getOffsetX(),
             (position.y + blocks[i].y) * pointerToTetris->getCellSize() + 7,
             pointerToTetris->getCellSize() - (pointerToTetris->getSpaceBetweenCells()),
             pointerToTetris->getCellSize() - (pointerToTetris->getSpaceBetweenCells()),
             color);
+    }
+}
+
+void Piece::drawGhost(){
+if(pointerToTetris == nullptr || blocks == nullptr){
+        return;
+    }
+    Vector2 ghostPosition = position;
+
+    bool canGoDown = true;
+    while(canGoDown) {
+        // Tentamos ver se a posição abaixo da GHOST é válida
+        for(int i = 0; i < 4; i++) {
+            int nextX = ghostPosition.x + blocks[i].x;
+            int nextY = ghostPosition.y + 1 + blocks[i].y; // +1 para testar em baixo
+
+            // Se bater nas bordas, no chão ou em outra peça
+            if (nextX < 0 || nextX >= pointerToTetris->getWidth() || 
+                nextY >= pointerToTetris->getHeight() || 
+                (nextY >= 0 && pointerToTetris->grid[nextY][nextX] > 0)) {
+                canGoDown = false;
+                break;
+            }
+        }
+
+        if(canGoDown) {
+            ghostPosition.y += 1;
+        }
+    }
+    for(int i = 0; i < 4; i++){
+        if(ghostPosition.y + blocks[i].y < 0) continue; //  não desenha blocos que estão acima do campo de jogo
+        DrawRectangle(
+            (ghostPosition.x + blocks[i].x) * pointerToTetris->getCellSize() + pointerToTetris->getOffsetX(),
+            (ghostPosition.y + blocks[i].y) * pointerToTetris->getCellSize() + 7,
+            pointerToTetris->getCellSize() - (pointerToTetris->getSpaceBetweenCells()),
+            pointerToTetris->getCellSize() - (pointerToTetris->getSpaceBetweenCells()),
+            Fade(color, 0.7f));
     }
 }
 

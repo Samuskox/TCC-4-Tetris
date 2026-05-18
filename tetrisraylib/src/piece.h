@@ -15,6 +15,7 @@ class Piece{
         void move(Vector2 direction);
         bool isValidMove(Vector2 direction, Vector2 newBlocks[4]);
         void draw();
+        void drawGhost();
         bool canFall();
         void hardDrop();
         Vector2 position;
