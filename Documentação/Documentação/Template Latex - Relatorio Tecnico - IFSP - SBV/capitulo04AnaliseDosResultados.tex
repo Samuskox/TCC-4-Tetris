@@ -8,7 +8,7 @@ Para a implementação do jogo \textit{Tetris} foi levantado os requisitos neces
 
 Antes do desenvolvimento de cada versão do jogo, foi realizado um estudo introdutório da linguagem de programação utilizada pela tecnologia correspondente, buscando compreender conceitos fundamentais de sintaxe, orientação a objetos, manipulação gráfica e estrutura de execução.
 
-Após o estudo introdutório da linguagem, foi feito um estudo da documentação oficial de cada engine ou biblioteca/\textit{Framework}, com foco nos recursos necessários para o desenvolvimento do jogo \textit{Tetris}, como renderização gráfica, captura de entrada do usuário, temporização, gerenciamento de desenho de elementos na tela e outros recursos específicos de cada tecnologia.
+Após o estudo introdutório da linguagem, foi feito um estudo da documentação oficial de cada engine ou biblioteca/\textit{Framework}, com foco nos recursos necessários para o desenvolvimento do jogo \textit{Tetris}, como renderização gráfica, captura de entrada do usuário, temporização e o gerenciamento de desenho de elementos.
 
 O desenvolvimento foi realizado de forma incremental e comparativa. A cada nova implementação, aplicou-se os mesmos requisitos do jogo em diferentes ambientes de desenvolvimento. Essa abordagem possibilitou observar diferenças relacionadas à organização do código, gerenciamento do loop principal do jogo, modularização e disponibilidade de recursos oferecidos por cada tecnologia. Durante esse processo, também foram estudados e incorporados algoritmos e mecânicas adicionais presentes no \textit{Tetris}, como o sistema de geração de peças \textit{7-Bag} (para evitar peças iguais) e o \textit{Super Rotation System} (SRS) (sistema de rotação para cada peça), possibilitando a evolução gradual das implementações ao longo do projeto.
 
@@ -16,7 +16,7 @@ O desenvolvimento foi realizado de forma incremental e comparativa. A cada nova 
 
 Durante o desenvolvimento do jogo na \textit{Godot}, observou-se uma grande facilidade na criação de cenas e gerenciamento de nós, permitindo uma implementação rápida da lógica do jogo. A estrutura de nós da \textit{Godot} facilitou a organização do código e a reutilização de componentes, o que contribuiu para uma implementação mais eficiente do jogo \textit{Tetris}. A documentação da \textit{Godot} foi útil para esclarecer dúvidas e fornecer exemplos práticos, acelerando o processo de desenvolvimento.
 Foi utilizado 2 nós principais para a implementação do jogo, o nó \textit{Node2D} para a cena principal do jogo e outro nó \textit{Node2D} para as peças do jogo, além de outros nós auxiliares para a temporização e gerenciamento gráfico, junto aos dois nós principais, foram criados scripts para implementar a lógica do jogo, como a movimentação das peças, a rotação, a queda automática, o sistema de colisão e a remoção de linhas completas.
-Abaixo há a figura~\ref{fig:godotnos} dos nós e dos scripts criados para a implementação do jogo \textit{Tetris} na \textit{Godot}:
+Abaixo na figura~\ref{fig:godotnos}, estão os nós e os scripts criados para a implementação do jogo \textit{Tetris} na \textit{Godot}:
 
 \FloatBarrier
 \begin{figure}[!htbp]
@@ -28,15 +28,82 @@ Abaixo há a figura~\ref{fig:godotnos} dos nós e dos scripts criados para a imp
 \end{figure}
 \FloatBarrier
 
+Os dois scripts tem dentro deles outros nós, como o nó de temporização e os nós Label Score e Lines.
 
-Com algumas funcionalidades já implementadas, é possivel compreender melhor o funcionamento da \textit{engine} 
-demonstrando o funcionamento do sistema de entrada e atualização de cena e sua lógica baseada em nós (nodes),
-bem como o uso da linguagem GDScript.
+\subsection{LibGDX}
 
-Durante o processo da implementação, foi observado que a \textit{Godot} apresenta uma curva de aprendizado acessível e uma boa documentação,
-facilitando a compreensão de seus recursos principais. No entanto, o gerenciamento da lógica de colisão e a integração entre os nós ainda exigem atenção e prática.
+A implementação do jogo \textit{Tetris} na \textit{LibGDX} apresentou uma abordagem mais tradicional de desenvolvimento, utilizando a linguagem \textit{Java}, a IDE Visual Studio Code e os recursos da engine para implementar o Tetris.
+Foi utilizado o paradigma de programação orientada a objetos para organizar o código, criando classes para representar as peças, o tabuleiro e a lógica do jogo. A \textit{LibGDX} forneceu uma boa estrutura para lidar com gráficos e entrada do usuário, mas exigiu um pouco mais de configuração inicial em comparação com a \textit{Godot}. A documentação da \textit{LibGDX} foi útil para entender os conceitos básicos e as funcionalidades da engine, mas em alguns momentos foi necessário recorrer a fóruns e tutoriais de terceiros para esclarecer dúvidas específicas relacionadas à implementação do jogo e à recursos da engine \textit{Tetris}.
+Foi implementado 4 classes para que o jogo \textit{Tetris} fosse implementado, a classe \textit{Tetris} para a lógica principal do jogo e representar o tabuleiro do jogo, a classe \textit{Piece} para representar as peças do jogo, a classe \textit{InputProcessor} para lidar com a entrada do usuário e a classe \textit{Main} para gerenciar o fluxo principal do jogo, na figura~\ref{fig:libgdxclasses} é mostrado as classes criadas para a implementação do jogo \textit{Tetris} na \textit{LibGDX}:
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Classes do Jogo Tetris na LibGDX}
+	\includegraphics[scale=1.2]{imagens/ClassesLibGDX.png}
+	\\\textbf{Fonte:} Elaborado pelo autor
+	\label{fig:libgdxclasses}
+\end{figure}
+\FloatBarrier
+
+Todas as classes tem dentro delas uma instância do objeto da classe \textit{Tetris}, que é a classe principal do jogo, para que possam acessar os métodos e atributos da classe.
+Dentro da classe \textit{Tetris} tem uma instância da classe \textit{Piece} para utilizar os métodos e atributos da classe \textit{Piece} e para o travamento das peças no tabuleiro. %Pode escrever travamento?????? não sei como escrever de outra forma
+A classe \textit{Main} gerencia o fluxo principal do jogo, como a renderização gráfica, a captura de entrada do usuário e a temporização.
+
+\subsection{Raylib}
+
+A implementação do jogo \textit{Tetris} na \textit{Raylib} apresentou uma abordagem mais direta e de baixo nível, foi utilizado tambem o Visual Studio Code como ambiente de desenvolvimento, usou-se a linguagem \textit{C++} e os recursos do \textit{Framework} para implementar o Tetris. A \textit{Raylib} forneceu uma boa estrutura para lidar com gráficos e entrada do usuário, mas exigiu um pouco mais de configuração inicial em comparação com a \textit{Godot} e a \textit{LibGDX}. A documentação da \textit{Raylib} foi útil para entender os conceitos básicos e as funcionalidades do \textit{Framework}, porém, em alguns momentos foi necessário recorrer a fóruns e tutoriais de terceiros para esclarecer dúvidas específicas relacionadas à linguagem \text{C++}, como por exemplo, o uso de ponteiros e referências.
+
+Foi implementado 4 classes para essa versão, a classe \textit{Tetris} para a lógica principal do jogo e representar o tabuleiro do jogo, a classe \textit{Piece} para representar as peças do jogo, a classe \textit{Game} para gerenciar o fluxo principal do jogo, como a renderização gráfica, a captura de entrada do usuário e a temporização, e a classe principal presente em \textit{main.cpp}, utilizada para inicialização da implementação.
+Além disso,a implementação utilizou arquivos de cabeçalho (\textit{headers}), como \textit{piece.h}, \textit{tetris.h} e \textit{game.h}, responsáveis pela declaração das classes, atributos e métodos utilizados no projeto. Já os arquivos com extensão \textit{.cpp} foram utilizados para a implementação da lógica dessas classes. Essa separação entre declaração e implementação contribuiu para uma melhor organização e modularização do código, característica comum em projetos desenvolvidos em \textit{C++}.
+
+Como \textit{C++} requer um gerenciamento de memória manual, foi necessário lidar com a gestão de memória manualmente, utilizando ponteiros e referências para criar e destruir objetos dinamicamente.
+Na figura~\ref{fig:raylibclasses} é mostrado as classes criadas para a implementação do jogo \textit{Tetris} na \textit{Raylib}:
+
+\FloatBarrier
+\begin{figure}[!htbp]
+	\centering
+	\caption{Classes e Headers do Jogo Tetris na Raylib}
+	\includegraphics[scale=1.2]{imagens/ClassesRaylib.png}
+	\\\textbf{Fonte:} Elaborado pelo autor
+	\label{fig:raylibclasses}
+\end{figure}
+\FloatBarrier
+
+Ha tambem na documentação oficial exemplos prontos de implementação de jogos, incluindo uma versão funcional do jogo \textit{Tetris}. Entretanto, esse exemplo não foi utilizado diretamente no desenvolvimento do projeto, por que o objetivo do trabalho consistia em compreender e implementar manualmente as mecânicas do jogo, permitindo maior aprofundamento nos conceitos da linguagem \textit{C++} e da própria biblioteca.
+
+
+\subsection{Pygame}
+
+A implementação do jogo \textit{Tetris} na \textit{Pygame} foi a mais simples e direta, também utilizando o Visual Studio Code como ambiente de desenvolvimento, usou-se a linguagem \textit{Python} e os recursos da biblioteca para implementar o Tetris. A \textit{Pygame} forneceu uma boa estrutura para lidar com graficos e entrada do usuário, e exigiu uma configuração inicial minima em comparação com as outras tecnologias. A documentação da \textit{Pygame} foi útil para entender os conceitos básicos e as funcionalidades da biblioteca.
+Na implementação, foi utilizado o paradigma de programação procedural para organizar o código, criando funções para representar as peças, o tabuleiro e a lógica do jogo. A estrutura do código foi mais linear e menos modularizada em comparação com as outras tecnologias, mas ainda assim permitiu uma implementação funcional do jogo \textit{Tetris}.
+Além disso foi utilizado o Venv para criar um ambiente virtual e gerenciar as dependências do projeto, como a instalação da biblioteca \textit{Pygame}.
 
 \section{Resultados/Impactos}
+
+\subsection{Analise Comparativa}
+
+A análise comparativa entre as tecnologias utilizadas permitiu observar diferenças significativas relacionadas à estrutura de desenvolvimento, modularização do código, facilidade de implementação e nível de abstração oferecido por cada ferramenta. Apesar de todas as tecnologias terem sido capazes de implementar os requisitos funcionais do jogo \textit{Tetris}, cada uma apresentou vantagens e limitações específicas durante o processo de desenvolvimento.
+
+\subsubsection{Facilidade de Desenvolvimento}
+
+A \textit{Godot} e a \textit{Pygame} apresentaram menor complexidade inicial de desenvolvimento, permitindo uma implementação mais rápida das mecânicas básicas do jogo. A estrutura baseada em nós da \textit{Godot} simplificou o gerenciamento dos elementos gráficos e temporizadores, enquanto a flexibilidade da linguagem \textit{Python} tornou o desenvolvimento na \textit{Pygame} mais acessível.
+
+Por outro lado, a \textit{LibGDX} e a \textit{Raylib} exigiram maior configuração inicial e uma organização estrutural mais detalhada, especialmente devido ao uso de linguagens mais robustas como \textit{Java} e \textit{C++}. Entretanto, essas tecnologias proporcionaram maior controle sobre o desenvolvimento do projeto.
+
+\subsubsection{Arquitetura e Modularização}
+
+Durante as implementações, observou-se que a \textit{LibGDX} e a \textit{Raylib} favoreceram uma organização mais modular do código, utilizando separação em múltiplas classes e responsabilidades distintas para entrada do usuário, renderização e lógica do jogo. Em especial, a implementação em \textit{C++} apresentou uma estrutura mais próxima de aplicações de baixo nível, utilizando ponteiros e referências, arquivos de cabeçalho e separação entre declaração e implementação.
+
+A implementação em \textit{Pygame} apresentou uma estrutura mais procedural e linear, reduzindo a complexidade da arquitetura, porém com menor modularização em comparação às demais tecnologias, apesar de ser possível a separação de funções e responsabilidades em diferentes arquivos Python, utilizando importações entre módulos, a flexibilidade da linguagem permite desenvolver sem o uso intensivo de programação orientada a objetos. A \textit{Godot}, por sua vez, apresentou uma abordagem híbrida, utilizando nós e scripts para organizar os componentes do jogo.
+
+\subsubsection{Curva de Aprendizado}
+
+A curva de aprendizado variou significativamente entre as tecnologias analisadas. A \textit{Pygame} apresentou maior facilidade inicial devido à simplicidade da linguagem \textit{Python} e da própria biblioteca. A \textit{Godot} também demonstrou acessibilidade durante o desenvolvimento, principalmente pela documentação e tutoriais de terceiros.
+
+A \textit{LibGDX} exigiu maior compreensão sobre programação orientada a objetos e estruturação de aplicações em \textit{Java}. Já a implementação utilizando \textit{Raylib} e \textit{C++} apresentou a maior complexidade entre as tecnologias estudadas, devido à necessidade de lidar com conceitos mais avançados da linguagem, como ponteiros, referências e organização em arquivos de cabeçalho.
+
+
 
 %\david[inline]{sinceramente, não sei se vale pensar em performance. acho que é melhor focar na sua experiência de usar n tecnologias para resolver o mesmo problema. para a quali, pode deixar o que vc coletou abaixo, mas para a defesa, vamos tirar isso. pq se for mesmo analisar desempenho, ai são outros problemas...}
 
