@@ -4,6 +4,8 @@
 Foi desenvolvido as quatros versões do jogo \textit{Tetris} utilizando as tecnologias \textit{Godot}, \textit{Pygame}, \textit{Raylib} e \textit{LibGDX}, após a implementação, foi feita uma análise comparativa entre as tecnologias, levando em consideração aspectos como facilidade de uso, curva de aprendizado e desempenho.
 Para a implementação do jogo \textit{Tetris} foi levantado os requisitos necessários para o desenvolvimento do jogo, como a movimentação das peças, a rotação, a queda automática, o sistema de colisão e a remoção de linhas completas.
 
+
+
 \section{Estudos das Tecnologias e Implementação}
 
 Antes do desenvolvimento de cada versão do jogo, foi realizado um estudo introdutório da linguagem de programação utilizada pela tecnologia correspondente, buscando compreender conceitos fundamentais de sintaxe, orientação a objetos, manipulação gráfica e estrutura de execução.
@@ -12,9 +14,15 @@ Após o estudo introdutório da linguagem, foi feito um estudo da documentação
 
 O desenvolvimento foi realizado de forma incremental e comparativa. A cada nova implementação, aplicou-se os mesmos requisitos do jogo em diferentes ambientes de desenvolvimento. Essa abordagem possibilitou observar diferenças relacionadas à organização do código, gerenciamento do loop principal do jogo, modularização e disponibilidade de recursos oferecidos por cada tecnologia. Durante esse processo, também foram estudados e incorporados algoritmos e mecânicas adicionais presentes no \textit{Tetris}, como o sistema de geração de peças \textit{7-Bag} (para evitar peças iguais) e o \textit{Super Rotation System} (SRS) (sistema de rotação para cada peça), possibilitando a evolução gradual das implementações ao longo do projeto.
 
+Nas subseções abaixo serão mostradas como algumas funções essênciais foram implementadas de acordo com cada linguagem e tecnologia.
+
+
 \subsection{Godot}
 
 Durante o desenvolvimento do jogo na \textit{Godot}, observou-se uma grande facilidade na criação de cenas e gerenciamento de nós, permitindo uma implementação rápida da lógica do jogo. A estrutura de nós da \textit{Godot} facilitou a organização do código e a reutilização de componentes, o que contribuiu para uma implementação mais eficiente do jogo \textit{Tetris}. A documentação da \textit{Godot} foi útil para esclarecer dúvidas e fornecer exemplos práticos, acelerando o processo de desenvolvimento.
+
+\subsubsection{Nós e Scripts}
+
 Foi utilizado 2 nós principais para a implementação do jogo, o nó \textit{Node2D} para a cena principal do jogo e outro nó \textit{Node2D} para as peças do jogo, além de outros nós auxiliares para a temporização e gerenciamento gráfico, junto aos dois nós principais, foram criados scripts para implementar a lógica do jogo, como a movimentação das peças, a rotação, a queda automática, o sistema de colisão e a remoção de linhas completas.
 Abaixo na figura~\ref{fig:godotnos}, estão os nós e os scripts criados para a implementação do jogo \textit{Tetris} na \textit{Godot}:
 
@@ -29,6 +37,65 @@ Abaixo na figura~\ref{fig:godotnos}, estão os nós e os scripts criados para a 
 \FloatBarrier
 
 Os dois scripts tem dentro deles outros nós, como o nó de temporização e os nós Label Score e Lines.
+
+\subsubsection{Instanciação de Peças}
+
+A função de surgir as peças do jogo, chamada de \textit{spawnPiece}, é implementada dentro do script do nó principal do jogo, o \textit{Node2D} da cena principal, e é responsável por criar uma nova peça e posicioná-la no topo do tabuleiro.
+Abaixo está  implementado o código dessa função:
+
+\lstinputlisting[language=]{fontes/Godot/spawnPieceGodot.gd} 
+
+Como visto no código acima, a função \textit{spawnPiece} utiliza a função \textit{randi} para gerar um número aleatório entre 1 e 7, que corresponde a uma das sete peças do jogo \textit{Tetris}. Em seguida, ocorre uma condição que verifica se o espaço está disponível para a nova peça. Se sim, a função instancia a peça correspondente e a adiciona como filha do nó principal do jogo, senão, é chamada a função \textit{gameOver}. Por fim, a função posiciona a peça no topo do tabuleiro, utilizando as coordenadas do meio do tabuleiro para centralizá-la horizontalmente e colocá-la no topo do tabuleiro.
+É importante observar que há possibilidade de aparecer peças iguais em sequência.
+Sempre quando uma peça é travada no tabuleiro, a função \textit{spawnPiece} é chamada para criar uma nova peça.
+
+\subsubsection{Verificação e remoção de linhas}
+
+Quando uma linha ou mais linhas na grade é completada, a função de remoção de linhas é chamada, \textit{cleanLines}, e é responsável por verificar quais linhas estão completas, removê-las do tabuleiro e atualizar a pontuação do jogador. Abaixo está implementado o código dessa função:
+
+\lstinputlisting[language=]{fontes/Godot/cleanLinesGodot.gd}
+
+A função \textit{cleanLines} percorre cada linha do tabuleiro, verificando se todas as células da linha estão ocupadas por peças. Se uma linha completa for encontrada, 
+é chamada a função \textit{removeLine} para remover a linha do tabuleiro. A função \textit{removeLine} recebe o índice da linha a ser removida. Esse processo ocorre de baixo para cima. Abaixo está implementado o código da função \textit{removeLine}:
+
+\lstinputlisting[language=]{fontes/Godot/removeLineGodot.gd}
+A função \textit{removeLine} remove a linha do tabuleiro, iterando sobre as células da linha e recolocando as peças acima da linha removida para baixo.
+
+A pontuação do jogador é atualizada com base no número de linhas removidas, seguindo a fórmula de pontuação tradicional do jogo \textit{Tetris}, onde a pontuação aumenta exponencialmente com o número de linhas removidas simultaneamente.
+
+\subsubsection{Temporização e Queda Automática}
+
+A temporização na \textit{Godot} é implementada utilizando o nó \textit{Timer}, que é adicionado na função interna \textit{ready}. O temporizador é configurado para disparar a cada 0.5 segundos, o que determina a velocidade de queda das peças. Abaixo está implementado o código para configurar o temporizador:
+
+\lstinputlisting[language=]{fontes/Godot/timerGodot.gd}
+
+A linha 7 conecta o temporizador e função responsável por fazer a peça cair \textit{fall}, simulando a queda automática.
+
+Abaixo está implementado o código da função \textit{fall}:
+
+\lstinputlisting[language=]{fontes/Godot/fallGodot.gd}
+
+Nessa função, há uma variavel chamada \textit{checkFall} que é utilizada para verificar se a peça não pode cair, ou seja, se há colisão com o tabuleiro ou com outras peças. Se a peça não puder cair uma vez em 0.5 segundos, é adicionado 1 na variável \textit{checkFall}. Se a variavel estiver com o valor 2, é chamada a função \textit{lockPiece} para travar a peça no tabuleiro, a função para verificar se há linhas completas e a função \textit{spawnPiece} para criar uma nova peça e o valor da variável \textit{checkFall} é resetado para 0.
+
+\subsubsection{Movimentação}
+
+A movimentação das peças é implementada utilizando a função de captura de entrada do usuário, que é chamada dentro da função \textit{process}, responsável por atualizar o estado do jogo a cada frame. Abaixo está implementado o código para capturar a entrada do usuário:
+
+\lstinputlisting[language=]{fontes/Godot/processGodot.gd}
+
+Nessa função, são verificadas as teclas pressionadas pelo jogador para movimentar, rotacionar ou fixar a peça. A função de movimentação das peças, chamada de \textit{move}, é implementada dentro do script do nó das peças e é responsável por atualizar a posição da peça com base na entrada do usuário. Abaixo está implementado o código da função \textit{move}:
+
+\lstinputlisting[language=]{fontes/Godot/moveGodot.gd}
+
+Dentro da função \textit{move}, é verificado se a nova posição da peça é válida, ou seja, se não há colisão com o tabuleiro ou com outras peças. Se a posição for válida, a peça é movida para a nova posição, caso contrário, a peça permanece na posição atual. A função que faz essa verificação é a função \textit{isValidMove}, que é implementada dentro do script do nó das peças e é responsável por verificar se a peça colidiu com o tabuleiro ou com outras peças. Abaixo está implementado o código da função \textit{isValidMove}:
+
+\lstinputlisting[language=]{fontes/Godot/isValidMoveGodot.gd}
+
+Essa função checa os limites horizontais e verticais da grade, além de verificar se a posição da peça colidiu com outras peças. Se a posição for válida, a função retorna \textit{true}, caso contrário, retorna \textit{false}.
+
+A função de rotação das peças, chamada de \textit{rotate}, também é implementada dentro do script do nó das peças, e é responsável por alterar a orientação da peça quando o jogador solicita uma rotação. Abaixo está implementado o código da função \textit{rotate}:
+
+\lstinputlisting[language=]{fontes/Godot/rotateGodot.gd}
 
 \subsection{LibGDX}
 
@@ -80,6 +147,8 @@ Na implementação, foi utilizado o paradigma de programação procedural para o
 Além disso foi utilizado o Venv para criar um ambiente virtual e gerenciar as dependências do projeto, como a instalação da biblioteca \textit{Pygame}.
 
 \section{Resultados/Impactos}
+
+
 
 \subsection{Analise Comparativa}
 
