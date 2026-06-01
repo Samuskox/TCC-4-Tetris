@@ -841,6 +841,62 @@ INPUT .\imagens\ClassesLibGDX.png
 INPUT .\imagens\ClassesLibGDX.png
 INPUT .\imagens\ClassesLibGDX.png
 INPUT .\imagens\ClassesLibGDX.png
+INPUT .\fontes\LibGDX\spawnPieceLibGDX.java
+INPUT .\fontes\LibGDX\spawnPieceLibGDX.java
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\LibGDX\spawnPieceLibGDX.java
+INPUT .\fontes\LibGDX\spawnPieceLibGDX.java
+INPUT .\fontes\LibGDX\7Bag.java
+INPUT .\fontes\LibGDX\7Bag.java
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\LibGDX\7Bag.java
+INPUT .\fontes\LibGDX\7Bag.java
+INPUT .\fontes\LibGDX\cleanLine.java
+INPUT .\fontes\LibGDX\cleanLine.java
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\LibGDX\cleanLine.java
+INPUT .\fontes\LibGDX\cleanLine.java
+INPUT .\fontes\LibGDX\render.java
+INPUT .\fontes\LibGDX\render.java
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\LibGDX\render.java
+INPUT .\fontes\LibGDX\render.java
+INPUT .\fontes\LibGDX\InputProcessor.java
+INPUT .\fontes\LibGDX\InputProcessor.java
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\LibGDX\InputProcessor.java
+INPUT .\fontes\LibGDX\InputProcessor.java
+INPUT .\fontes\LibGDX\move.java
+INPUT .\fontes\LibGDX\move.java
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\LibGDX\move.java
+INPUT .\fontes\LibGDX\move.java
+INPUT .\fontes\LibGDX\isValidMove.java
+INPUT .\fontes\LibGDX\isValidMove.java
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\LibGDX\isValidMove.java
+INPUT .\fontes\LibGDX\isValidMove.java
+INPUT .\fontes\LibGDX\rotate.java
+INPUT .\fontes\LibGDX\rotate.java
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\LibGDX\rotate.java
+INPUT .\fontes\LibGDX\rotate.java
 INPUT .\imagens\ClassesRaylib.png
 INPUT .\imagens\ClassesRaylib.png
 INPUT .\imagens\ClassesRaylib.png
@@ -848,6 +904,132 @@ INPUT .\imagens\ClassesRaylib.png
 INPUT .\imagens\ClassesRaylib.png
 INPUT .\imagens\ClassesRaylib.png
 INPUT .\imagens\ClassesRaylib.png
+INPUT .\fontes\Raylib\spawnPiece.cpp
+INPUT .\fontes\Raylib\spawnPiece.cpp
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Raylib\spawnPiece.cpp
+INPUT .\fontes\Raylib\spawnPiece.cpp
+INPUT .\fontes\Raylib\cleanLines.cpp
+INPUT .\fontes\Raylib\cleanLines.cpp
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Raylib\cleanLines.cpp
+INPUT .\fontes\Raylib\cleanLines.cpp
+INPUT .\fontes\Raylib\update.cpp
+INPUT .\fontes\Raylib\update.cpp
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Raylib\update.cpp
+INPUT .\fontes\Raylib\update.cpp
+INPUT .\fontes\Raylib\gravity.cpp
+INPUT .\fontes\Raylib\gravity.cpp
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Raylib\gravity.cpp
+INPUT .\fontes\Raylib\gravity.cpp
+INPUT .\fontes\Raylib\checkLock.cpp
+INPUT .\fontes\Raylib\checkLock.cpp
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Raylib\checkLock.cpp
+INPUT .\fontes\Raylib\checkLock.cpp
+INPUT .\fontes\Raylib\input.cpp
+INPUT .\fontes\Raylib\input.cpp
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Raylib\input.cpp
+INPUT .\fontes\Raylib\input.cpp
+INPUT .\fontes\Raylib\move.cpp
+INPUT .\fontes\Raylib\move.cpp
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Raylib\move.cpp
+INPUT .\fontes\Raylib\move.cpp
+INPUT .\fontes\Raylib\rotate.cpp
+INPUT .\fontes\Raylib\rotate.cpp
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Raylib\rotate.cpp
+INPUT .\fontes\Raylib\rotate.cpp
+INPUT .\fontes\Pygame\spawnPiece.py
+INPUT .\fontes\Pygame\spawnPiece.py
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Pygame\spawnPiece.py
+INPUT .\fontes\Pygame\spawnPiece.py
+INPUT .\fontes\Pygame\clearLines.py
+INPUT .\fontes\Pygame\clearLines.py
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Pygame\clearLines.py
+INPUT .\fontes\Pygame\clearLines.py
+INPUT .\fontes\Pygame\timer.py
+INPUT .\fontes\Pygame\timer.py
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Pygame\timer.py
+INPUT .\fontes\Pygame\timer.py
+INPUT .\fontes\Pygame\move.py
+INPUT .\fontes\Pygame\move.py
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Pygame\move.py
+INPUT .\fontes\Pygame\move.py
+INPUT .\fontes\Pygame\isValidMove.py
+INPUT .\fontes\Pygame\isValidMove.py
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Pygame\isValidMove.py
+INPUT .\fontes\Pygame\isValidMove.py
+INPUT .\fontes\Pygame\rotate.py
+INPUT .\fontes\Pygame\rotate.py
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Program Files\MiKTeX\tex\latex\base\latin1.def
+INPUT .\fontes\Pygame\rotate.py
+INPUT .\fontes\Pygame\rotate.py
+INPUT .\imagens\TetrisGodot.png
+INPUT .\imagens\TetrisGodot.png
+INPUT .\imagens\TetrisGodot.png
+INPUT .\imagens\TetrisGodot.png
+INPUT .\imagens\TetrisGodot.png
+INPUT .\imagens\TetrisGodot.png
+INPUT .\imagens\TetrisGodot.png
+INPUT .\imagens\TetrisLibGDX.png
+INPUT .\imagens\TetrisLibGDX.png
+INPUT .\imagens\TetrisLibGDX.png
+INPUT .\imagens\TetrisLibGDX.png
+INPUT .\imagens\TetrisLibGDX.png
+INPUT .\imagens\TetrisLibGDX.png
+INPUT .\imagens\TetrisLibGDX.png
+INPUT .\imagens\TetrisRaylib.png
+INPUT .\imagens\TetrisRaylib.png
+INPUT .\imagens\TetrisRaylib.png
+INPUT .\imagens\TetrisRaylib.png
+INPUT .\imagens\TetrisRaylib.png
+INPUT .\imagens\TetrisRaylib.png
+INPUT .\imagens\TetrisRaylib.png
+INPUT .\imagens\TetrisPygame.png
+INPUT .\imagens\TetrisPygame.png
+INPUT .\imagens\TetrisPygame.png
+INPUT .\imagens\TetrisPygame.png
+INPUT .\imagens\TetrisPygame.png
+INPUT .\imagens\TetrisPygame.png
+INPUT .\imagens\TetrisPygame.png
 INPUT .\capitulo05ConclusoesRecomendacoes.tex
 INPUT .\capitulo05ConclusoesRecomendacoes.tex
 INPUT .\capitulo05ConclusoesRecomendacoes.tex

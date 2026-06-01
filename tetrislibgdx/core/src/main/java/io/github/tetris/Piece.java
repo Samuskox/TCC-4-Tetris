@@ -119,8 +119,6 @@ public class Piece {
         if (!isValidMove(newPosition, blocks)){
             return;
         }
-
-        //System.out.println("Valid move");
         position.x += direction.x;
         position.y += direction.y;
         tetris.lockTimer = 0;

@@ -45,12 +45,9 @@ public class Main extends ApplicationAdapter {
 
         tetris.fallTimer += Gdx.graphics.getDeltaTime();
         if (tetris.fallTimer >= tetris.fallInterval) {
-            // System.out.println("one seconds passing");
-            // System.out.println("time reseting");
             tetris.fallTimer = 0;
             tetris.lockTimer = 0;
             tetris.piece.canFall();
-
         }
 
         if (tetris.piece.isValidMove(new Vector2(tetris.piece.position.x, tetris.piece.position.y - 1),
