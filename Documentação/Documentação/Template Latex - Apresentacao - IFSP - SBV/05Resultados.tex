@@ -1,34 +1,158 @@
-\section{Resultados Parciais}
+\section{Resultados}
 
+\subsection{Implementações}
 
 \begin{frame}
 
-    \frametitle{Resultados Parciais}
-
-   	Foi desenvolvido parcialmente a versão do jogo Tetris utilizando o
-   	motor gráfico Godot, foi a feito a movimentação, queda automática, rotação e colisão.
+    \frametitle{Evolução}
+    
+   	Durante o processo da implementação, o desenvolvimento foi sequencial e permitiu a melhoria contínua entre os tetris.
    	
-   	Durante o processo da implementação, foi observado que a Godot apresenta uma curva de aprendizado acessível e uma boa documentação, facilitando a compreensão de seus recursos principais. No entanto, o gerenciamento da lógica de colisão e a integração entre os nós ainda exigem atenção e prática.
+   	   \begin{figure}[!htbp]
+   		%\caption{Exemplo de figura (caption é opcional)}
+   		\includegraphics[scale=0.146]{imagens/EvolucaoImplementacao.png}
+   		%\\\small{\textbf{Fonte:} Elaborada pelo autor (fonte é opcional)}%
+   		\end{figure}
+   	
+   	
 
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Evolução}
+	
+	Foi unificado o comportamento nas 4 versões, garantindo que sejam semelhantes em todas as versões (mesma velocidade, cores semelhantes, mesma lógica de pontuação).
+	
+	\begin{exampleblock}{Demonstração}
+		Um vídeo de cada Tetris.
+	\end{exampleblock}
+	
+\end{frame}
+
+\subsection{Analise Comparativa}
+
+\begin{frame}
+	
+	\frametitle{Diferenças de Paradigmas e arquitetura}
+	
+	\begin{columns}[t]
+		
+		\begin{column}{7cm}
+			
+			Godot: Abstração baseado em nós e Scripts
+			\begin{figure}[!htbp]
+				\centering
+				%\caption{Exemplo de figura (caption é opcional)}
+				\includegraphics[scale=0.6]{imagens/Nos&Scripts.png}
+				%\\\small{\textbf{Fonte:} Elaborada pelo autor (fonte é opcional)}%
+			\end{figure}
+			
+			
+		\end{column}
+		
+		\begin{column}{7cm}
+			
+			LibGDX: POO e separação em classes cada uma com suas funcionalidades
+			
+			\begin{figure}[!htbp]
+				\centering
+				%\caption{Exemplo de figura (caption é opcional)}
+				\includegraphics[scale=0.7]{imagens/ClassesLibGDX.png}
+				%\\\small{\textbf{Fonte:} Elaborada pelo autor (fonte é opcional)}%
+			\end{figure}
+			
+		\end{column}
+		
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Diferenças de Paradigmas e arquitetura}
+	
+	
+	\begin{columns}[t]
+		\begin{column}{7cm}
+		
+		Raylib: Separação também em classes, mas com arquivos de cabeçalhos de implementação
+		
+		\begin{figure}[!htbp]
+			\centering
+			%\caption{Exemplo de figura (caption é opcional)}
+			\includegraphics[scale=0.6]{imagens/ClassesRaylib.png}
+			%\\\small{\textbf{Fonte:} Elaborada pelo autor (fonte é opcional)}%
+		\end{figure}
+		
+		\end{column}
+	
+		\begin{column}{7cm}
+		
+		Pygame: Programação procedural em apenas um arquivo, mas com a possibilidade de modulação
+		
+		\end{column}
+	\end{columns}
+	
+	%LibGDX e a Raylib favoreceram uma organização mais modular do código, utilizando separação em múltiplas classes e responsabilidades distintas para entrada do usuário, renderização e lógica do jogo.
+	
+	%A implementação em Pygame apresentou uma estrutura mais procedural e linear, reduzindo a complexidade da arquitetura, porém com menor modularização em comparação às demais tecnologias.
+	
 \end{frame}
 
 
 \begin{frame}
 
-    \frametitle{Métricas}
-
-
-		Através da aba de monitoramento disponível na ferramenta Godot, já é possível avaliar algumas métricas:
-    		
-    		\begin{itemize}
-    			\item \textbf{FPS:} 60 por segundos
-    			\item \textbf{Memória RAM:} 50.80 Mb
-    			\item \textbf{Memória de Vídeo:} 11.30 Mb
-    		\end{itemize}
-    		
-    	    
-    	\begin{block}{Observação}
-    		Tetris é um jogo simples e leve que não demanda muitos recursos significativos de hardware, portanto os resultados da perfomance não refletem uma carga significativa sobre o desempenho da máquina.
-    	\end{block}
+    \frametitle{Observações no desenvolvimento}
     
+    As 4 implementações tiveram níveis de abstrações diferentes, mas as linhas de códigos praticamente foram as mesma, com algumas diferenças que alguns foram mais curtos e outras mais longas.
+
+	%A Godot e a Pygame apresentaram menor complexidade inicial de desenvolvimento, permitindo uma implementação mais rápida das mecânicas básicas do jogo.
+	
+	%Por outro lado, a LibGDX e a Raylib exigiram maior configuração inicial e uma organização estrutural mais detalhada, especialmente devido ao uso de linguagens mais robustas como Java e C++.
+\end{frame}
+
+\begin{frame}
+	
+	\frametitle{Observações no desenvolvimento}
+	
+	
+	A função de limpar linha:
+	
+	\begin{columns}[t]
+		
+		\begin{column}{7cm}
+			
+			\resizebox{5cm}{!}{%
+				\lstinputlisting[language=]{fontes/cleanLines.cpp} 
+			}
+			
+			
+		\end{column}
+		
+		\begin{column}{7cm}
+			
+			\resizebox{10cm}{!}{%
+				\lstinputlisting[language=Python]{fontes/clearLines.py} 
+			}
+			
+		\end{column}
+		
+	\end{columns}
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{Acessibilidade de linguagem}
+
+	\begin{figure}[!htbp]
+		\centering
+		%\caption{Exemplo de figura (caption é opcional)}
+		\includegraphics[scale=0.6]{imagens/facilidadeLinguagem.png}
+		%\\\small{\textbf{Fonte:} Elaborada pelo autor (fonte é opcional)}%
+	\end{figure}
+	
+	
 \end{frame}

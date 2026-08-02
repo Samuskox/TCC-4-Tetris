@@ -80,3 +80,29 @@ E pygame é uma biblioteca para python, feita sobre a SDL que é uma biblioteca 
 
 ------------------------------------------------------------------
 
+
+------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------
+
+
+------------------------------------------------------------------
+
+------------------------------------------------------------------
+
+
+De forma geral, observou-se que tecnologias com maior nível de abstração, como
+Godot e Pygame, proporcionaram maior rapidez de desenvolvimento e menor complexidade
+inicial. Em contrapartida, tecnologias mais próximas do baixo nível, como Raylib com C++,
+exigiram maior conhecimento técnico, mas ofereceram maior controle no desenvolvimento.
+É importante salientar que na escolha da tecnologia deve levar em consideração o
+objetivo do projeto, o nível de experiência do desenvolvedor e os requisitos específicos do
+jogo a ser desenvolvido. Para projetos mais simples ou para iniciantes, tecnologias como
+Pygame ou Godot podem ser mais adequadas. Já para projetos que demandam maior
+controle e performance, tecnologias como Raylib podem ser mais indicadas, desde que o
+desenvolvedor possua o conhecimento necessário para lidar com a complexidade envolvida.
+A experiência de desenvolver múltiplas versões do mesmo jogo permitiu compreender como diferentes tecnologias influenciam diretamente na organização do código, na
+complexidade do desenvolvimento e na implementação de mecânicas de jogos digitais.
+

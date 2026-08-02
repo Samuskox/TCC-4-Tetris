@@ -487,20 +487,25 @@ INPUT .\04AtaDefesa.tex
 INPUT .\04AtaDefesa.tex
 INPUT .\04AtaDefesa.tex
 INPUT 04AtaDefesa.tex
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
-INPUT .\ataDefesa\exemploAtaDefesa.pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
+INPUT .\ataDefesa\2026-07-01 - Samuel Oliveira Lopes (BV3031926).pdf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss17.tfm
 INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.toc
 INPUT .\Template Latex - Relatorio Tecnico - IFSP - SBV.toc
@@ -509,6 +514,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmssbx10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmss10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmssbo10.tfm
 INPUT .\05Resumo.tex
 INPUT .\05Resumo.tex
 INPUT .\05Resumo.tex
@@ -752,6 +758,7 @@ INPUT .\imagens\DiagramaMetodologia.png
 INPUT .\imagens\DiagramaMetodologia.png
 INPUT .\imagens\DiagramaMetodologia.png
 INPUT .\imagens\DiagramaMetodologia.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmsso17.tfm
 INPUT .\imagens\tetraminoes.png
 INPUT .\imagens\tetraminoes.png
 INPUT .\imagens\tetraminoes.png
@@ -1072,11 +1079,15 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmss17.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmssbo10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmssbo10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso17.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso17.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmtt10.pfb

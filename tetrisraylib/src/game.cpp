@@ -45,6 +45,11 @@ void Game::inputs(){
         tetris.piece->~Piece();
         tetris.spawnPiece();
     }
+    if(IsKeyPressed(KEY_R)){
+        tetris = Tetris();
+        score = 0;
+        tetris.spawnPiece();
+    }
 }
 
 void Game::update(){

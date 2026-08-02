@@ -310,7 +310,7 @@ Além da queda automática, a implementação também utiliza a variável \texti
 
 Quando o valor de \textit{lockTimer} atinge o limite definido em \textit{lockInterval}, a função \textit{lockPiece} é chamada para fixar a peça no tabuleiro e, em seguida, a função \textit{spawnPiece} cria uma nova peça para dar continuidade à partida. Após isso, o temporizador é reiniciado.
 
-\subsection{Movimentação}
+\subsubsection{Movimentação}
 
 A movimentação das peças na \textit{Pygame} é semelhante a \textit{Godot}, \textit{LibGDX} e na \textit{Raylib}, implementada na classe responsável por representar as peças do jogo, a \textit{Piece}. 
 
@@ -335,7 +335,7 @@ O método de rotação utilizado consiste em aplicar uma transformação geomét
 Caso a rotação resulte em colisão, são realizadas tentativas de deslocamento da peça para posições próximas, verificando a posição original, uma posição à direita, uma posição à esquerda e uma posição abaixo da posição atual. Caso alguma dessas alternativas seja válida, a rotação é aplicada. Caso contrário, a peça permanece em sua posição original.
 
 \section{Resultados/Impactos}
-Apesar da evolução gradual a cada implementação do jogo \textit{Tetris} utilizando as quatro tecnologias selecionadas, foi unificado o comportamento das 4 versões, garantindo que a experiência do usuário seja idêntica em todas as versões (mesma velocidade, cores semelhantes, mesma lógica de pontuação). 
+Apesar da evolução gradual a cada implementação do jogo \textit{Tetris}, foi unificado o comportamento das 4 versões, garantindo que a experiência do usuário seja idêntica em todas as versões (mesma velocidade, cores semelhantes, mesma lógica de pontuação). 
 
 Também foi possível observar que cada uma delas apresentou características distintas em termos de estrutura de desenvolvimento, modularização do código, facilidade de implementação e nível de abstração oferecido.
 
@@ -381,8 +381,7 @@ Após as implementações do jogo \textit{Tetris} utilizando as quatro tecnologi
 \end{figure}
 \FloatBarrier
 
-Todos os códigos-fonte desenvolvidos estão disponibilizados em repositórios públicos na plataforma GitHub. O histórico de commits evidenciam a evolução das implementações.
-Abaixo estão os links para os repositórios de cada implementação do jogo \textit{Tetris} utilizando as tecnologias selecionadas:
+Todos os códigos-fonte desenvolvidos estão disponibilizados em repositórios públicos na plataforma GitHub. Abaixo estão os links para os repositórios de cada implementação do jogo \textit{Tetris} utilizando as tecnologias selecionadas:
 
 \begin{itemize}
 \item \textbf{Tetris Godot:} \url{https://github.com/Samuskox/Tetris-Godot}
